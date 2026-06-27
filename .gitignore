@@ -1,0 +1,16 @@
+# Python環境
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# MkDocsビルド出力
+03_Site/site/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.bak
