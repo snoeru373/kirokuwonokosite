@@ -1,0 +1,3285 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Ubuntu,ローカルAI,Hermes Agent,Obsidian,無料アフィリエイト運用の実践記録">
+      
+      
+      
+        <link rel="canonical" href="https://snoeru373.github.io/kirokuwonokosite/blog/article-05-no-wordpress/">
+      
+      
+        <link rel="prev" href="../article-04-github-pages-website/">
+      
+      
+        <link rel="next" href="../article-06-chatgpt-canva-note/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>WordPressを使わない理由 - 50代からのローカルAI実践ノート</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wordpressgithub-pagesnoteai" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="50代からのローカルAI実践ノート" class="md-header__button md-logo" aria-label="50代からのローカルAI実践ノート" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            50代からのローカルAI実践ノート
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              WordPressを使わない理由
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/seioeru/affiliate-free-ops/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="50代からのローカルAI実践ノート" class="md-nav__button md-logo" aria-label="50代からのローカルAI実践ノート" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    50代からのローカルAI実践ノート
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/seioeru/affiliate-free-ops/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ホーム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ubuntu/local-ai-ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UbuntuでAI環境を作る
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ローカルAI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ローカルAI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-ai/ollama-openwebui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OllamaとOpen WebUI
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-07-local-cloud-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ローカルAI vs クラウドAI比較
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hermes Agent
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hermes Agent
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../drafts/hermes-agent-obsidian-gaibusnou/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Obsidian外部脳化
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    無料サイト運営
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    無料サイト運営
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-04-github-pages-website/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Pagesで無料サイト
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WordPressを使わない理由
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WordPressを使わない理由
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        はじめに
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        結論：最初はWordPressなしで十分始められる
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        noteの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Xの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        無料副業サイトのフォルダ構成
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubuntuでの初期作業コマンド例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        プロフィールページに書くこと
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AIに任せてよい作業
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AIに任せない作業
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        収益導線の作り方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自己改善の仕組み
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="自己改善の仕組み">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2週目：記事を作る
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4週目：分析と改善
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. WordPressなしでも副業サイトは作れますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. GitHub Pagesだけで十分ですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3. 無料サイトでもアフィリエイトできますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q4. 何記事くらい作ればよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q5-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q5. AIで記事を全部作ってもよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q6-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q6. いつWordPressへ移行すればよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        内部リンク候補
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        公開前確認メモ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        広告リンク管理メモ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-06-chatgpt-canva-note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ChatGPT×Canva×noteのトリセツ
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ブログ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ブログ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    記事一覧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-01-50-kara-ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UbuntuでローカルAI環境を作ってみた
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-02-ollama-open-webui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OllamaとOpen WebUI
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-03-hermes-agent-ob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hermes AgentでObsidian運用
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI徹底解説・失敗記録
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI徹底解説・失敗記録
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-47-ai-saikou-yakata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIを「右腕」から「従業員」へ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-08-ai-writing-mistakes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI記事作成のよくある間違い
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-09-ubuntu-start-mistakes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubuntu導入初心者の失敗
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ASPガイド
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ASPガイド
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-10-free-aspx-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    アフィリエイトASP比較
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../disclosure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A8.net活用術
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考ドキュメント
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参考ドキュメント
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../media-design-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    無料版の媒体設計
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site-format-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    無料版で使うサイト形式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monetization-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    収益化ASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../niche-selection-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    狙う商品ジャンル
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../media-strategy-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    メディア戦略
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation-scope-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自動化範囲
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../initial-articles-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最初の10本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../revenue-expansion-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    収益展開
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../self-improvement-loop-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自分改善ループ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thirty-day-roadmap-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    30日ロードマップ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../free-tools-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    無料ツール一覧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdocs-yml-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs設定例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../directory-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ディレクトリ構成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hermes-agent-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hermes Agent運用ルール
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../affiliate-learning-memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自己改善メモ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../article-disclosure-note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    記事冒頭表記基準
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        はじめに
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        結論：最初はWordPressなしで十分始められる
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        noteの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Xの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        無料副業サイトのフォルダ構成
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubuntuでの初期作業コマンド例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        プロフィールページに書くこと
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AIに任せてよい作業
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AIに任せない作業
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        収益導線の作り方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自己改善の仕組み
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="自己改善の仕組み">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2週目：記事を作る
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4週目：分析と改善
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. WordPressなしでも副業サイトは作れますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. GitHub Pagesだけで十分ですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3. 無料サイトでもアフィリエイトできますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q4. 何記事くらい作ればよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q5-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q5. AIで記事を全部作ってもよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q6-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q6. いつWordPressへ移行すればよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        内部リンク候補
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        公開前確認メモ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        広告リンク管理メモ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<hr />
+<p>作成日時: 2026-06-30（Asia/Tokyo）
+タグ: #無料副業サイト #wordpressなし #affiliate
+status: draft
+affiliate: true
+review_required: true
+title: WordPressを使わず無料で副業サイトを作る方法｜GitHub Pages・note・AIで始める実践メモ
+description: WordPressや有料サーバーを使わず、GitHub Pages、note、X、Obsidian、AIを組み合わせて無料で副業サイトを作る方法をまとめます。</p>
+<hr />
+<h1 id="wordpressgithub-pagesnoteai">WordPressを使わず無料で副業サイトを作る方法｜GitHub Pages・note・AIで始める実践メモ</h1>
+<p>※この記事には広告・アフィリエイトリンクを含む場合があります。</p>
+<h2 id="_1">はじめに</h2>
+<p>副業サイトを作ろうとすると、多くの場合、最初にWordPressをすすめられます。</p>
+<p>たしかに、WordPressは本格的なブログやアフィリエイトサイトを作るには便利です。</p>
+<p>記事管理、デザイン変更、広告配置、プラグイン、アクセス解析など、ブログ運営に必要な機能をそろえやすいからです。</p>
+<p>しかし、最初からWordPressを使うと、次のような費用や管理が必要になります。</p>
+<ul>
+<li>レンタルサーバー代</li>
+<li>独自ドメイン代</li>
+<li>有料テーマ代</li>
+<li>WordPress本体の更新</li>
+<li>プラグイン管理</li>
+<li>セキュリティ対策</li>
+<li>バックアップ設定</li>
+<li>表示速度の調整</li>
+</ul>
+<p>副業を始める前から固定費がかかると、心理的な負担も大きくなります。</p>
+<p>そこで私は、まずはWordPressを使わず、無料で小さく副業サイトを作る方法を考えました。</p>
+<p>この記事では、GitHub Pages、note、X、Obsidian、AIを組み合わせて、無料で副業サイトを作る方法をまとめます。</p>
+<hr />
+<h2 id="wordpress">結論：最初はWordPressなしで十分始められる</h2>
+<p>結論から言うと、最初の副業サイトはWordPressなしでも始められます。</p>
+<p>特に、次のような目的なら無料構成で十分です。</p>
+<ul>
+<li>記事を書いて公開する</li>
+<li>自分の体験を発信する</li>
+<li>アフィリエイト導線を試す</li>
+<li>noteと連携する</li>
+<li>Xで反応を見る</li>
+<li>Search Consoleで検索状況を確認する</li>
+<li>AIで記事下書きや改善案を作る</li>
+<li>収益化できるテーマか検証する</li>
+</ul>
+<p>最初から本格的なサイトを作るより、まずは無料で小さく試すことが大切です。</p>
+<p>おすすめの構成は次のとおりです。</p>
+<p>```text id="6q8fei"
+Obsidian
+↓
+AIで記事下書き
+↓
+GitHub Pagesで無料公開
+↓
+noteで体験談を書く
+↓
+Xで記事を紹介する
+↓
+Search Consoleで反応を見る
+↓
+ASPで収益導線を作る</p>
+<pre><code>
+この流れなら、有料サーバーなし、独自ドメインなしでも始められます。
+
+---
+
+## WordPressを使わない理由
+
+WordPressを否定するつもりはありません。
+
+むしろ、本格的に収益化するなら、いずれWordPressを検討する価値はあります。
+
+ただし、初期段階では次の理由から、WordPressなしで始める方が現実的です。
+
+### 1. 固定費を抑えられる
+
+副業サイトは、最初から収益が出るとは限りません。
+
+記事を書き、公開し、検索に表示され、読者に読まれ、広告がクリックされ、成果が発生するまでには時間がかかります。
+
+その間も、レンタルサーバー代やドメイン代は発生します。
+
+無料で始めれば、収益が出る前の固定費を抑えられます。
+
+### 2. 記事作成に集中できる
+
+最初からWordPressを使うと、テーマ選び、プラグイン設定、デザイン調整、セキュリティ設定などに時間を使いがちです。
+
+しかし、本当に大切なのは、読者に役立つ記事を書くことです。
+
+無料構成なら、余計な設定に時間を使いすぎず、記事作成に集中できます。
+
+### 3. AIとMarkdownの相性がよい
+
+AIに記事下書きを作らせる場合、Markdown形式はとても扱いやすいです。
+
+Obsidian、GitHub Pages、Git、Hermes Agentなどとも相性がよく、ファイル単位で整理できます。
+
+WordPressの管理画面に直接入れるより、まずMarkdownで下書きを管理する方が、AIとの連携もしやすいです。
+
+### 4. やめるときの損失が少ない
+
+副業サイトは、始めてみないと続けられるか分かりません。
+
+無料構成なら、うまくいかなかった場合でも金銭的な損失は小さく済みます。
+
+逆に、反応が出たら、あとからWordPressや独自ドメインへ移行すればよいです。
+
+---
+
+## 無料副業サイトの全体構成
+
+WordPressを使わずに副業サイトを作るなら、次のような構成にします。
+
+```text id=&quot;3uxzzi&quot;
+無料副業サイト構成
+
+1. GitHub Pages
+   記事・比較ページ・プロフィールを公開する母艦
+
+2. note
+   体験談、人柄、読み物、再開ストーリーを書く場所
+
+3. X
+   記事の拡散、反応確認、短文発信
+
+4. Obsidian
+   記事ネタ、作業メモ、AIとの会話を保存する場所
+
+5. AI
+   記事構成、下書き、FAQ、改善案を作る補助
+
+6. Search Console
+   検索表示回数、クリック数、CTR、掲載順位を確認する
+
+7. ASP
+   A8.net、もしもアフィリエイト、楽天アフィリエイトなどで収益化する
+</code></pre>
+<p>それぞれの役割を分けることで、無料でも副業サイトらしい運用ができます。</p>
+<hr />
+<h2 id="github-pages">GitHub Pagesの役割</h2>
+<p>GitHub Pagesは、副業サイトの母艦として使います。</p>
+<p>ここには、検索で読まれやすい記事や、後から何度も見てもらいたい記事を置きます。</p>
+<p>たとえば、次のような記事です。</p>
+<ul>
+<li>GitHub Pagesで無料アフィリエイトサイトを作る方法</li>
+<li>AI副業を始めるために必要なPC・サーバー・ツール</li>
+<li>無料で始めるアフィリエイトASP比較</li>
+<li>OllamaとOpen WebUIでできること・できないこと</li>
+<li>Hermes AgentでObsidianを外部脳にする方法</li>
+<li>AI記事作成でやってはいけないこと</li>
+</ul>
+<p>GitHub Pagesは静的サイトなので、WordPressのような管理画面はありません。</p>
+<p>しかし、Markdownで記事を書き、GitHubに反映すれば無料で公開できます。</p>
+<p>副業サイトの初期段階では、これで十分です。</p>
+<hr />
+<h2 id="note">noteの役割</h2>
+<p>noteは、検索記事というより、体験談や人柄を伝える場所として使います。</p>
+<p>GitHub Pagesには、手順記事、比較記事、まとめ記事を置きます。</p>
+<p>一方で、noteには次のような記事を置きます。</p>
+<ul>
+<li>50代からAI副業を始めようと思った理由</li>
+<li>AIに聞きながらUbuntu環境を作った話</li>
+<li>作業手順を覚えていないから記録することにした話</li>
+<li>WordPressを使わず無料で副業サイトを作る実験を始めた話</li>
+<li>AIに助けられながら学び直す記録</li>
+</ul>
+<p>noteは、読者との距離を縮める場所です。</p>
+<p>GitHub Pagesが「情報を整理する場所」なら、noteは「背景や思いを伝える場所」と考えます。</p>
+<p>note記事の末尾から、GitHub Pagesの詳しい手順記事へ誘導します。</p>
+<hr />
+<h2 id="x">Xの役割</h2>
+<p>Xは、記事の反応を見る場所として使います。</p>
+<p>最初からフォロワーを大きく増やそうとする必要はありません。</p>
+<p>まずは、自分の記事テーマに対して、どんな言葉に反応があるかを確認します。</p>
+<p>たとえば、次のような投稿です。</p>
+<p>```text id="ui5twg"
+WordPressを使わずに、副業サイトを無料で作る実験を始めました。</p>
+<p>使うもの：
+・GitHub Pages
+・Obsidian
+・Markdown
+・AI下書き
+・note
+・Search Console
+・ASP</p>
+<p>最初から固定費をかけず、記事を書いて反応を見ながら改善します。</p>
+<pre><code>
+Xでは、記事の要点を短く投稿します。
+
+反応がある投稿は、記事のタイトルや見出し改善にも使えます。
+
+---
+
+## Obsidianの役割
+
+Obsidianは、記事ネタや作業記録をためる場所です。
+
+副業サイトを続けるには、記事ネタを失わないことが重要です。
+
+AIに聞いたこと、Ubuntuでつまずいたこと、GitHub Pagesで設定したこと、ASP登録で迷ったこと。
+
+これらはすべて記事になります。
+
+Obsidianには、次のようなメモを残します。
+
+* 記事ネタ
+* 作業メモ
+* エラー対応
+* AIとの会話
+* ASP登録メモ
+* 商品候補
+* 公開前チェックリスト
+* 週次改善メモ
+* 成果が出た記事の特徴
+* 失敗した記事の反省
+
+Obsidianにメモをためておくと、あとでAIやHermes Agentに記事化を頼みやすくなります。
+
+---
+
+## AIの役割
+
+AIは、副業サイト運用の補助役として使います。
+
+たとえば、次の作業に向いています。
+
+* 記事タイトル案を出す
+* 記事構成を作る
+* Markdown下書きを作る
+* FAQを作る
+* 比較表を作る
+* 誤字脱字を確認する
+* 内部リンク候補を出す
+* 広告表記漏れを確認する
+* 誇大表現を検出する
+* 週次改善案を出す
+
+ただし、AIにすべて任せるのは危険です。
+
+特に、アフィリエイトでは次の確認が必要です。
+
+* 広告であることを表示しているか
+* 商品情報が最新か
+* 公式情報と矛盾していないか
+* 価格や条件を断定していないか
+* 「必ず稼げる」などの誇大表現がないか
+* ASP規約に違反していないか
+
+AIは下書きと整理に使い、公開前の最終確認は人間が行います。
+
+---
+
+## Search Consoleの役割
+
+記事を書いて公開したら、次は反応を確認します。
+
+無料で使える重要なツールがSearch Consoleです。
+
+Search Consoleでは、主に次のような情報を確認します。
+
+* Google検索に表示された回数
+* クリックされた回数
+* CTR
+* 平均掲載順位
+* 検索クエリ
+* インデックス状況
+* ページの問題
+
+副業サイトでは、記事を書いて終わりではありません。
+
+反応を見て改善することが大切です。
+
+たとえば、表示回数があるのにクリックされていない記事は、タイトルや説明文を改善します。
+
+クリックされているのに成果につながらない記事は、商品導線やCTAを見直します。
+
+---
+
+## ASPの役割
+
+副業サイトを収益化するには、ASPを使います。
+
+初期候補は次の3つです。
+
+| ASP        | 向いているもの          |
+| ---------- | ---------------- |
+| 楽天アフィリエイト  | 書籍、PC用品、日用品      |
+| もしもアフィリエイト | Amazon・楽天系の商品リンク |
+| A8.net     | サーバー、学習サービス、ツール系 |
+
+A8.netは、サイト・ブログ・SNSなどのメディアに広告を掲載し、訪問者が広告経由で購入やサービス利用をすると報酬が発生する仕組みを説明しており、無料登録も案内しています。もしもアフィリエイトや楽天アフィリエイトも、無料運用の初期候補として検討しやすいASPです。
+
+最初は高単価案件を狙いすぎず、自分の記事と自然につながるものを紹介します。
+
+たとえば、UbuntuやローカルAIの記事なら、次のようなものです。
+
+* USBメモリ
+* 外付けSSD
+* AI入門書
+* Linux入門書
+* キーボード
+* モニター
+* 作業環境用品
+
+WordPressやサーバーの記事を書く段階になったら、A8.netでレンタルサーバーや学習サービスを探します。
+
+---
+
+## 無料副業サイトの最小構成
+
+最初から大きなサイトを作る必要はありません。
+
+最小構成はこれで十分です。
+
+```text id=&quot;pvd5ef&quot;
+1. トップページ
+2. プロフィールページ
+3. 広告・アフィリエイト表記ページ
+4. 記事3本
+5. note記事1本
+6. X投稿数本
+</code></pre>
+<p>最初の記事3本は、次がおすすめです。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">優先</th>
+<th>記事タイトル</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>50代からUbuntuでローカルAI環境を作ってみた</td>
+<td>体験・信頼形成</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>AI副業を始めるために必要なPC・サーバー・ツール</td>
+<td>準備物の整理</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>GitHub Pagesで無料アフィリエイトサイトを作る方法</td>
+<td>無料公開の手順</td>
+</tr>
+</tbody>
+</table>
+<p>その後、次の記事を追加します。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">優先</th>
+<th>記事タイトル</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">4</td>
+<td>無料で始めるアフィリエイトASP比較</td>
+<td>収益導線</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>WordPressを使わず無料で副業サイトを作る方法</td>
+<td>全体設計</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>AI記事作成でやってはいけないこと</td>
+<td>安全運用</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>OllamaとOpen WebUIでできること・できないこと</td>
+<td>ローカルAI解説</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_2">無料副業サイトのフォルダ構成</h2>
+<p>Ubuntuで管理する場合は、次のような構成にします。</p>
+<p>```text id="e8i80a"
+/home/ubun/Documents/data/affiliate-free-ops/
+├── 00_Inbox/
+├── 01_Research/
+│   ├── asp/
+│   ├── products/
+│   └── trends/
+├── 02_Articles/
+│   ├── drafts/
+│   ├── review/
+│   └── published/
+├── 03_Site/
+│   └── docs/
+│       ├── index.md
+│       ├── profile.md
+│       ├── disclosure.md
+│       ├── affiliate/
+│       ├── local-ai/
+│       ├── ai-sidejob/
+│       └── tools/
+├── 04_SNS/
+│   ├── note/
+│   └── x/
+├── 05_Tracking/
+│   ├── search-console/
+│   ├── asp-reports/
+│   └── weekly-reviews/
+├── 06_Agent/
+│   ├── rules/
+│   ├── prompts/
+│   ├── logs/
+│   └── memory/
+└── 99_Backup/</p>
+<pre><code>
+この構成にしておくと、AIやHermes Agentに作業を任せやすくなります。
+
+---
+
+## WordPressなしで作る手順
+
+大まかな手順は次のとおりです。
+
+```text id=&quot;rh8l8q&quot;
+1. Obsidianに記事ネタを集める
+2. AIで記事構成を作る
+3. Markdownで記事下書きを作る
+4. GitHub Pages用のdocsフォルダに配置する
+5. プロフィールページを作る
+6. 広告表記ページを作る
+7. 記事3本を用意する
+8. GitHub Pagesで公開する
+9. noteに体験談を書く
+10. Xで記事を紹介する
+11. Search Consoleで反応を見る
+12. ASPに登録する
+13. 広告リンク候補を整理する
+14. 人間確認後に広告リンクを入れる
+15. 週次で改善する
+</code></pre>
+<p>この流れなら、WordPressを使わなくても副業サイトの基本形ができます。</p>
+<hr />
+<h2 id="ubuntu">Ubuntuでの初期作業コマンド例</h2>
+<p>Ubuntuでフォルダを作る場合は、次のようにします。</p>
+<p>```bash id="fx68l3"
+mkdir -p /home/ubun/Documents/data/affiliate-free-ops
+cd /home/ubun/Documents/data/affiliate-free-ops</p>
+<p>mkdir -p 00_Inbox \
+01_Research/{asp,products,trends} \
+02_Articles/{drafts,review,published} \
+03_Site/docs/{affiliate,local-ai,ai-sidejob,tools} \
+04_SNS/{note,x} \
+05_Tracking/{search-console,asp-reports,weekly-reviews} \
+06_Agent/{rules,prompts,logs,memory} \
+99_Backup</p>
+<p>touch 03_Site/docs/index.md
+touch 03_Site/docs/profile.md
+touch 03_Site/docs/disclosure.md</p>
+<pre><code>
+この時点では、まだ公開しなくても大丈夫です。
+
+まずはローカルで記事とページをそろえます。
+
+---
+
+## トップページに書くこと
+
+トップページには、サイトの目的を短く書きます。
+
+例文です。
+
+```text id=&quot;g4zpn0&quot;
+このサイトでは、50代からUbuntu、ローカルAI、Obsidian、Hermes Agent、GitHub Pagesを使って、無料でAI活用と副業サイト運営に挑戦する実践記録をまとめています。
+</code></pre>
+<p>トップページに入れる要素は次です。</p>
+<ul>
+<li>サイトの説明</li>
+<li>誰に向けたサイトか</li>
+<li>主なカテゴリー</li>
+<li>おすすめ記事</li>
+<li>最新記事</li>
+<li>プロフィールへのリンク</li>
+<li>広告表記ページへのリンク</li>
+<li>noteやXへのリンク</li>
+</ul>
+<p>最初は簡単で構いません。</p>
+<p>記事が増えてから整えれば十分です。</p>
+<hr />
+<h2 id="_3">プロフィールページに書くこと</h2>
+<p>プロフィールページは、信頼性を高めるために重要です。</p>
+<p>ただし、本名や勤務先など、公開したくない情報を書く必要はありません。</p>
+<p>書く内容は次のようなもので十分です。</p>
+<ul>
+<li>表示名</li>
+<li>サイトを始めた理由</li>
+<li>扱うテーマ</li>
+<li>実際に使っている環境</li>
+<li>どんな読者に向けているか</li>
+<li>広告リンクの扱い方</li>
+<li>noteやGitHub Pagesの運用方針</li>
+</ul>
+<p>例文です。</p>
+<p>```text id="h0h3lu"
+このサイトでは、Ubuntu、ローカルAI、Obsidian、Hermes Agent、GitHub Pagesを実際に使いながら、無料でAI活用と副業サイト運営を試す過程を記録しています。</p>
+<p>記事には広告・アフィリエイトリンクを含む場合がありますが、実体験や公式情報を確認し、誇大表現を避ける方針で運営します。</p>
+<pre><code>
+---
+
+## 広告・アフィリエイト表記ページに書くこと
+
+アフィリエイトを行うなら、広告表記ページは必ず作ります。
+
+例文です。
+
+```markdown id=&quot;pq3jw7&quot;
+# 広告・アフィリエイト表記について
+
+当サイトでは、記事内に広告・アフィリエイトリンクを含む場合があります。
+
+リンク経由で商品やサービスを購入・申し込みいただいた場合、運営者に報酬が発生することがあります。
+
+ただし、紹介内容は実際の利用経験、公式情報、調査内容をもとに作成し、読者に不利益となる誇大表現や根拠のない断定を避ける方針です。
+
+価格、仕様、キャンペーン内容、成果条件は変更される場合があります。
+
+実際に利用する場合は、必ず公式サイトで最新情報をご確認ください。
+</code></pre>
+<p>各記事の冒頭にも、次を入れます。</p>
+<p>```text id="owq1t5"
+※この記事には広告・アフィリエイトリンクを含む場合があります。</p>
+<pre><code>
+広告であることを分かりやすく示すことは、読者の信頼を守るためにも重要です。
+
+---
+
+## 記事作成の流れ
+
+WordPressなしで副業サイトを作る場合、記事作成の流れは次のようにします。
+
+```text id=&quot;as8p56&quot;
+1. Obsidianにネタを書く
+2. AIに記事構成を作らせる
+3. Markdownで下書きを作る
+4. 自分の体験を追記する
+5. FAQを追加する
+6. 広告表記を確認する
+7. 誇大表現をチェックする
+8. reviewフォルダに移す
+9. 人間が確認する
+10. publishedまたはdocsに配置する
+</code></pre>
+<p>特に大切なのは、自分の体験を追記することです。</p>
+<p>AIに下書きを作らせるだけでは、一般的な記事になりやすいです。</p>
+<p>実際に困ったこと、失敗したこと、調べたこと、改善したことを入れると、記事に独自性が出ます。</p>
+<hr />
+<h2 id="ai">AIに任せてよい作業</h2>
+<p>AIには、次の作業を任せやすいです。</p>
+<ul>
+<li>記事テーマ案</li>
+<li>タイトル案</li>
+<li>見出し案</li>
+<li>下書き</li>
+<li>FAQ作成</li>
+<li>比較表作成</li>
+<li>内部リンク候補</li>
+<li>誤字脱字チェック</li>
+<li>広告表記漏れチェック</li>
+<li>誇大表現チェック</li>
+<li>週次改善案</li>
+</ul>
+<p>AIに任せると、記事作成の最初の負担を減らせます。</p>
+<hr />
+<h2 id="ai_1">AIに任せない作業</h2>
+<p>一方で、次は人間が確認します。</p>
+<ul>
+<li>記事の公開</li>
+<li>広告リンクの初回掲載</li>
+<li>ASP登録</li>
+<li>規約同意</li>
+<li>銀行口座情報の入力</li>
+<li>商品情報の最終確認</li>
+<li>価格や条件の確認</li>
+<li>記事削除</li>
+<li>収益を保証する表現</li>
+<li>金融・医療・法律系の断定</li>
+</ul>
+<p>AI副業では、自動化できる部分と、自動化してはいけない部分を分けることが大切です。</p>
+<hr />
+<h2 id="_4">収益導線の作り方</h2>
+<p>副業サイトとして収益化するには、記事の中に自然な導線を作ります。</p>
+<p>最初から広告リンクを貼りすぎる必要はありません。</p>
+<p>流れは次のとおりです。</p>
+<p>```text id="pxec0j"
+体験記事
+↓
+手順記事
+↓
+必要なもの一覧
+↓
+ASP比較記事
+↓
+広告リンク</p>
+<pre><code>
+たとえば、UbuntuでローカルAI環境を作る記事なら、次のような導線になります。
+
+```text id=&quot;j70iwh&quot;
+Ubuntu環境構築でつまずいた
+↓
+USBメモリや外付けSSDが必要だった
+↓
+バックアップの重要性を感じた
+↓
+必要なもの一覧を作る
+↓
+楽天・もしもで商品リンクを検討する
+</code></pre>
+<p>GitHub Pagesの記事なら、次のような導線です。</p>
+<p>```text id="binm6h"
+無料でサイトを作る
+↓
+記事が3〜5本できる
+↓
+ASP登録を検討する
+↓
+A8.net、もしも、楽天を比較する</p>
+<pre><code>
+大切なのは、「売りたい商品」から記事を作らないことです。
+
+先に読者の悩みを解決し、その流れで必要なものを紹介します。
+
+---
+
+## 3つのASPの使い分け
+
+無料副業サイトでは、最初に次の3つを候補にします。
+
+| ASP        | 使いどころ            |
+| ---------- | ---------------- |
+| 楽天アフィリエイト  | 書籍、PC用品、日用品、作業環境 |
+| もしもアフィリエイト | Amazon・楽天系の商品リンク |
+| A8.net     | サーバー、学習サービス、ツール系 |
+
+最初は楽天やもしもで、書籍やPC周辺機器を紹介します。
+
+サイトが育ってきたら、A8.netでサービス系案件も検討します。
+
+ただし、報酬単価だけで選ぶのは避けます。
+
+記事テーマと読者の悩みに合うものだけを選びます。
+
+---
+
+## 無料サイトで紹介しやすいもの
+
+WordPressなしの無料副業サイトで紹介しやすいものは次です。
+
+| 記事テーマ        | 紹介しやすいもの           |
+| ------------ | ------------------ |
+| Ubuntu環境構築   | USBメモリ、SSD、Linux本  |
+| ローカルAI       | メモリ、ミニPC、AI本       |
+| Obsidian運用   | Markdown本、バックアップ用品 |
+| GitHub Pages | GitHub本、HTML/CSS本  |
+| note運用       | Canva本、文章術本        |
+| AI副業         | 学習本、作業環境、サーバー比較    |
+| WordPress移行  | レンタルサーバー、ドメイン、テーマ  |
+
+無料ツール自体は直接収益になりにくいです。
+
+しかし、無料ツールの使い方を丁寧に説明することで、読者の信頼を作れます。
+
+その中で、必要な周辺機器や学習本を紹介するのが自然です。
+
+---
+
+## noteからGitHub Pagesへ誘導する方法
+
+noteでは、読みやすい体験談を書きます。
+
+GitHub Pagesでは、詳しい手順や比較表を置きます。
+
+導線は次のようにします。
+
+```text id=&quot;x04563&quot;
+note：
+なぜ無料副業サイトを作ろうと思ったか
+
+GitHub Pages：
+実際の作り方、手順、注意点、必要ツール
+</code></pre>
+<p>note記事の末尾に、次のような文言を入れます。</p>
+<p>```text id="i8qb8o"
+詳しい手順や使ったツールは、GitHub Pages側の記事にまとめています。</p>
+<pre><code>
+この形にすると、noteは入口、GitHub Pagesは詳しい資料として使えます。
+
+---
+
+## Xから記事へ誘導する方法
+
+Xでは、記事内容を短く分解して投稿します。
+
+例です。
+
+```text id=&quot;8m17zd&quot;
+WordPressを使わずに無料で副業サイトを作るなら、最初はこの構成で十分です。
+
+・GitHub Pages
+・note
+・X
+・Obsidian
+・AI下書き
+・Search Console
+・ASP
+
+まずは固定費ゼロで小さく試し、反応が出たらWordPress移行を考えます。
+</code></pre>
+<p>X投稿では、すぐに売り込まず、考え方や手順を短く伝えます。</p>
+<p>反応がよかった内容は、記事の見出しやタイトル改善に使えます。</p>
+<hr />
+<h2 id="_5">自己改善の仕組み</h2>
+<p>副業サイトは、作って終わりではありません。</p>
+<p>反応を見ながら改善します。</p>
+<p>改善の流れは次のとおりです。</p>
+<p>```text id="zkljmb"
+記事公開
+↓
+Search Consoleで表示回数を見る
+↓
+CTRを見る
+↓
+ASPレポートでクリックを見る
+↓
+成果が出た記事を確認する
+↓
+タイトルや導線を改善する
+↓
+関連記事を追加する</p>
+<pre><code>
+改善ルールは次のようにします。
+
+| 状態                | 改善          |
+| ----------------- | ----------- |
+| 表示回数があるのにクリックされない | タイトルを改善     |
+| クリックされるが読まれない     | 冒頭を改善       |
+| 読まれるが広告クリックがない    | CTAを改善      |
+| 広告クリックはあるが成果がない   | 商品選定を見直す    |
+| 成果が出た             | 関連記事を追加     |
+| 古い情報がある           | 公式情報を確認して更新 |
+
+この改善を週1回行えば、無料サイトでも少しずつ育てられます。
+
+---
+
+## Hermes Agentに任せる改善作業
+
+Hermes Agentには、次のような改善作業を任せます。
+
+```text id=&quot;gekwwd&quot;
+Search ConsoleのCSVを確認し、表示回数があるのにCTRが低い記事を抽出してください。
+タイトル改善案、メタ説明改善案、内部リンク改善案を作成してください。
+記事削除は行わず、リライト候補として整理してください。
+</code></pre>
+<p>ASPレポートを使う場合は、次のようにします。</p>
+<p>```text id="w9c7bc"
+ASPレポートを確認し、クリックされているが成果が出ていない記事を抽出してください。
+商品導線、CTA、比較表、記事内リンクの改善案を作成してください。
+広告リンクの差し替えは人間承認にしてください。</p>
+<pre><code>
+AIには改善案を出させ、実際の公開や広告リンク変更は人間が確認します。
+
+---
+
+## WordPressへ移行するタイミング
+
+WordPressなしで始めても、将来的にWordPressへ移行してよいです。
+
+移行を検討するタイミングは次です。
+
+* 記事が30本以上になった
+* 検索流入が増えてきた
+* アフィリエイト成果が出始めた
+* 独自ドメインで運営したくなった
+* デザインを細かく調整したくなった
+* 広告配置を本格化したくなった
+* メールマガジンやLPを作りたくなった
+* WordPressテーマやプラグインを使いたくなった
+
+つまり、最初からWordPressを使わないだけで、永遠に使わないという意味ではありません。
+
+無料で検証してから、必要になったら移行します。
+
+---
+
+## WordPressなしで始めるメリット
+
+WordPressなしで副業サイトを始めるメリットは次です。
+
+* 初期費用を抑えられる
+* 固定費が少ない
+* Markdownで管理できる
+* Obsidianと相性がよい
+* AIに記事作成を任せやすい
+* GitHub Pagesで無料公開できる
+* noteやXと連携しやすい
+* やめるときの損失が少ない
+* 小さく実験しやすい
+
+特に、副業の初期段階では、固定費を抑えながら試せることが大きなメリットです。
+
+---
+
+## WordPressなしで始めるデメリット
+
+一方で、デメリットもあります。
+
+* 管理画面がない
+* デザイン調整に知識が必要
+* コメント機能が標準ではない
+* 動的な機能は苦手
+* 広告管理は手作業になりやすい
+* 記事数が増えると整理が必要
+* 初心者にはGit操作が難しい
+* 本格運用ではWordPressの方が楽な場面もある
+
+無料構成は、あくまで小さく始めるための方法です。
+
+必要になったら、有料サーバーやWordPressへ移行すればよいです。
+
+---
+
+## この手法が向いている人
+
+この方法は、次のような人に向いています。
+
+* 初期費用をかけたくない人
+* まずは無料で副業サイトを試したい人
+* AIを使って記事を書きたい人
+* Obsidianでメモを整理したい人
+* GitHub Pagesに興味がある人
+* noteやXも使いたい人
+* 50代からAI副業を始めたい人
+* UbuntuやローカルAIの実体験を記事にしたい人
+
+---
+
+## この方法が向いていない人
+
+次のような人には、最初からWordPressの方が合うかもしれません。
+
+* コマンド操作をしたくない人
+* 管理画面で記事を書きたい人
+* デザインを簡単に変えたい人
+* コメント機能を使いたい人
+* 最初から独自ドメインで本格運用したい人
+* プラグインで機能を追加したい人
+* 複数人で記事管理したい人
+
+大切なのは、目的に合う方法を選ぶことです。
+
+---
+
+## 最初の30日ロードマップ
+
+### 1週目：土台を作る
+
+```text id=&quot;q2h1ur&quot;
+・Obsidianに記事ネタを集める
+・GitHub Pages用フォルダを作る
+・トップページを作る
+・プロフィールページを作る
+・広告表記ページを作る
+</code></pre>
+<h3 id="2">2週目：記事を作る</h3>
+<p>```text id="jobef6"
+・体験記事を1本作る
+・GitHub Pagesの記事を1本作る
+・AI副業に必要なツール記事を1本作る
+・noteに体験談を1本出す</p>
+<pre><code>
+### 3週目：収益導線を作る
+
+```text id=&quot;dlj5ix&quot;
+・ASP比較記事を作る
+・楽天アフィリエイトを確認する
+・もしもアフィリエイトを確認する
+・A8.netを確認する
+・記事ごとの広告候補を整理する
+</code></pre>
+<h3 id="4">4週目：分析と改善</h3>
+<p>```text id="gbzz01"
+・Search Consoleに登録する
+・インデックス状況を見る
+・表示回数とCTRを見る
+・Xで記事を紹介する
+・読まれた記事を改善する</p>
+<pre><code>
+---
+
+## まとめ
+
+副業サイトを作るとき、最初からWordPressや有料サーバーを使う必要はありません。
+
+まずは、無料で小さく始める方法があります。
+
+おすすめの構成は次です。
+
+```text id=&quot;z85yha&quot;
+GitHub Pages
+note
+X
+Obsidian
+AI
+Search Console
+ASP
+</code></pre>
+<p>この構成なら、固定費を抑えながら、記事作成、公開、発信、分析、収益化の流れを作れます。</p>
+<p>最初の目標は、大きく稼ぐことではありません。</p>
+<p>まずは、次の流れを作ることです。</p>
+<p><code>text id="vsk6f1"
+体験する
+↓
+記録する
+↓
+記事にする
+↓
+無料で公開する
+↓
+反応を見る
+↓
+改善する
+↓
+必要なものだけ紹介する</code></p>
+<p>この流れができれば、WordPressなしでも副業サイトの第一歩は始められます。</p>
+<p>そして、記事が増え、検索流入や収益の方向性が見えてきたら、その段階でWordPressや独自ドメインを検討すればよいと思います。</p>
+<hr />
+<h2 id="faq">FAQ</h2>
+<h3 id="q1-wordpress">Q1. WordPressなしでも副業サイトは作れますか？</h3>
+<p>作れます。</p>
+<p>GitHub Pages、note、X、Obsidian、AIを組み合わせれば、無料で記事公開と収益導線の実験ができます。</p>
+<h3 id="q2-github-pages">Q2. GitHub Pagesだけで十分ですか？</h3>
+<p>初期段階では十分です。</p>
+<p>ただし、本格的な広告管理、デザイン調整、動的機能が必要になったら、WordPressを検討してもよいです。</p>
+<h3 id="q3">Q3. 無料サイトでもアフィリエイトできますか？</h3>
+<p>ASPや広告主の規約によります。</p>
+<p>GitHub Pages、note、SNSなどを媒体として使える場合がありますが、必ず各ASPの最新条件を確認してください。</p>
+<h3 id="q4">Q4. 何記事くらい作ればよいですか？</h3>
+<p>最初は3〜5本で十分です。</p>
+<p>トップページ、プロフィール、広告表記ページ、体験記事、ASP比較記事があると、サイトの形が見えやすくなります。</p>
+<h3 id="q5-ai">Q5. AIで記事を全部作ってもよいですか？</h3>
+<p>AIは下書きや構成作成に使えます。</p>
+<p>ただし、実体験、公式情報確認、広告表記、公開前チェックは人間が行うべきです。</p>
+<h3 id="q6-wordpress">Q6. いつWordPressへ移行すればよいですか？</h3>
+<p>記事数、検索流入、収益導線が見えてきた段階で検討すればよいです。</p>
+<p>最初から固定費をかけるより、無料で検証してから移行する方が安全です。</p>
+<hr />
+<h2 id="_6">内部リンク候補</h2>
+<ul>
+<li>50代からUbuntuでローカルAI環境を作ってみた</li>
+<li>AI副業を始めるために必要なPC・サーバー・ツール</li>
+<li>GitHub Pagesで無料アフィリエイトサイトを作る方法</li>
+<li>無料で始めるアフィリエイトASP比較</li>
+<li>OllamaとOpen WebUIでできること・できないこと</li>
+<li>Hermes AgentでObsidianを外部脳にする方法</li>
+<li>AI記事作成でやってはいけないこと</li>
+</ul>
+<hr />
+<h2 id="_7">公開前確認メモ</h2>
+<ul>
+<li>GitHub Pagesの最新利用条件</li>
+<li>Cloudflare Pagesの無料枠</li>
+<li>Search Consoleの設定方法</li>
+<li>A8.net、もしも、楽天アフィリエイトの登録条件</li>
+<li>広告表記の位置</li>
+<li>ステルスマーケティング規制への対応</li>
+<li>公開フォルダに個人情報が含まれていないか</li>
+<li>APIキー、パスワード、口座情報が含まれていないか</li>
+<li>誇大表現がないか</li>
+<li>「必ず稼げる」「完全放置」などの表現がないか</li>
+</ul>
+<hr />
+<h2 id="_8">広告リンク管理メモ</h2>
+<ul>
+<li>楽天アフィリエイト: 書籍、PC用品、作業環境用品候補</li>
+<li>もしもアフィリエイト: Amazon・楽天系商品リンク候補</li>
+<li>A8.net: サーバー、学習サービス、制作ツール候補</li>
+<li>広告リンク挿入: 人間確認後</li>
+<li>最終確認日: 未設定</li>
+<li>注意: 報酬単価だけで案件を選ばない</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
