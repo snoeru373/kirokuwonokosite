@@ -1,0 +1,40 @@
+site_name: 50代からのローカルAI実践ノート
+site_description: Ubuntu,ローカルAI,Hermes Agent,Obsidian,無料アフィリエイト運用の実践記録
+site_url: https://snoeru373.github.io/kirokuwonokosite/
+repo_url: https://github.com/snoeru373/kirokuwonokosite/
+
+theme:
+  name: material
+  language: ja
+  palette:
+    primary: blue
+    accent: indigo
+
+nav:
+  - ホーム: index.md
+  
+  - ローカルAI:
+      - OllamaとOpen WebUI: local-ai/ollama-openwebui.md
+      - ローカルAI vs クラウドAI比較: blog/article-07-local-cloud-comparison.md
+  - Hermes Agent:
+      - Obsidian外部脳化: drafts/hermes-agent-obsidian-gaibusnou.md
+  - 無料サイト運営:
+      - GitHub Pagesで無料サイト: blog/article-04-github-pages-website.md
+      - WordPressを使わない理由: blog/article-05-no-wordpress.md
+      - ChatGPT×Canva×noteのトリセツ: blog/article-06-chatgpt-canva-note.md
+  - ブログ:
+      - 記事一覧: blog/index.md
+      - UbuntuでローカルAI環境を作ってみた: blog/article-01-50-kara-ubuntu.md
+      - OllamaとOpen WebUI: blog/article-02-ollama-open-webui.md
+      - Hermes AgentでObsidian運用: blog/article-03-hermes-agent-ob.md
+  - AI徹底解説・失敗記録:
+      - AIを「右腕」から「従業員」へ: blog/article-47-ai-saikou-yakata.md
+      - AI記事作成のよくある間違い: blog/article-08-ai-writing-mistakes.md
+      - Ubuntu導入初心者の失敗: blog/article-09-ubuntu-start-mistakes.md
+  - ASPガイド:
+      - アフィリエイトASP比較: blog/article-10-free-aspx-comparison.md
+      - A8.net活用術: disclosure.md
+
+
+
+docs_dir: docs

@@ -1,0 +1,3264 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="有料サーバーや有料ドメインを使わず、GitHub Pagesで無料アフィリエイトサイトを作る方法を、Ubuntu・Markdown・AI活用の視点からまとめます。">
+      
+      
+      
+        <link rel="canonical" href="https://snoeru373.github.io/kirokuwonokosite/blog/article-04-github-pages-website/">
+      
+      
+        <link rel="prev" href="../../drafts/hermes-agent-obsidian-gaibusnou/">
+      
+      
+        <link rel="next" href="../article-05-no-wordpress/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>GitHub Pagesで無料アフィリエイトサイトを作る方法｜WordPressなしで始める実践メモ - 50代からのローカルAI実践ノート</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#github-pageswordpress" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="50代からのローカルAI実践ノート" class="md-header__button md-logo" aria-label="50代からのローカルAI実践ノート" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            50代からのローカルAI実践ノート
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GitHub Pagesで無料アフィリエイトサイトを作る方法｜WordPressなしで始める実践メモ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/snoeru373/kirokuwonokosite/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="50代からのローカルAI実践ノート" class="md-nav__button md-logo" aria-label="50代からのローカルAI実践ノート" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    50代からのローカルAI実践ノート
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/snoeru373/kirokuwonokosite/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ホーム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ローカルAI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ローカルAI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-ai/ollama-openwebui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OllamaとOpen WebUI
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-07-local-cloud-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ローカルAI vs クラウドAI比較
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hermes Agent
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hermes Agent
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../drafts/hermes-agent-obsidian-gaibusnou/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Obsidian外部脳化
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    無料サイト運営
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    無料サイト運営
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Pagesで無料サイト
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Pagesで無料サイト
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        はじめに
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        結論：最初の実験サイトならGitHub Pagesで十分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesで作るサイトのイメージ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wordpressgithub-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        なぜWordPressではなくGitHub Pagesから始めるのか
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesが向いている記事
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必要なもの
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最初に作るページ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        おすすめのフォルダ構成
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トップページの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        プロフィールページの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        広告・アフィリエイト表記ページの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesで作る場合の手順
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubuntuで作業する場合のコマンド例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHubリポジトリの作り方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesの公開元を設定する
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最初に入れる記事
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASP登録への導線
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a8net" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A8.netへのつなげ方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        もしもアフィリエイトへのつなげ方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        楽天アフィリエイトへのつなげ方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        記事内リンクの設計
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        noteとXの使い方
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="noteとXの使い方">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        noteの役割
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Xの役割
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pages運用で注意すること
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub Pages運用で注意すること">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 個人情報を入れない
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 広告表記を忘れない
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 誇大表現をしない
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 商品情報を放置しない
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. GitHub Pagesの制約を理解する
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aihermes-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AIとHermes Agentで自動化できること
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hermes-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hermes Agentに任せる作業例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesで始めるメリット
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesで始めるデメリット
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有料サーバーへ移行するタイミング
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        この方法が向いている人
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        この方法が向いていない人
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最初の公開前チェックリスト
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        まとめ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. GitHub Pagesだけでアフィリエイトはできますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. WordPressを使わないと不利ですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-asp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3. 何記事くらい作ってからASPに登録すればよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q4. GitHub Pagesで広告リンクを貼ってもよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q5-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q5. AIで記事を自動生成して公開してもよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q6-github-pagesurlasp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q6. GitHub PagesのURLでASP登録できますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q7. 有料サーバーへ移行するべきタイミングはいつですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        内部リンク候補
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        公開前確認メモ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        広告リンク管理メモ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-05-no-wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WordPressを使わない理由
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-06-chatgpt-canva-note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ChatGPT×Canva×noteのトリセツ
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ブログ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ブログ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    記事一覧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-01-50-kara-ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UbuntuでローカルAI環境を作ってみた
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-02-ollama-open-webui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OllamaとOpen WebUI
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-03-hermes-agent-ob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hermes AgentでObsidian運用
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI徹底解説・失敗記録
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI徹底解説・失敗記録
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-47-ai-saikou-yakata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIを「右腕」から「従業員」へ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-08-ai-writing-mistakes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI記事作成のよくある間違い
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-09-ubuntu-start-mistakes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubuntu導入初心者の失敗
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ASPガイド
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ASPガイド
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-10-free-aspx-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    アフィリエイトASP比較
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../disclosure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A8.net活用術
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        はじめに
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        結論：最初の実験サイトならGitHub Pagesで十分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesで作るサイトのイメージ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wordpressgithub-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        なぜWordPressではなくGitHub Pagesから始めるのか
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesが向いている記事
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必要なもの
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最初に作るページ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        おすすめのフォルダ構成
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トップページの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        プロフィールページの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        広告・アフィリエイト表記ページの役割
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesで作る場合の手順
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubuntuで作業する場合のコマンド例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHubリポジトリの作り方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesの公開元を設定する
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最初に入れる記事
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASP登録への導線
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a8net" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A8.netへのつなげ方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        もしもアフィリエイトへのつなげ方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        楽天アフィリエイトへのつなげ方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        記事内リンクの設計
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        noteとXの使い方
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="noteとXの使い方">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        noteの役割
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Xの役割
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pages運用で注意すること
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub Pages運用で注意すること">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 個人情報を入れない
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 広告表記を忘れない
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 誇大表現をしない
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 商品情報を放置しない
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. GitHub Pagesの制約を理解する
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aihermes-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AIとHermes Agentで自動化できること
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hermes-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hermes Agentに任せる作業例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesで始めるメリット
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pagesで始めるデメリット
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有料サーバーへ移行するタイミング
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        この方法が向いている人
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        この方法が向いていない人
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最初の公開前チェックリスト
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        まとめ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. GitHub Pagesだけでアフィリエイトはできますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. WordPressを使わないと不利ですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-asp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3. 何記事くらい作ってからASPに登録すればよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q4. GitHub Pagesで広告リンクを貼ってもよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q5-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q5. AIで記事を自動生成して公開してもよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q6-github-pagesurlasp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q6. GitHub PagesのURLでASP登録できますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q7. 有料サーバーへ移行するべきタイミングはいつですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        内部リンク候補
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        公開前確認メモ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        広告リンク管理メモ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="github-pageswordpress">GitHub Pagesで無料アフィリエイトサイトを作る方法｜WordPressなしで始める実践メモ</h1>
+<p>※この記事には広告・アフィリエイトリンクを含む場合があります。</p>
+<h2 id="_1">はじめに</h2>
+<p>アフィリエイトを始めようとすると、多くの場合、最初にWordPressやレンタルサーバーの話が出てきます。</p>
+<p>もちろん、WordPressは本格的にブログやアフィリエイトサイトを運営するには便利です。</p>
+<p>しかし、最初からレンタルサーバー代、独自ドメイン代、有料テーマ代を払うのは、少しハードルが高いと感じる人も多いと思います。</p>
+<p>私自身も、最初はできるだけ無料で始める方法を考えました。</p>
+<p>そこで候補になるのが、GitHub Pagesです。</p>
+<p>GitHub Pagesを使えば、有料サーバーを契約しなくても、MarkdownやHTMLで作った静的サイトを公開できます。</p>
+<p>この記事では、WordPressを使わずに、GitHub Pagesで無料アフィリエイトサイトを作る方法を、Ubuntu・Markdown・AI活用の視点から整理します。</p>
+<hr />
+<h2 id="github-pages">結論：最初の実験サイトならGitHub Pagesで十分</h2>
+<p>結論から言うと、アフィリエイトを無料で小さく試す段階なら、GitHub Pagesで十分です。</p>
+<p>特に、次のような人には向いています。</p>
+<ul>
+<li>有料サーバーを契約せずに始めたい人</li>
+<li>有料ドメインなしで試したい人</li>
+<li>Markdownで記事を書きたい人</li>
+<li>Obsidianのメモを記事化したい人</li>
+<li>UbuntuやLinux環境で作業したい人</li>
+<li>AIに記事下書きを作らせたい人</li>
+<li>noteやXと組み合わせて発信したい人</li>
+<li>まずは無料でアフィリエイト導線を試したい人</li>
+</ul>
+<p>GitHub Pagesは、WordPressのような管理画面を持つブログシステムではありません。</p>
+<p>基本的には、HTML、CSS、JavaScript、Markdownなどで作った静的サイトを公開する仕組みです。</p>
+<p>そのため、会員登録機能、コメント機能、動的な検索機能、PHPやPythonによるサーバー側の処理は苦手です。</p>
+<p>しかし、初期のアフィリエイトサイトに必要な次のようなページは十分に作れます。</p>
+<ul>
+<li>トップページ</li>
+<li>プロフィールページ</li>
+<li>記事ページ</li>
+<li>比較記事</li>
+<li>おすすめツール一覧</li>
+<li>広告・アフィリエイト表記ページ</li>
+<li>noteやXへのリンク</li>
+<li>ASP比較記事</li>
+<li>無料ツール紹介記事</li>
+</ul>
+<p>最初から完璧なサイトを目指すより、まずは無料で記事を公開し、読者の反応を見ることが大切です。</p>
+<hr />
+<h2 id="github-pages_1">GitHub Pagesで作るサイトのイメージ</h2>
+<p>今回作る無料アフィリエイトサイトは、次のような構成を想定します。</p>
+<pre><code class="language-text">GitHub Pagesサイト
+├── トップページ
+├── プロフィール
+├── 広告・アフィリエイト表記
+├── Ubuntu・ローカルAIの記事
+├── GitHub Pages運用の記事
+├── AI副業に必要なツール記事
+├── ASP比較記事
+├── note活用記事
+└── おすすめツール一覧
+</code></pre>
+<p>このサイトでは、いきなり商品を売り込むのではなく、まず自分の実体験を記事にします。</p>
+<p>たとえば、次のような記事です。</p>
+<ul>
+<li>50代からUbuntuでローカルAI環境を作ってみた</li>
+<li>OllamaとOpen WebUIでできること・できないこと</li>
+<li>Hermes AgentでObsidianを外部脳にする方法</li>
+<li>AI副業を始めるために必要なPC・サーバー・ツール</li>
+<li>GitHub Pagesで無料アフィリエイトサイトを作る方法</li>
+<li>無料で始めるアフィリエイトASP比較</li>
+<li>AI記事作成でやってはいけないこと</li>
+</ul>
+<p>このように、自分が実際に試した内容を中心にすれば、単なる広告サイトではなく、読者に役立つ実践記録になります。</p>
+<hr />
+<h2 id="wordpressgithub-pages">なぜWordPressではなくGitHub Pagesから始めるのか</h2>
+<p>WordPressには大きなメリットがあります。</p>
+<p>記事の投稿、カテゴリー管理、デザイン変更、プラグイン導入、広告管理などがしやすいです。</p>
+<p>本格的にブログ運営をするなら、WordPressは有力な選択肢です。</p>
+<p>しかし、最初の段階では次のような負担もあります。</p>
+<ul>
+<li>レンタルサーバー代がかかる</li>
+<li>独自ドメイン代がかかる</li>
+<li>WordPress本体の更新が必要</li>
+<li>プラグイン管理が必要</li>
+<li>セキュリティ対策が必要</li>
+<li>バックアップ設定が必要</li>
+<li>テーマ選びで迷いやすい</li>
+<li>表示速度や広告配置にも気を使う</li>
+</ul>
+<p>一方、GitHub Pagesは静的サイトなので、構成がシンプルです。</p>
+<p>MarkdownやHTMLファイルを用意し、GitHubに反映すればサイトとして公開できます。</p>
+<p>初期費用をかけずに、アフィリエイト記事の練習、SEOの確認、noteやXからの導線づくりを試せるのが大きなメリットです。</p>
+<p>最初はGitHub Pagesで無料サイトを作り、記事が増えて収益化の方向性が見えてから、WordPressや独自ドメインを検討すればよいと思います。</p>
+<hr />
+<h2 id="github-pages_2">GitHub Pagesが向いている記事</h2>
+<p>GitHub Pagesは、次のような記事と相性がよいです。</p>
+<table>
+<thead>
+<tr>
+<th>記事タイプ</th>
+<th>相性</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>手順記事</td>
+<td>高い</td>
+<td>Markdownで整理しやすい</td>
+</tr>
+<tr>
+<td>比較記事</td>
+<td>高い</td>
+<td>表や見出しで構成しやすい</td>
+</tr>
+<tr>
+<td>実践記録</td>
+<td>高い</td>
+<td>Obsidianのメモから転用しやすい</td>
+</tr>
+<tr>
+<td>ツール紹介</td>
+<td>高い</td>
+<td>内部リンクを作りやすい</td>
+</tr>
+<tr>
+<td>FAQ記事</td>
+<td>高い</td>
+<td>静的ページでも作りやすい</td>
+</tr>
+<tr>
+<td>日記記事</td>
+<td>中</td>
+<td>noteの方が向く場合もある</td>
+</tr>
+<tr>
+<td>速報記事</td>
+<td>低〜中</td>
+<td>更新頻度が高いと管理が大変</td>
+</tr>
+<tr>
+<td>会員制サイト</td>
+<td>低い</td>
+<td>静的サイトだけでは難しい</td>
+</tr>
+<tr>
+<td>コメント付きブログ</td>
+<td>低い</td>
+<td>標準ではコメント機能がない</td>
+</tr>
+</tbody>
+</table>
+<p>私の場合は、Ubuntu、ローカルAI、Obsidian、Hermes Agent、note運用、無料アフィリエイトのようなテーマを扱う予定なので、GitHub Pagesとの相性はかなり良いと考えています。</p>
+<hr />
+<h2 id="_2">必要なもの</h2>
+<p>GitHub Pagesで無料アフィリエイトサイトを作るために必要なものは、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>必要なもの</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GitHubアカウント</td>
+<td>サイト公開</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>ファイル管理</td>
+</tr>
+<tr>
+<td>Markdownエディタ</td>
+<td>記事作成</td>
+</tr>
+<tr>
+<td>Obsidian</td>
+<td>メモ整理</td>
+</tr>
+<tr>
+<td>Ubuntu PC</td>
+<td>作業環境</td>
+</tr>
+<tr>
+<td>GitHub Pages</td>
+<td>無料公開</td>
+</tr>
+<tr>
+<td>ASPアカウント</td>
+<td>アフィリエイトリンク取得</td>
+</tr>
+<tr>
+<td>広告表記ページ</td>
+<td>広告・PR表示対応</td>
+</tr>
+<tr>
+<td>プロフィールページ</td>
+<td>サイトの信頼性向上</td>
+</tr>
+<tr>
+<td>記事3〜5本</td>
+<td>ASP登録前の最低限の内容</td>
+</tr>
+</tbody>
+</table>
+<p>最初からすべてを完璧にそろえる必要はありません。</p>
+<p>まずは、GitHubアカウント、トップページ、プロフィールページ、広告表記ページ、記事3本程度があれば、無料サイトの形を作り始められます。</p>
+<hr />
+<h2 id="_3">最初に作るページ</h2>
+<p>GitHub Pagesで無料アフィリエイトサイトを始めるなら、最初は次の5ページで十分です。</p>
+<table>
+<thead>
+<tr>
+<th>ページ</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>トップページ</td>
+<td>サイトの概要を伝える</td>
+</tr>
+<tr>
+<td>プロフィールページ</td>
+<td>誰が書いているかを伝える</td>
+</tr>
+<tr>
+<td>広告・アフィリエイト表記ページ</td>
+<td>広告掲載方針を示す</td>
+</tr>
+<tr>
+<td>体験記事</td>
+<td>読者の共感を得る</td>
+</tr>
+<tr>
+<td>ASP比較記事</td>
+<td>登録導線を作る</td>
+</tr>
+</tbody>
+</table>
+<p>最初から大量の記事を作る必要はありません。</p>
+<p>むしろ、少ない記事でも、サイトの目的と運営方針が分かる状態にすることが大切です。</p>
+<hr />
+<h2 id="_4">おすすめのフォルダ構成</h2>
+<p>GitHub Pages用のサイトは、次のような構成にすると管理しやすいです。</p>
+<pre><code class="language-text">docs/
+├── index.md
+├── profile.md
+├── disclosure.md
+├── local-ai/
+│   ├── ubuntu-local-ai.md
+│   └── ollama-openwebui.md
+├── affiliate/
+│   ├── github-pages-affiliate.md
+│   └── free-asp-compare.md
+├── ai-sidejob/
+│   └── pc-server-tools.md
+└── tools/
+    ├── obsidian.md
+    └── canva-note.md
+</code></pre>
+<p>それぞれの役割は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>ファイル・フォルダ</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index.md</td>
+<td>トップページ</td>
+</tr>
+<tr>
+<td>profile.md</td>
+<td>運営者プロフィール</td>
+</tr>
+<tr>
+<td>disclosure.md</td>
+<td>広告・アフィリエイト表記</td>
+</tr>
+<tr>
+<td>local-ai/</td>
+<td>Ubuntu・ローカルAI記事</td>
+</tr>
+<tr>
+<td>affiliate/</td>
+<td>アフィリエイト運用記事</td>
+</tr>
+<tr>
+<td>ai-sidejob/</td>
+<td>AI副業記事</td>
+</tr>
+<tr>
+<td>tools/</td>
+<td>ツール紹介記事</td>
+</tr>
+</tbody>
+</table>
+<p>このようにカテゴリを分けておくと、記事が増えても整理しやすくなります。</p>
+<hr />
+<h2 id="_5">トップページの役割</h2>
+<p>トップページでは、サイトの目的を短く伝えます。</p>
+<p>たとえば、次のような内容です。</p>
+<pre><code class="language-text">このサイトでは、50代からUbuntu、ローカルAI、Obsidian、Hermes Agent、GitHub Pagesを使って、無料でAI活用と副業サイト運営に挑戦する実践記録をまとめています。
+</code></pre>
+<p>トップページに入れたい要素は次です。</p>
+<ul>
+<li>サイトのテーマ</li>
+<li>誰に向けたサイトか</li>
+<li>主な記事カテゴリ</li>
+<li>最新記事へのリンク</li>
+<li>おすすめ記事へのリンク</li>
+<li>広告・アフィリエイト表記ページへのリンク</li>
+<li>noteやXへのリンク</li>
+</ul>
+<p>最初のトップページは簡単で構いません。</p>
+<p>記事が増えてきたら、カテゴリー別に整理していけばよいです。</p>
+<hr />
+<h2 id="_6">プロフィールページの役割</h2>
+<p>アフィリエイトサイトでは、誰が書いているかが分かることも大切です。</p>
+<p>特に、AIや副業のようなテーマでは、読者は「この人は実際に試しているのか」を見ます。</p>
+<p>プロフィールページには、次の内容を入れます。</p>
+<ul>
+<li>表示名</li>
+<li>サイトを始めた理由</li>
+<li>扱うテーマ</li>
+<li>実際に使っている環境</li>
+<li>noteやGitHub Pagesの運用方針</li>
+<li>読者に約束すること</li>
+<li>広告リンクの扱い方</li>
+</ul>
+<p>たとえば、次のような書き方です。</p>
+<pre><code class="language-text">このサイトでは、実際にUbuntuやローカルAI環境を試しながら、作業記録、失敗談、無料ツールの使い方をまとめています。広告リンクを含む場合がありますが、公式情報や実体験を確認し、誇大表現を避ける方針で運営します。
+</code></pre>
+<p>本名や勤務先など、公開したくない個人情報は書く必要はありません。</p>
+<p>公開する情報と非公開にする情報は、事前に分けておくべきです。</p>
+<hr />
+<h2 id="_7">広告・アフィリエイト表記ページの役割</h2>
+<p>アフィリエイトサイトでは、広告リンクを含む可能性があることを分かりやすく示す必要があります。</p>
+<p>そのため、早い段階で <code>disclosure.md</code> を作ります。</p>
+<p>例文は次のとおりです。</p>
+<pre><code class="language-markdown"># 広告・アフィリエイト表記について
+
+当サイトでは、記事内に広告・アフィリエイトリンクを含む場合があります。
+
+リンク経由で商品やサービスを購入・申し込みいただいた場合、運営者に報酬が発生することがあります。
+
+ただし、紹介内容は実際の利用経験、公式情報、調査内容をもとに作成し、読者に不利益となる誇大表現や根拠のない断定を避ける方針です。
+
+価格、仕様、キャンペーン内容、成果条件は変更される場合があります。
+
+実際に利用する場合は、必ず公式サイトで最新情報をご確認ください。
+</code></pre>
+<p>また、広告リンクを含む記事の冒頭にも、次の一文を入れます。</p>
+<pre><code class="language-markdown">※この記事には広告・アフィリエイトリンクを含む場合があります。
+</code></pre>
+<p>これは、読者の信頼を守るためにも重要です。</p>
+<hr />
+<h2 id="github-pages_3">GitHub Pagesで作る場合の手順</h2>
+<p>ここでは、GitHub Pagesで無料サイトを作る大まかな流れを整理します。</p>
+<pre><code class="language-text">1. GitHubアカウントを用意する
+2. 新しいリポジトリを作る
+3. docsフォルダを作る
+4. index.mdを作る
+5. profile.mdを作る
+6. disclosure.mdを作る
+7. 記事を3本程度作る
+8. GitHub Pagesの公開元を設定する
+9. 公開URLを確認する
+10. Search Consoleに登録する
+11. ASP登録へ進む
+</code></pre>
+<p>最初からデザインにこだわる必要はありません。</p>
+<p>まずは、読者に役立つ記事が存在し、サイトの目的が分かる状態にします。</p>
+<hr />
+<h2 id="ubuntu">Ubuntuで作業する場合のコマンド例</h2>
+<p>Ubuntuで作業フォルダを作る場合は、次のような流れになります。</p>
+<pre><code class="language-bash">mkdir -p /home/ubun/Documents/data/affiliate-free-ops/03_Site/docs
+cd /home/ubun/Documents/data/affiliate-free-ops/03_Site/docs
+
+mkdir -p local-ai affiliate ai-sidejob tools
+
+touch index.md
+touch profile.md
+touch disclosure.md
+touch affiliate/github-pages-affiliate.md
+touch affiliate/free-asp-compare.md
+touch local-ai/ubuntu-local-ai.md
+touch ai-sidejob/pc-server-tools.md
+</code></pre>
+<p>この段階では、まだ公開せず、ローカルで記事を作るだけでも構いません。</p>
+<p>記事がある程度そろってから、GitHubリポジトリへ反映します。</p>
+<hr />
+<h2 id="github">GitHubリポジトリの作り方</h2>
+<p>GitHub上で新しいリポジトリを作ります。</p>
+<p>リポジトリ名は、分かりやすい名前にします。</p>
+<p>例：</p>
+<pre><code class="language-text">affiliate-free-ops
+local-ai-affiliate-note
+ai-sidejob-lab
+</code></pre>
+<p>GitHub PagesのURLは、通常、次のような形になります。</p>
+<pre><code class="language-text">https://ユーザー名.github.io/リポジトリ名/
+</code></pre>
+<p>すでにGitHub Pagesを使っている場合は、同じGitHubアカウント内に新しいリポジトリを作って、プロジェクトサイトとして公開できます。</p>
+<hr />
+<h2 id="github-pages_4">GitHub Pagesの公開元を設定する</h2>
+<p>GitHub Pagesでは、どのブランチ・どのフォルダを公開するかを設定します。</p>
+<p>無料運用では、まず次の設定が分かりやすいです。</p>
+<pre><code class="language-text">Branch: main
+Folder: /docs
+</code></pre>
+<p>この場合、<code>main</code> ブランチの <code>/docs</code> フォルダ内にあるファイルが公開対象になります。</p>
+<p>そして、<code>docs_index.md</code> がトップページになります。</p>
+<p>変更を反映したあと、数分待つと公開URLで確認できるようになります。</p>
+<p>反映に少し時間がかかる場合があるため、すぐに表示されなくても慌てず確認します。</p>
+<hr />
+<h2 id="_8">最初に入れる記事</h2>
+<p>GitHub Pagesサイトを作ったら、最初に次の記事を入れると流れが作りやすいです。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">優先</th>
+<th>記事タイトル</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>50代からUbuntuでローカルAI環境を作ってみた</td>
+<td>体験・信頼形成</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>AI副業を始めるために必要なPC・サーバー・ツール</td>
+<td>準備物の整理</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>GitHub Pagesで無料アフィリエイトサイトを作る方法</td>
+<td>無料公開の中核</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>無料で始めるアフィリエイトASP比較</td>
+<td>登録導線</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>OllamaとOpen WebUIでできること・できないこと</td>
+<td>ローカルAI解説</td>
+</tr>
+</tbody>
+</table>
+<p>この5本があると、サイトの方向性が伝わります。</p>
+<p>さらに、A8.net、もしもアフィリエイト、楽天アフィリエイトなどの登録導線も作りやすくなります。</p>
+<hr />
+<h2 id="asp">ASP登録への導線</h2>
+<p>GitHub Pagesでサイトを作ったら、次にASP登録へ進みます。</p>
+<p>ただし、サイトを作った直後に広告リンクだけを貼るのはおすすめしません。</p>
+<p>まずは、次の状態を目指します。</p>
+<pre><code class="language-text">トップページがある
+プロフィールページがある
+広告表記ページがある
+記事が3〜5本ある
+サイトのテーマが分かる
+誇大表現がない
+個人情報が公開されていない
+</code></pre>
+<p>そのうえで、ASP登録へ進みます。</p>
+<p>初期候補は次の3つです。</p>
+<table>
+<thead>
+<tr>
+<th>ASP</th>
+<th>向いているもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>楽天アフィリエイト</td>
+<td>PC用品、書籍、日用品</td>
+</tr>
+<tr>
+<td>もしもアフィリエイト</td>
+<td>Amazon・楽天系商品リンク</td>
+</tr>
+<tr>
+<td>A8.net</td>
+<td>サーバー、学習サービス、ツール系</td>
+</tr>
+</tbody>
+</table>
+<p>最初は、楽天やもしもで書籍やPC周辺機器を自然に紹介し、A8.netでサーバーや学習サービスなどの案件を探す流れが分かりやすいです。</p>
+<hr />
+<h2 id="a8net">A8.netへのつなげ方</h2>
+<p>A8.netは、サービス系や高単価案件を探すときに使いやすいASPです。</p>
+<p>GitHub Pagesの記事からA8.netにつなげる場合は、次の流れが自然です。</p>
+<pre><code class="language-text">無料でサイトを作る
+↓
+記事が3〜5本できる
+↓
+広告表記ページを作る
+↓
+A8.netでサイトテーマに合う案件を探す
+↓
+サーバー、学習サービス、ツール系案件を確認する
+↓
+自分の記事内容に合うものだけ紹介する
+</code></pre>
+<p>たとえば、次のような記事からA8.netへつなげられます。</p>
+<ul>
+<li>AI副業を始めるために必要なPC・サーバー・ツール</li>
+<li>WordPressを使わず無料で副業サイトを作る方法</li>
+<li>無料サイトからWordPressへ移行するタイミング</li>
+<li>noteとブログを組み合わせて収益導線を作る方法</li>
+<li>無料で始めるアフィリエイトASP比較</li>
+</ul>
+<p>CTAの文言は、強く売り込まず、次のようにします。</p>
+<pre><code class="language-text">ブログや無料サイトに合うサービス案件を探したい方は、A8.netで自分のテーマに合う広告があるか確認してみるとよいです。
+</code></pre>
+<hr />
+<h2 id="_9">もしもアフィリエイトへのつなげ方</h2>
+<p>もしもアフィリエイトは、Amazonや楽天の商品リンクをまとめて使いたいときに便利です。</p>
+<p>GitHub Pagesの記事からもしもアフィリエイトにつなげる場合は、次の流れが自然です。</p>
+<pre><code class="language-text">UbuntuやAI環境構築の記事を書く
+↓
+実際に必要だったものをリスト化する
+↓
+外付けSSD、USBメモリ、本、PC周辺機器を紹介する
+↓
+もしもアフィリエイトの商品リンク候補にする
+↓
+クリック数や成果を確認する
+</code></pre>
+<p>相性がよい記事は次のとおりです。</p>
+<ul>
+<li>50代からUbuntuでローカルAI環境を作ってみた</li>
+<li>AI副業を始めるために必要なPC・サーバー・ツール</li>
+<li>Ubuntu初心者がAI環境構築でつまずいたこと10選</li>
+<li>ローカルAIに必要なPC環境を考える</li>
+<li>50代からAIを学び直すために読んだ本</li>
+</ul>
+<p>CTAの文言は、次のようにします。</p>
+<pre><code class="language-text">Amazonや楽天の商品リンクをまとめて作りたい場合は、もしもアフィリエイトも確認しておくと便利です。
+</code></pre>
+<hr />
+<h2 id="_10">楽天アフィリエイトへのつなげ方</h2>
+<p>楽天アフィリエイトは、楽天市場の商品を紹介しやすいASPです。</p>
+<p>GitHub Pagesの記事から楽天アフィリエイトにつなげる場合は、次の流れが自然です。</p>
+<pre><code class="language-text">実体験記事を書く
+↓
+記事末尾に「今回使ったもの・検討したもの」を置く
+↓
+楽天市場で該当商品を探す
+↓
+楽天アフィリエイトリンクを作成する
+↓
+記事内またはSNSで紹介する
+</code></pre>
+<p>相性がよい商品は次のとおりです。</p>
+<ul>
+<li>USBメモリ</li>
+<li>外付けSSD</li>
+<li>Linux入門書</li>
+<li>AI入門書</li>
+<li>キーボード</li>
+<li>モニター</li>
+<li>PCスタンド</li>
+<li>作業環境用品</li>
+<li>学び直し関連本</li>
+</ul>
+<p>CTAの文言は、次のようにします。</p>
+<pre><code class="language-text">楽天市場で普段使っている商品や学習本を紹介したい場合は、楽天アフィリエイトから始めるのも分かりやすいです。
+</code></pre>
+<p>商品リンクだけを並べるのではなく、「なぜそれが必要だったのか」「どの作業で役立つのか」「どんな人には不要か」を書くことが大切です。</p>
+<hr />
+<h2 id="_11">記事内リンクの設計</h2>
+<p>GitHub Pagesサイトでは、内部リンクを意識します。</p>
+<p>たとえば、この記事から次のようにリンクします。</p>
+<pre><code class="language-text">GitHub Pagesで無料アフィリエイトサイトを作る方法
+↓
+無料で始めるアフィリエイトASP比較
+↓
+AI副業を始めるために必要なPC・サーバー・ツール
+↓
+50代からUbuntuでローカルAI環境を作ってみた
+</code></pre>
+<p>記事同士がつながると、読者がサイト内を回遊しやすくなります。</p>
+<p>また、Google検索にも、サイトの構造が伝わりやすくなります。</p>
+<p>最初は記事末尾に「関連記事」としてリンクを置くだけでも十分です。</p>
+<hr />
+<h2 id="notex">noteとXの使い方</h2>
+<p>GitHub Pagesだけで集客するのは、最初は難しいです。</p>
+<p>そこで、noteとXを使います。</p>
+<h3 id="note">noteの役割</h3>
+<p>noteでは、検索記事というより、体験談や読み物を書きます。</p>
+<p>例：</p>
+<ul>
+<li>50代からAI副業を始めようと思った理由</li>
+<li>UbuntuでローカルAI環境を作ってみた話</li>
+<li>AIに聞きながら作業したら、手順を覚えていなかった話</li>
+<li>無料でアフィリエイトサイトを作る実験を始めた話</li>
+</ul>
+<p>note記事の最後に、GitHub Pagesの記事へリンクします。</p>
+<h3 id="x">Xの役割</h3>
+<p>Xでは、記事の要点を短く投稿します。</p>
+<p>例：</p>
+<pre><code class="language-text">有料サーバーなしでアフィリエイトサイトを作る実験を始めました。
+
+使うもの：
+・GitHub Pages
+・Obsidian
+・Markdown
+・AI下書き
+・note
+・ASP
+
+まずは無料で小さく始めて、反応を見ながら改善します。
+</code></pre>
+<p>Xは、記事の反応を確認する場所として使います。</p>
+<hr />
+<h2 id="github-pages_5">GitHub Pages運用で注意すること</h2>
+<p>GitHub Pagesでアフィリエイトサイトを作る場合、次の点に注意します。</p>
+<h3 id="1">1. 個人情報を入れない</h3>
+<p>公開リポジトリで運用する場合、ファイルは外部から見えるものとして扱います。</p>
+<p>次の情報は絶対に入れないようにします。</p>
+<ul>
+<li>住所</li>
+<li>電話番号</li>
+<li>本名を出したくない場合の本名</li>
+<li>銀行口座情報</li>
+<li>ASPの管理画面情報</li>
+<li>ログインID</li>
+<li>パスワード</li>
+<li>APIキー</li>
+<li>秘密のメモ</li>
+<li>未公開の個人情報</li>
+</ul>
+<p>特に、AIエージェントにファイルを作らせる場合は、公開フォルダに個人情報が混ざらないように注意します。</p>
+<h3 id="2">2. 広告表記を忘れない</h3>
+<p>アフィリエイトリンクを含む記事には、広告・アフィリエイトリンクを含むことを明記します。</p>
+<p>読者が広告だと分かる場所に書くことが重要です。</p>
+<h3 id="3">3. 誇大表現をしない</h3>
+<p>次のような表現は避けます。</p>
+<ul>
+<li>必ず稼げる</li>
+<li>誰でも簡単に月〇万円</li>
+<li>完全放置で収益化</li>
+<li>これだけで稼げる</li>
+<li>絶対おすすめ</li>
+<li>公式より安いと断定</li>
+<li>買わないと損</li>
+</ul>
+<p>アフィリエイト記事では、読者に冷静に判断してもらえる書き方が必要です。</p>
+<h3 id="4">4. 商品情報を放置しない</h3>
+<p>価格、仕様、キャンペーン、成果条件は変わります。</p>
+<p>記事に書いた情報が古くならないように、定期的に確認します。</p>
+<h3 id="5-github-pages">5. GitHub Pagesの制約を理解する</h3>
+<p>GitHub Pagesは静的サイト向けです。</p>
+<p>WordPressのような管理画面や動的機能はありません。</p>
+<p>できることとできないことを理解して使う必要があります。</p>
+<hr />
+<h2 id="aihermes-agent">AIとHermes Agentで自動化できること</h2>
+<p>GitHub Pages運用は、AIやHermes Agentと相性がよいです。</p>
+<p>たとえば、次の作業は自動化しやすいです。</p>
+<ul>
+<li>記事案の作成</li>
+<li>記事下書き作成</li>
+<li>Markdown整形</li>
+<li>FAQ作成</li>
+<li>関連記事候補の作成</li>
+<li>内部リンク候補の作成</li>
+<li>広告表記漏れチェック</li>
+<li>誇大表現チェック</li>
+<li>公開前チェックリスト作成</li>
+<li>Search Console CSVの分析</li>
+<li>ASP案件候補の整理</li>
+<li>週次改善レポート作成</li>
+</ul>
+<p>一方で、次の作業は自動化しない方が安全です。</p>
+<ul>
+<li>記事の本番公開</li>
+<li>広告リンクの初回掲載</li>
+<li>ASP登録フォームの送信</li>
+<li>規約同意</li>
+<li>銀行口座情報の入力</li>
+<li>パスワード管理</li>
+<li>提携申請の最終送信</li>
+<li>記事削除</li>
+</ul>
+<p>AIには下書きと改善案を任せ、最終判断は人間が行う。</p>
+<p>この分担が安全です。</p>
+<hr />
+<h2 id="hermes-agent">Hermes Agentに任せる作業例</h2>
+<p>Hermes Agentには、次のような指示を出せます。</p>
+<pre><code class="language-text">GitHub Pages用の記事下書きを作成してください。
+保存先は 02_Articles/drafts/ としてください。
+広告リンクを含む場合は、冒頭に広告表記を入れてください。
+公開は行わないでください。
+広告リンクの初回挿入は人間承認にしてください。
+個人情報、APIキー、ログイン情報が含まれていないか確認してください。
+</code></pre>
+<p>また、週次改善では次のような指示が使えます。</p>
+<pre><code class="language-text">Search ConsoleのCSVを確認し、表示回数があるのにCTRが低い記事を抽出してください。
+タイトル改善案、メタ説明改善案、内部リンク改善案を作成してください。
+記事削除は行わず、リライト候補として整理してください。
+</code></pre>
+<p>このように、AIには作業補助を任せ、公開や削除は人間承認にします。</p>
+<hr />
+<h2 id="github-pages_6">GitHub Pagesで始めるメリット</h2>
+<p>GitHub Pagesで無料アフィリエイトサイトを始めるメリットは、次のとおりです。</p>
+<ul>
+<li>初期費用を抑えられる</li>
+<li>有料サーバーが不要</li>
+<li>Markdownで記事を書ける</li>
+<li>Obsidianと相性がよい</li>
+<li>GitHubで履歴管理できる</li>
+<li>静的サイトなので構成がシンプル</li>
+<li>AIエージェントがファイル単位で扱いやすい</li>
+<li>noteやXからリンクしやすい</li>
+<li>小さく実験しやすい</li>
+</ul>
+<p>特に、無料でAI副業を始めたい人にとって、固定費を増やさずに試せる点は大きなメリットです。</p>
+<hr />
+<h2 id="github-pages_7">GitHub Pagesで始めるデメリット</h2>
+<p>一方で、デメリットもあります。</p>
+<ul>
+<li>WordPressのような管理画面がない</li>
+<li>デザイン変更に少し知識が必要</li>
+<li>コメント機能が標準ではない</li>
+<li>動的な機能は苦手</li>
+<li>サーバーサイド処理はできない</li>
+<li>初心者にはGit操作が難しく感じる</li>
+<li>ASPや広告主によっては媒体審査で確認が必要</li>
+<li>本格運用では独自ドメインやWordPressを検討したくなる可能性がある</li>
+</ul>
+<p>つまり、GitHub Pagesは「無料で始める実験サイト」としては優秀ですが、すべてに向いているわけではありません。</p>
+<p>本格的に収益化できる見込みが出たら、WordPressや独自ドメインへ移行する選択肢もあります。</p>
+<hr />
+<h2 id="_12">有料サーバーへ移行するタイミング</h2>
+<p>最初から有料サーバーを契約する必要はありません。</p>
+<p>ただし、次のような状態になったら、WordPressや有料サーバーを検討してもよいです。</p>
+<ul>
+<li>記事が30本以上になった</li>
+<li>検索流入が増えてきた</li>
+<li>アフィリエイト成果が出始めた</li>
+<li>デザインを細かく調整したい</li>
+<li>広告配置を本格化したい</li>
+<li>独自ドメインで運営したい</li>
+<li>メールマガジンやLPを作りたい</li>
+<li>WordPressプラグインを使いたい</li>
+</ul>
+<p>流れとしては、次の順番が安全です。</p>
+<pre><code class="language-text">GitHub Pagesで無料検証
+↓
+記事を増やす
+↓
+Search Consoleで反応を見る
+↓
+ASP成果を確認する
+↓
+収益導線が見えたら有料サーバーを検討
+</code></pre>
+<p>この順番なら、無駄な固定費を避けられます。</p>
+<hr />
+<h2 id="_13">この方法が向いている人</h2>
+<p>GitHub Pagesでの無料アフィリエイト運用は、次のような人に向いています。</p>
+<ul>
+<li>初期費用をかけたくない人</li>
+<li>WordPressの前に小さく試したい人</li>
+<li>UbuntuやLinuxに興味がある人</li>
+<li>Markdownで記事を書きたい人</li>
+<li>Obsidianにメモをためている人</li>
+<li>AIに記事下書きを作らせたい人</li>
+<li>自分の体験を記事化したい人</li>
+<li>noteやXと組み合わせて発信したい人</li>
+<li>50代からAI副業を試したい人</li>
+</ul>
+<hr />
+<h2 id="_14">この方法が向いていない人</h2>
+<p>一方で、次のような人には向いていないかもしれません。</p>
+<ul>
+<li>コマンド操作をまったくしたくない人</li>
+<li>WordPressの管理画面に慣れている人</li>
+<li>デザインを細かく作り込みたい人</li>
+<li>会員サイトを作りたい人</li>
+<li>コメント機能を重視したい人</li>
+<li>すぐに本格的な収益化をしたい人</li>
+<li>独自ドメインでブランドを作りたい人</li>
+</ul>
+<p>GitHub Pagesは、あくまで無料で小さく始めるための方法です。</p>
+<p>目的に合わなくなったら、WordPressや独自ドメインへ移行すればよいです。</p>
+<hr />
+<h2 id="_15">最初の公開前チェックリスト</h2>
+<p>公開前には、次を確認します。</p>
+<pre><code class="language-text">トップページがある
+プロフィールページがある
+広告・アフィリエイト表記ページがある
+記事が3本以上ある
+記事冒頭に広告表記がある
+個人情報が含まれていない
+APIキーやパスワードが含まれていない
+誇大表現がない
+内部リンクがある
+スマホで読みにくくない
+リンク切れがない
+ASP登録用のサイト説明文がある
+</code></pre>
+<p>このチェックリストを通してから、ASP登録や広告リンク掲載に進みます。</p>
+<hr />
+<h2 id="_16">まとめ</h2>
+<p>アフィリエイトを始めるとき、最初から有料サーバーやWordPressに進む必要はありません。</p>
+<p>まずはGitHub Pagesを使って、無料で小さな実験サイトを作る方法があります。</p>
+<p>特に、Ubuntu、ローカルAI、Obsidian、Hermes Agent、note運用のようなテーマは、Markdownで整理しやすく、GitHub Pagesとの相性がよいです。</p>
+<p>最初の目標は、大きく稼ぐことではありません。</p>
+<p>まずは、次の流れを作ることです。</p>
+<pre><code class="language-text">体験する
+↓
+記録する
+↓
+記事にする
+↓
+無料で公開する
+↓
+ASPに登録する
+↓
+必要なものだけ紹介する
+↓
+反応を見て改善する
+</code></pre>
+<p>この流れができれば、無料でもアフィリエイト運用を始められます。</p>
+<p>そして、記事が増え、読者の反応が見えてきた段階で、WordPressや独自ドメイン、有料ツールを検討すればよいと思います。</p>
+<hr />
+<h2 id="faq">FAQ</h2>
+<h3 id="q1-github-pages">Q1. GitHub Pagesだけでアフィリエイトはできますか？</h3>
+<p>できます。</p>
+<p>ただし、各ASPや広告主の規約、広告掲載ルールを確認する必要があります。</p>
+<p>また、広告であることが分かる表記を入れることも大切です。</p>
+<h3 id="q2-wordpress">Q2. WordPressを使わないと不利ですか？</h3>
+<p>最初は不利とは限りません。</p>
+<p>WordPressは便利ですが、費用や管理の手間もあります。</p>
+<p>無料で小さく始めるなら、GitHub Pagesでも十分に実験できます。</p>
+<h3 id="q3-asp">Q3. 何記事くらい作ってからASPに登録すればよいですか？</h3>
+<p>ASPごとに条件は異なります。</p>
+<p>実務上は、プロフィール、広告表記ページ、記事3〜5本程度を用意してから登録すると安心です。</p>
+<h3 id="q4-github-pages">Q4. GitHub Pagesで広告リンクを貼ってもよいですか？</h3>
+<p>ASPや広告主の規約に合っていれば掲載できます。</p>
+<p>ただし、広告リンクを含む場合は、広告・アフィリエイトリンクを含むことを分かりやすく表示します。</p>
+<h3 id="q5-ai">Q5. AIで記事を自動生成して公開してもよいですか？</h3>
+<p>下書き作成にAIを使うのは便利です。</p>
+<p>ただし、公開前には人間が必ず確認するべきです。</p>
+<p>特に、広告表記、商品情報、価格、成果条件、誇大表現には注意が必要です。</p>
+<h3 id="q6-github-pagesurlasp">Q6. GitHub PagesのURLでASP登録できますか？</h3>
+<p>ASPや広告主の条件によります。</p>
+<p>GitHub Pages、note、ブログ、SNSなどを媒体として登録できる場合がありますが、必ず各ASPの最新条件を確認してください。</p>
+<h3 id="q7">Q7. 有料サーバーへ移行するべきタイミングはいつですか？</h3>
+<p>記事数が増え、検索流入やアフィリエイト成果が見え始めた段階で検討すればよいです。</p>
+<p>最初から固定費をかけず、無料で検証してから判断するのがおすすめです。</p>
+<hr />
+<h2 id="_17">内部リンク候補</h2>
+<ul>
+<li>50代からUbuntuでローカルAI環境を作ってみた</li>
+<li>AI副業を始めるのために必要なPC・サーバー・ツール</li>
+<li>OllamaとOpen WebUIでできること・できないこと</li>
+<li>Hermes AgentでObsidianを外部脳にする方法</li>
+<li>無料で始めるアフィリエイトASP比較</li>
+<li>AI記事作成でやってはいけないこと</li>
+<li>WordPressを使わず無料で副業サイトを作る方法</li>
+</ul>
+<hr />
+<h2 id="_18">公開前確認メモ</h2>
+<ul>
+<li>GitHub Pagesの最新利用条件</li>
+<li>GitHub Pagesの公開元設定</li>
+<li>GitHub Pagesで使えるファイル形式</li>
+<li>GitHub Pagesの制限事項</li>
+<li>ASPごとの広告掲載ルール</li>
+<li>広告・アフィリエイト表記</li>
+<li>ステルスマーケティング規制への対応</li>
+<li>公開リポジトリに個人情報が含まれていないか</li>
+<li>APIキー、パスワード、口座情報が含まれていないか</li>
+<li>各広告リンクの動作確認</li>
+</ul>
+<hr />
+<h2 id="_19">広告リンク管理メモ</h2>
+<ul>
+<li>楽天アフィリエイト: 書籍、PC用品、作業環境用品候補</li>
+<li>もしもアフィリエイト: Amazon・楽天系商品リンク候補</li>
+<li>A8.net: サーバー、学習サービス、制作ツール候補</li>
+<li>広告リンク挿入: 人間確認後</li>
+<li>最終確認日: 未設定</li>
+<li>注意: 「無料で必ず稼げる」「完全自動で収益化」などの表現は禁止</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

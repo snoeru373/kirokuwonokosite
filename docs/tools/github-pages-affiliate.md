@@ -44,7 +44,7 @@ cd kirokuwonokosite
 - GoogleサイトVerificationのmetaタグをHTMLヘッダに追加する
 
 ## まとめ
-WordPressより簡単で、無料ですぐ始められます。詳しくは[Thirty-Day Roadmap](../thirty-day-roadmap-overview.md) にも公開手順があります！
+WordPressより簡単で、無料ですぐ始められます。公開手順の詳細は初期の記事10本ガイドを参照して！
 
 
 ---
