@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Ubuntu上でOllamaとOpen WebUIをインストールし、50代が実際に試して分かった「できること」「できないこと」を実体験ベースで解説します。">
+        <meta name="description" content="Ubuntu環境でOllamaとOpen WebUIを構築し、50代が実際に試して分かった「できること」「できないこと」を実体験ベースで解説。ブラウザから使う手順と注意点を一覧付きで紹介。">
       
       
       
@@ -27,7 +27,7 @@
     
     
       
-        <title>OllamaとOpen WebUIでできること・できないこと — 50代の実体験で解説 - 50代からのローカルAI実践ノート</title>
+        <title>【2026年版】OllamaとOpen WebUIの比較 — ローカルAIをブラウザから使う方法と注意点を50代がレビュー - 50代からのローカルAI実践ノート</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2" class="md-skip">
+        <a href="#2026ollamaopen-webui-ai50" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OllamaとOpen WebUIでできること・できないこと — 50代の実体験で解説
+              【2026年版】OllamaとOpen WebUIの比較 — ローカルAIをブラウザから使う方法と注意点を50代がレビュー
             
           </span>
         </div>
@@ -514,7 +514,7 @@
     
   
   
-    <span class="md-status md-status--draft"></span>
+    <span class="md-status md-status--published"></span>
   
 
   
@@ -539,7 +539,7 @@
     
   
   
-    <span class="md-status md-status--draft"></span>
+    <span class="md-status md-status--published"></span>
   
 
   
@@ -565,18 +565,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💡 この記事を公開する理由（笔者視点）
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tldr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TL;DR（結論）
+        この記事を公開する理由
       
     </span>
   </a>
@@ -587,7 +576,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        読者の悩み
+        読者の悩み（よくある質問）
       
     </span>
   </a>
@@ -598,7 +587,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ターゲットユーザー（ユーザー別ニーズ）
+        ターゲットユーザーの特徴
       
     </span>
   </a>
@@ -606,10 +595,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#tldr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        できること / できないこと一覧
+        TL;DR（できること／できないこと一覧）
       
     </span>
   </a>
@@ -617,15 +606,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#ollamaopen-webui" class="md-nav__link">
     <span class="md-ellipsis">
       
-        やり方・手順の詳細
+        やり方：OllamaとOpen WebUIの構築手順
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="やり方・手順の詳細">
+    <nav class="md-nav" aria-label="やり方：OllamaとOpen WebUIの構築手順">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -654,7 +643,7 @@
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ステップ3 — 実際に使ってみて分かったこと
+        ステップ3 — 実際に使ってみて分かったこと（筆者体験）
       
     </span>
   </a>
@@ -667,10 +656,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        おすすめする人 / おすすめしない人
+        おすすめする人／おすすめしない人
       
     </span>
   </a>
@@ -717,7 +706,118 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        まとめ（最後に一言）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        やり方・手順の詳細
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="やり方・手順の詳細">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ollama_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ステップ1 — Ollamaのインストール
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-open-webui_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ステップ2 — Open WebUIとの連携
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ステップ3 — 実際に使ってみて分かったこと
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        おすすめする人 / おすすめしない人
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-ollama_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. Ollamaは無料ですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-pc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. どんなPCなら動きますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         まとめ（最後に一言）
@@ -1072,18 +1172,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💡 この記事を公開する理由（笔者視点）
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tldr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TL;DR（結論）
+        この記事を公開する理由
       
     </span>
   </a>
@@ -1094,7 +1183,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        読者の悩み
+        読者の悩み（よくある質問）
       
     </span>
   </a>
@@ -1105,7 +1194,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ターゲットユーザー（ユーザー別ニーズ）
+        ターゲットユーザーの特徴
       
     </span>
   </a>
@@ -1113,10 +1202,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#tldr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        できること / できないこと一覧
+        TL;DR（できること／できないこと一覧）
       
     </span>
   </a>
@@ -1124,15 +1213,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#ollamaopen-webui" class="md-nav__link">
     <span class="md-ellipsis">
       
-        やり方・手順の詳細
+        やり方：OllamaとOpen WebUIの構築手順
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="やり方・手順の詳細">
+    <nav class="md-nav" aria-label="やり方：OllamaとOpen WebUIの構築手順">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1161,7 +1250,7 @@
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ステップ3 — 実際に使ってみて分かったこと
+        ステップ3 — 実際に使ってみて分かったこと（筆者体験）
       
     </span>
   </a>
@@ -1174,10 +1263,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        おすすめする人 / おすすめしない人
+        おすすめする人／おすすめしない人
       
     </span>
   </a>
@@ -1224,7 +1313,118 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        まとめ（最後に一言）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        やり方・手順の詳細
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="やり方・手順の詳細">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ollama_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ステップ1 — Ollamaのインストール
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-open-webui_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ステップ2 — Open WebUIとの連携
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ステップ3 — 実際に使ってみて分かったこと
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        おすすめする人 / おすすめしない人
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-ollama_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. Ollamaは無料ですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-pc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. どんなPCなら動きますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         まとめ（最後に一言）
@@ -1254,30 +1454,22 @@
   
 
 
-<h1 id="2">【2】タイトル（記事構成案）</h1>
-<p><strong>タイトル</strong>: 「OllamaとOpen WebUIでできること・できないこと — 50代の実体験で解説」
-<strong>スラッグ</strong>: <code>ollama-open-webui-can-cannot</code>
-<strong>ステータス</strong>: <code>draft</code> (下書き)
-<strong>アフィリエイトリンク有無</strong>: なし</p>
-<hr />
-<h2 id="_1">💡 この記事を公開する理由（笔者視点）</h2>
+<h1 id="2026ollamaopen-webui-ai50">【2026年版】OllamaとOpen WebUIの比較 — ローカルAIをブラウザから使う方法と注意点を50代がレビュー</h1>
+<p>※この記事には広告・アフィリエイトリンクを含む場合があります。</p>
 <blockquote>
+<p><strong>結論</strong>: Ollamaはコマンドラインから、Open WebUIはブラウザのチャットUIからAIモデルを動かせる無料ツールです。7B〜13Bパラメータのモデルなら個人PCでも十分実用できます。ただし400GB以上のファイル処理やリアルタイム検索には不向きです。</p>
+</blockquote>
+<h2 id="_1">この記事を公開する理由</h2>
 <p><strong>狙いキーワード</strong>: ollama 使い方, Open WebUI ローカルAI
-<strong>検索意図</strong>: OllamaとOpen WebUIで何ができるのか知りたい。無料なのか？ハードルは？
+<strong>検索意図</strong>: OllamaとOpen WebUIで何ができるのか知りたい、無料か？ハードルは？
 <strong>差別化</strong>: 50代が実際に使った体験ベース。「できること」「できないこと」を明確に区別</p>
-</blockquote>
-<h2 id="tldr">TL;DR（結論）</h2>
-<blockquote>
-<p>Ollamaはコマンドラインから、Open WebUIはブラウザのチャットUIからAIモデルを動かせる無料ツール。
-7B〜13Bパラメータのモデルなら個人PCでも十分実用できます。ただし400GB以上のファイル処理やリアルタイム検索には不向きです。</p>
-</blockquote>
-<h2 id="_2">読者の悩み</h2>
+<h2 id="_2">読者の悩み（よくある質問）</h2>
 <ol>
 <li>Ollamaが無料で使えるのは本当か？</li>
 <li>ブラウザから簡単にAIを使えるようになるのか？</li>
 <li>自分のPCのスペックで作れるか不安</li>
 </ol>
-<h2 id="_3">ターゲットユーザー（ユーザー別ニーズ）</h2>
+<h2 id="_3">ターゲットユーザーの特徴</h2>
 <table>
 <thead>
 <tr>
@@ -1300,7 +1492,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_4">できること / できないこと一覧</h2>
+<h2 id="tldr">TL;DR（できること／できないこと一覧）</h2>
 <table>
 <thead>
 <tr>
@@ -1337,7 +1529,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_5">やり方・手順の詳細</h2>
+<h2 id="ollamaopen-webui">やり方：OllamaとOpen WebUIの構築手順</h2>
 <h3 id="1-ollama">ステップ1 — Ollamaのインストール</h3>
 <pre><code class="language-bash"># 公式サイトからインストーラーを取得
 curl -fsSL https://ollama.com/install.sh | sh
@@ -1346,6 +1538,65 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama pull llama3.1
 </code></pre>
 <h3 id="2-open-webui">ステップ2 — Open WebUIとの連携</h3>
+<p>Dockerを使わない場合:</p>
+<pre><code class="language-bash">pip install open-webui
+open-webui serve --port 8080
+</code></pre>
+<p>Dockerを使う場合（推奨）:</p>
+<pre><code class="language-bash">docker run -d -p 3000:8080 \
+  --add-host=host.docker.internal:host-gateway \
+  -v open-webui:/root/.open-webui \
+  --name open-webui \
+  ghcr.io/open-webui/open-webui:main
+</code></pre>
+<p>ブラウザで <code>localhost:3000</code> を開くとチャットUIが起動します。</p>
+<h3 id="3">ステップ3 — 実際に使ってみて分かったこと（筆者体験）</h3>
+<ul>
+<li>プロンプト次第で良い回答が得られる。日本語でもそれなりに対応</li>
+<li>ドラッグ&amp;ドロップしたPDFの要約が便利。ただし300ページ以上は時間がかかる</li>
+<li>VRAM48GBあれば数秒以内に回答。VRAM8GBの場合は10〜30秒程度</li>
+<li>インターネット情報を拾うには別のツールが必要</li>
+</ul>
+<h2 id="_4">おすすめする人／おすすめしない人</h2>
+<table>
+<thead>
+<tr>
+<th>詳細</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ おすすめ</td>
+<td>ローカルAIを試してみたい方、プライバシー重視の方</td>
+</tr>
+<tr>
+<td>❌ おすすめしない</td>
+<td>すぐ巨大なモデルを使いたい方、最新情報を拾ってほしい方</td>
+</tr>
+</tbody>
+</table>
+<h2 id="faq">FAQ</h2>
+<h3 id="q1-ollama">Q1. Ollamaは無料ですか？</h3>
+<p>A: はい。インストールと利用は無料です。クラウドAPIの利用料もかかりません。</p>
+<h3 id="q2-pc">Q2. どんなPCなら動きますか？</h3>
+<p>A: メモリ8GB以上でCPU推論可能です。VRAMがあればGPU加速で快適になります。</p>
+<h2 id="_5">まとめ（最後に一言）</h2>
+<blockquote>
+<p>この記事には広告・アフィリエイトリンクを含む場合があります。
+| チャットインターフェース | ✓ Open WebUIでブラウザから操作可能 | ✗ スマホアプリは未対応（PWAあり） |
+| API連携 | ✓ ローカルAPIとしてHTTPエンドポイントを公開 | ✗ クラウドのGPT-5級には及ばない |
+| カスタムモデル | ✓ 複数のモデルをインストール・切り替え可能 | ✗ 独自のモデル訓練は困難 |</p>
+</blockquote>
+<h2 id="_6">やり方・手順の詳細</h2>
+<h3 id="1-ollama_1">ステップ1 — Ollamaのインストール</h3>
+<pre><code class="language-bash"># 公式サイトからインストーラーを取得
+curl -fsSL https://ollama.com/install.sh | sh
+
+# モデルをダウンロード (例: Llama3.1 8B)
+ollama pull llama3.1
+</code></pre>
+<h3 id="2-open-webui_1">ステップ2 — Open WebUIとの連携</h3>
 <p>Dockerを使わない場合:</p>
 <pre><code class="language-bash"># pipでOpen WebUIをインストール
 pip install open-webui
@@ -1361,14 +1612,14 @@ open-webui serve --port 8080
   ghcr.io/open-webui/open-webui:main
 </code></pre>
 <p>ブラウザで <code>http://localhost:3000</code> を開くとチャットUIが起動します。</p>
-<h3 id="3">ステップ3 — 実際に使ってみて分かったこと</h3>
+<h3 id="3_1">ステップ3 — 実際に使ってみて分かったこと</h3>
 <ul>
 <li><strong>テキスト生成</strong>: プロンプト次第で良い回答が得られる。日本語でもそれなりに対応</li>
 <li><strong>ファイル処理</strong>: ドラッグ&amp;ドロップしたPDFの要約が便利。ただし300ページ以上は時間がかかる</li>
 <li><strong>速度</strong>: VRAM48GBあれば数秒以内に回答。VRAM8GBの場合は10〜30秒程度</li>
 <li><strong>リアルタイム検索</strong>: できません。インターネット情報を拾うには別のツールが必要</li>
 </ul>
-<h2 id="_6">おすすめする人 / おすすめしない人</h2>
+<h2 id="_7">おすすめする人 / おすすめしない人</h2>
 <table>
 <thead>
 <tr>
@@ -1387,12 +1638,12 @@ open-webui serve --port 8080
 </tr>
 </tbody>
 </table>
-<h2 id="faq">FAQ</h2>
-<h3 id="q1-ollama">Q1. Ollamaは無料ですか？</h3>
+<h2 id="faq_1">FAQ</h2>
+<h3 id="q1-ollama_1">Q1. Ollamaは無料ですか？</h3>
 <p>A: はい。インストールと利用は無料です。クラウドAPIの利用料もかかりません。</p>
-<h3 id="q2-pc">Q2. どんなPCなら動きますか？</h3>
+<h3 id="q2-pc_1">Q2. どんなPCなら動きますか？</h3>
 <p>A: メモリ8GB以上でCPU推論可能です。VRAMがあればGPU加速で快適になります。</p>
-<h2 id="_7">まとめ（最後に一言）</h2>
+<h2 id="_8">まとめ（最後に一言）</h2>
 <blockquote>
 <p>Ollama＋Open WebUIの組み合わせは「無料」「オフライン可能」「ブラウザ操作」という3つの利点を持っています。50代でもまずこれからです。</p>
 <p><strong>広告</strong>: この記事には広告・アフィリエイトリンクを含む場合があります。</p>
