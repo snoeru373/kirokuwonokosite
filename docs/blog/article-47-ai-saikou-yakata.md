@@ -1,7 +1,8 @@
 ---
 created: 2026-07-25
 tags: [AI活用, エージェント設計, AutoGen, AI組織, プロンプトエンジニアリング]
-status-affiliate-review_required: true
+status: published
+review_required: false
 title: AIを「右腕」から「従業員」へ――劇的に効率を上げる活用の3原則と5つの仕組み
 description: AIのポテンシャルを最大限に引き出す基礎的な活用方法と、AIを自律的に動く「従業員（組織）」として高度に運用する設計思想について。
 ---
