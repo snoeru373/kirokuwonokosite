@@ -5,7 +5,7 @@
 site_name: 50代からのローカルAI実践ノート
 site_description: Ubuntu + ローカルAI + note連携の等身大アフィリエイト実践記
 site_author: seoeru（しのえる）
-repo_url: https://github.com/seoeru/ai-practical-note
+repo_url: https://github.com/snoeru373/kirokuwonokosite
 
 theme:
   name: material
