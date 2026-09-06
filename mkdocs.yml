@@ -65,6 +65,7 @@ nav:
     - お知らせ:
       - article-disclosure-note: blog/article-disclosure-note.md
   - Wiki:
+    - 記事一覧: wiki/index.md
     - コンセプト:
       - ローカルLLMアーキテクチャ統合: wiki/concepts/local-ai-stack-overview.md
       - Ollama運用ガイドブック: wiki/concepts/ollama-operating-guidebook.md
