@@ -66,7 +66,6 @@ description: "50代からのローカルAI実践ノート。Ollama、Hermes Agen
 - [article-05 WordPress不要](blog/article-05-no-wordpress.md)
 - [article-07 ローカルvsクラウド比較](blog/article-07-local-cloud-comparison.md)
 - [article-10 無料ASP比較](blog/article-10-free-aspx-comparison.md)
-- [article-11 オープンデザイン/オープンコーサイン](blog/article-11-open-design-vs-open-codesign.md)
 - [メディア概要](blog/affiliate-media-overview.md)
 
 ### 設計思想
@@ -78,7 +77,6 @@ description: "50代からのローカルAI実践ノート。Ollama、Hermes Agen
 - [10 自己改善ループ概要](blog/10-self-improvement-loop-overview.md)
 - [30日間ロードマップ概要](blog/thirty-day-roadmap-overview.md)
 - [Ubuntu初期環境設定](blog/ubuntu-env-setup.md)
-- [コアデザイン vs オープンコーサイン解説](blog/open-design-vs-open-codesign.md)
 
 ---
 
