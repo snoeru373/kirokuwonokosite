@@ -1,0 +1,3628 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://snoeru373.github.io/kirokuwonokosite/blog/article-loop-08-ai-integration-design-v1/">
+      
+      
+        <link rel="prev" href="../article-loop-07-claude-design-open-tools/">
+      
+      
+        <link rel="next" href="../article-loop-10-afo-ai-engineering-v2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Brain3 × AI活用 統合設計書 v1 - 50代からのローカルAI実践ノート</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#brain3-ai-v1-loop7" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="50代からのローカルAI実践ノート" class="md-header__button md-logo" aria-label="50代からのローカルAI実践ノート" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            50代からのローカルAI実践ノート
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Brain3 × AI活用 統合設計書 v1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/snoeru373/kirokuwonokosite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="50代からのローカルAI実践ノート" class="md-nav__button md-logo" aria-label="50代からのローカルAI実践ノート" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    50代からのローカルAI実践ノート
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/snoeru373/kirokuwonokosite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ホーム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ブログ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ブログ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../initial-articles-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    記事一覧
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubuntu/AI構築関連
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ubuntu/AI構築関連
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-01-50-kara-ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-01 (Ubuntu+AI構築)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-02-ollama-open-webui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-02 (Ollama+Open WebUI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-09-ubuntu-start-mistakes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-09 (Ubuntu入門ミス)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ローカルAI/推論
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ローカルAI/推論
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ollama%E6%9C%80%E6%96%B0%E6%83%85%E5%A0%B12026%20%E2%80%94%20MLX%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E6%9B%B4%E6%96%B0%E3%80%81GPU%E4%BA%92%E6%8F%9B%E6%80%A7Calculator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-02 (Ollama最新情報)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026%E5%B9%B4%E4%B8%AD%E3%81%AE%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%ABLLM%E3%83%99%E3%83%B3%E3%83%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026年中のローカルLLMベンチマーク
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026%E5%B9%B4%E4%B8%AD%E3%81%AE%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%ABLLM%E6%8E%A8%E8%AB%96%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E6%AF%94%E8%BC%83%20%E2%80%94%20Ollama%E3%80%81vLLM%E3%80%81llama.cpp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    推論プラットフォーム比較
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent/Hermes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent/Hermes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hermes-Agent%20%E2%80%94%20Nous%20Research%E8%A3%BD%E8%87%AA%E5%BE%8B%E5%9E%8BAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hermes-Agent記事
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-03-hermes-agent-ob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-03 (Hermes Agent OB)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Obsidian%E3%81%A8%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%ABLLM%E9%80%A3%E6%90%BA%20%E2%80%94%20Local-LLM-Helper%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%81Llm-hub%E7%B5%B1%E5%90%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Obsidian連携
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop記事
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Loop記事
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-01-getting-started-with-loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 01 (ループ入門)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-02-3layer-memory-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 02 (3層メモリスタック)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-03-claude-code-45-tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 03 (Claude Code 45タスク)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-04-yukiyoshi-thinking-method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 04 ( Yukiyoshi思考法)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-05-notebooklm-32-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 05 (NotebookLM 32方法)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-06-us-stock-auto-trading-bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 06 (米国株自動取引BOT)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-07-claude-design-open-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 07 (Claudeデザイン/オープンツール)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 08 (AI統合設計v1)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 08 (AI統合設計v1)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-why-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 哲学的基盤 — Why: 何のためにAIと関わるのか
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. 哲学的基盤 — Why: 何のためにAIと関わるのか">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI活用の根底姿勢（又吉直樹式）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-engineering-prompt-exploring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt Engineering → Prompt Exploring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fast-slow-thinking-in-ai-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        遅い思考 — Fast &amp; Slow Thinking in AI Era
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        思考の最初と最後を人間に残す
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-how-ai-obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. コンセプト設計層 — How: AI + Obsidianを統合して何を作るのか
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. コンセプト設計層 — How: AI + Obsidianを統合して何を作るのか">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3つの基本要素
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3つの基本要素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loop-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ループの基本構造（loop-01から抜粋）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-1-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ループの実行パターン（LOOP #1-#7 の実績から）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-ai-what-brain3-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. AI活用パターン — What: Brain3 Vaultでどんなことができるか
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. AI活用パターン — What: Brain3 Vaultでどんなことができるか">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-hermes-agent-obsidian-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. スキル運用（Hermes Agent + Obsidian vault連携）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-notebooklm32-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. NotebookLM32活用法 × Claude Codeとの比較
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-claude-codeloop-06bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Claude Code活用パターン（loop-06の米国株Botで学んだもの）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. AIによる思考支援パターン（又吉式思考術から学んだもの）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-which" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. ツール比較・選び方 — Which: どう使い分けるか
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="D. ツール比較・選び方 — Which: どう使い分けるか">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        セクター別のツール選定マトリックス
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notebooklm-vs-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NotebookLM vs Claude Code の使い分けガイド
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-brain3-vault-wherehow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Brain3 Vaultでの実装例 — Where/How: 具体的にどう運用するか
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="E. Brain3 Vaultでの実装例 — Where/How: 具体的にどう運用するか">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brain3-vault-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain3 Vault × AI活用 の設計パターン
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-8raw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        loop #8の実行パターン（新着raw素材がある場合）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f-loop-the-meta-layer-loop-revisit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        F. Loopプロセスの統合 — The Meta-Layer: LOOPとは何か revisit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="F. Loopプロセスの統合 — The Meta-Layer: LOOPとは何か revisit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loop123-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LOOPの概念（第1,2,3, loopsで定着）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop2-loop-7loop-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LOOPの進化（第2回） — 最初の LOOP として構築、7回のLOOPを経て「統合設計書 v1」として再構成
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g-brain3-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        G. Brain3 Vaultでの適用可能性（実装例一覧）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#h-brain3-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H. Brain3 Vaultでの設計原則
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="H. Brain3 Vaultでの設計原則">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ルール：「AIが考える部分を人間が残す」という境界設計
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain3-vault-ai-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain3 Vault × AI活用 の5設計原則
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brain3-ai-v1-loop8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain3 × AI活用統合設計書 v1 LOOP#8
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Brain3 × AI活用統合設計書 v1 LOOP#8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loop-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LOOP #9への引き継ぎ情報
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-10-afo-ai-engineering-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 10 (AFO AIエンジニアリングv2)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-11-graph-engineering-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 11 (グラフエンジニアリング基礎)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-12-overseas-affiliate-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 12 (海外アフィリエイト戦略)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-13-loop-engineering-and-agent-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 13 (ループエンジニアリング/エージェントパターン)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-14-agent-design-all-layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 14 (エージェント設計全レイヤー)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-15-better-systems-than-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 15 (システムvsモデル)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-16-brain3-vault-operation-guide-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 16 (Brain3 Vault運用ガイドv2)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    アフィリエイト/戦略
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    アフィリエイト/戦略
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-05-no-wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-05 (WordPress不要)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-07-local-cloud-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-07 (ローカルvsクラウド比較)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-10-free-aspx-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-10 (無料ASP比較)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-11-open-design-vs-open-codesign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-11 (オープンデザイン/オープンコーサイン)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../affiliate-media-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    メディア概要
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    設計思想
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    設計思想
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-06-chatgpt-canva-note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-06 (ChatGPT+Canvaノート)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-08-ai-writing-mistakes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-08 (AI書き間違い)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-04-github-pages-website/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-04 (GitHub Pages Webサイト)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-self-improvement-loop-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自己改善ループ概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thirty-day-roadmap-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    30日間ロードマップ概要
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-env-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubuntu初期環境設定
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--archived_by_aging"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-design-vs-open-codesign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    コアデザインvsオープンコーサイン解説
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--superseded_by_article-11"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    お知らせ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    お知らせ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-disclosure-note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-disclosure-note
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wiki
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wiki
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    コンセプト
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    コンセプト
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/concepts/local-ai-stack-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ローカルLLMアーキテクチャ統合
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/concepts/ollama-operating-guidebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ollama運用ガイドブック
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ポリシー
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ポリシー
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/policies/advertising-rules-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    広告ルールv2
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/policies/blog-writing-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ブログ執筆ルール
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/policies/hermes-agent-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hermes Agentルール
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/policies/publishing-rules-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公開ルールv2
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    プロンプト
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    プロンプト
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/prompts/golden-hero-section-prompt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ゴールデンヒーローセクションプロンプト
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ツール
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ツール
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/tools/hardcore-local-agent-setup-guide-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ハードコアローカルエージェント構築ガイドv1
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/tools/local-ai-stack-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ローカルAI統合
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/tools/mkdocs-yml-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs YML例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="brain3-ai-v1-loop7">Brain3 × AI活用統合設計書 v1 — LOOP進化版（7記事統合）<a class="headerlink" href="#brain3-ai-v1-loop7" title="Permanent link">&para;</a></h1>
+<h2 id="a-why-ai">A. 哲学的基盤 — Why: 何のためにAIと関わるのか<a class="headerlink" href="#a-why-ai" title="Permanent link">&para;</a></h2>
+<h3 id="ai">AI活用の根底姿勢（又吉直樹式）<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>「天才」の定義：何でも知っている人ではなく、普通なら途中で面倒になって閉じる</strong>
+<strong>問いを閉じずに持ち続けられる人のことだ。</strong></p>
+</blockquote>
+<p>又吉直樹は夜ごとに約3時間、AIと対話し、<strong>答えを急がせない。作品を丸ごと書かせようともしない。AIから「問題」を出してもらい、自分で考え、反論し、別の角度から問い直し、言葉が意味を失う地点まで会話続ける。</strong></p>
+<p>また吉式思考の5つの動き：
+1. <strong>細部を拾う</strong> — テーブルに付いた輪ジミなど抽象的な問題は具体的な細部から立ち上げる
+2. <strong>すぐに意味を決めない</strong> — 「これは現代人の孤独」などとまとめず、偶然かもしれないと留める
+3. <strong>自分の外へ出る</strong> — 植物・アリ・宗教・経済・文学を視点を持ち込み最初の解釈を崩す
+4. <strong>矛盾を残す</strong> — 優しいけれど残酷。正しいけれど嫌い。どちらかを誤りとして消さない
+5. <strong>全体を組み替える</strong> — 問いの順番を変える</p>
+<blockquote>
+<p>「答えが簡単に整い過ぎたとき、もう1回壊すしつこさ」——これが又吉式思考の核心。</p>
+</blockquote>
+<h3 id="prompt-engineering-prompt-exploring">Prompt Engineering → Prompt Exploring<a class="headerlink" href="#prompt-engineering-prompt-exploring" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>タイプ</th>
+<th>目的</th>
+<th>プロンプトは</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prompt Engineering</strong></td>
+<td>到着地点を決めて精度を上げる</td>
+<td>命令文。条件が明確であることほどよい</td>
+</tr>
+<tr>
+<td><strong>Prompt Exploring</strong></td>
+<td>出発地点だけを決めて到着地点を固定しない</td>
+<td>ルール。途中で条件を書き換えることにも価値がある</td>
+</tr>
+</tbody>
+</table>
+<p>又吉：「私の使い方では、プロンプトは命令文ではなく、対話のプロトコル（= ルール）になる」。これがLoop #4の核心概念——<strong>Prompt Exploring</strong>。</p>
+<h3 id="fast-slow-thinking-in-ai-era">遅い思考 — Fast &amp; Slow Thinking in AI Era<a class="headerlink" href="#fast-slow-thinking-in-ai-era" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>AIは速い：数秒で要約し数十秒で企画を出し、長い文書を読み、複数の情報を統合する</p>
+</blockquote>
+<p>又吉は、その速さを使って「早く答えを得ようとしていない」——<strong>より多くの問いを作る</strong>ためにAIを使う。これが「遅く考える」の核心。</p>
+<h3 id="_1">思考の最初と最後を人間に残す<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>AIに任せられる</th>
+<th>自分が決める</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>作業の大部分</strong></td>
+<td><strong>What, How fast, Why</strong></td>
+</tr>
+<tr>
+<td>シグナル生成</td>
+<td>何が疑問か</td>
+</tr>
+<tr>
+<td>調査（ディープサーチ）</td>
+<td>なぜそれを調べなければならないか</td>
+</tr>
+<tr>
+<td>文書要約</td>
+<td>何を自分の言葉として引き受けるか</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="b-how-ai-obsidian">B. コンセプト設計層 — How: AI + Obsidianを統合して何を作るのか<a class="headerlink" href="#b-how-ai-obsidian" title="Permanent link">&para;</a></h2>
+<h3 id="3">3つの基本要素<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>Loop #</th>
+<th>Brain3での実装</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ループとは何か（ループエンジニアリング）</td>
+<td>loop-01</td>
+<td>Claude Codeの定義：エージェントが停止条件を満たすまで作業サイクルを繰り返す仕組み</td>
+</tr>
+<tr>
+<td>3層記憶スタック</td>
+<td>loop-02</td>
+<td>Obsidian(記憶の地層)→ AI操作員(読み込み・推論エンジン)</td>
+</tr>
+<tr>
+<td>Brain3 Vault構造</td>
+<td>— (既存wiki/AGENTS.md参照)</td>
+<td>_agent/inbox/raw → wiki/articles → reviews</td>
+</tr>
+</tbody>
+</table>
+<h4 id="loop-01">ループの基本構造（loop-01から抜粋）<a class="headerlink" href="#loop-01" title="Permanent link">&para;</a></h4>
+<p>又吉式ループでは「主語が人間から動かない」：</p>
+<div class="codehilite"><pre><span></span><code>AIに問題を出させる → 自分が考える → AIが別の角度を示す → 自分が考え直す
+         ↑                           ↓
+    バックリンクで繋がったノードがAIにとりの読める記憶の地層になる
+</code></pre></div>
+
+<h3 id="loop-1-7">ループの実行パターン（LOOP #1-#7 の実績から）<a class="headerlink" href="#loop-1-7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>タイプ</th>
+<th>対応記事</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>探索型ループ</strong></td>
+<td>loop-04 (又吉式思考術)</td>
+<td>AIに問いを出させて自分で考える、Prompt Exploring</td>
+</tr>
+<tr>
+<td><strong>構造型ループ</strong></td>
+<td>loop-01, loop-03, loop-05</td>
+<td>既存のWiki記事を要約・cross-link化し新しい wiki を構築</td>
+</tr>
+<tr>
+<td><strong>自動化型ループ</strong></td>
+<td>loop-06 (米国株Bot)</td>
+<td>ルール→AI審査→実行 の2段ゲート</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="c-ai-what-brain3-vault">C. AI活用パターン — What: Brain3 Vaultでどんなことができるか<a class="headerlink" href="#c-ai-what-brain3-vault" title="Permanent link">&para;</a></h2>
+<h3 id="1-hermes-agent-obsidian-vault">1. スキル運用（Hermes Agent + Obsidian vault連携）<a class="headerlink" href="#1-hermes-agent-obsidian-vault" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>セクション</th>
+<th>loop-01 (Concept)</th>
+<th>Loop #実装例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ループ構造</td>
+<td>AIが自身でチェックして修正・再検証する自己ループ</td>
+<td>LOOP#1-7 で Wiki 化の実践</td>
+</tr>
+<tr>
+<td>3層メモリ</td>
+<td>Obsidian(記憶の地層), AI(操作員) → プロンプト（推論エンジン）</td>
+<td>Brain3 Vault(AGENTS.md, loop_memory.md, wiki/) + Hermes Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-notebooklm32-claude-code">2. NotebookLM32活用法 × Claude Codeとの比較<a class="headerlink" href="#2-notebooklm32-claude-code" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>テーマ</th>
+<th>NotebookLM</th>
+<th>Claude Code/Hermes</th>
+<th>両方の併用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>得意</strong></td>
+<td>素材ベースの要約・音声化・スライド生成</td>
+<td>ゼロ→ありのコード生成、自動化</td>
+<td>NotebookLM→素材集め →Claude→処理結果の統合</td>
+</tr>
+<tr>
+<td><strong>弱点</strong></td>
+<td>既存資料がないと使われない</td>
+<td>学習データにない情報は「存在しない」</td>
+<td>NotebookLMを「一次情報保管庫」として使う</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>「32番目：掛け合わせが重要」。NotebookLMは素材ベースの要約・音声化・スライド生成。Claude Codeはゼロからコードや自動化スクリプトを生成。</strong>
+<strong>両方を使うことで、「素材→要約→分析→統合」のパイプラインになる</strong>。</p>
+</blockquote>
+<h3 id="3-claude-codeloop-06bot">3. Claude Code活用パターン（loop-06の米国株Botで学んだもの）<a class="headerlink" href="#3-claude-codeloop-06bot" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パターン</th>
+<th>Brain3 Vaultでの使い道</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paper→実弾 (Virtual → Real)</td>
+<td>raw/inbox でテスト → Wiki 化で確定 → _agent/reports/ に保存</td>
+</tr>
+<tr>
+<td>AI審査ゲート</td>
+<td>ルーチンにルールシグナル→Claudeが審査</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-ai">4. AIによる思考支援パターン（又吉式思考術から学んだもの）<a class="headerlink" href="#4-ai" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>アプローチ</th>
+<th>Brain3 Vaultでの使い道</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>壁打ち5連コンボ</strong></td>
+<td>loop-propt-templateで「この仮説の弱点は？反対意見は？」を自問</td>
+</tr>
+<tr>
+<td><strong>概念耐久試験</strong></td>
+<td>AIに言葉を壊れるまで問い返す。loop_memory.md に記録</td>
+</tr>
+<tr>
+<td><strong>五者反対尋問評議会</strong></td>
+<td>AIに5つの異なる視点（実証/歴史/当事者-child/100年後）で反論させる</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="d-which">D. ツール比較・選び方 — Which: どう使い分けるか<a class="headerlink" href="#d-which" title="Permanent link">&para;</a></h2>
+<h3 id="_2">セクター別のツール選定マトリックス<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>セクター</th>
+<th>推薦ツール</th>
+<th>Brain3での応用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI/LLM関連検索</strong></td>
+<td>Arxiv + Blogwatcher + QMD（将来的に）</td>
+<td>AI研究、論文の探索</td>
+</tr>
+<tr>
+<td><strong>自動化・Pythonコード</strong></td>
+<td>Claude Code / Codex / Hermes Agent cron</td>
+<td>ループの自動化、rawフォルダ監視</td>
+</tr>
+<tr>
+<td><strong>UIデザイン・プロトタイピング</strong></td>
+<td>Claude Design vs OpenDesign vs CoDesign</td>
+<td>ブログ記事のプロトタイプ用</td>
+</tr>
+<tr>
+<td><strong>PDF・OCR</strong></td>
+<td>ocr-and-documents (builtin)</td>
+<td>行政資料の読み取り</td>
+</tr>
+<tr>
+<td><strong>動画/字幕要約</strong></td>
+<td>youtube-content + Humanizer</td>
+<td>YouTubeをNote記事素材化</td>
+</tr>
+<tr>
+<td><strong>検索エンジン</strong></td>
+<td>SearXNG or WebSearch（将来SearXNGコンテナ追加予定)</td>
+<td>ローカル検索基盤</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notebooklm-vs-claude-code">NotebookLM vs Claude Code の使い分けガイド<a class="headerlink" href="#notebooklm-vs-claude-code" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>課題</th>
+<th>NotebookLM</th>
+<th>Claude Code/Hermes</th>
+<th>推薦</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>大量PDFの要約</strong></td>
+<td>⭐⭐⭐ (引用元つきで裏取り)</td>
+<td>◯ (OCRスキルで抽出)</td>
+<td>NotebookLM</td>
+</tr>
+<tr>
+<td><strong>自動化スクリを書く</strong></td>
+<td>✗</td>
+<td>⭐⭐⭐ (実装可能)</td>
+<td>Claude Code/Hermes</td>
+</tr>
+<tr>
+<td><strong>資料作成(スライド/音声)</strong></td>
+<td>⭐⭐⭐ (自動生成)</td>
+<td>○（python-pptxなど）</td>
+<td>NotebookLM</td>
+</tr>
+<tr>
+<td><strong>AIへの問い出し・思考の深化</strong></td>
+<td>△（壁打ち機能あり）</td>
+<td>⭐⭐⭐（又吉式思考術とPrompt Exploring）</td>
+<td>Claude Code/Hermes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="e-brain3-vault-wherehow">E. Brain3 Vaultでの実装例 — Where/How: 具体的にどう運用するか<a class="headerlink" href="#e-brain3-vault-wherehow" title="Permanent link">&para;</a></h2>
+<h3 id="brain3-vault-ai">Brain3 Vault × AI活用 の設計パターン<a class="headerlink" href="#brain3-vault-ai" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">raw/inbox/</span><span class="o">]</span><span class="p">(</span><span class="n">未整理</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">wiki</span><span class="o">/</span><span class="n">articles</span><span class="o">/</span><span class="p">)</span>
+<span class="w">          </span><span class="err">│</span><span class="w">                      </span><span class="err">│</span>
+<span class="w">          </span><span class="err">├─</span><span class="w"> </span><span class="n">①</span><span class="w"> </span><span class="n">NotebookLM</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">要約</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">音声化</span><span class="err">（</span><span class="n">一次情報保管庫</span><span class="err">）</span>
+<span class="w">          </span><span class="err">├─</span><span class="w"> </span><span class="n">②</span><span class="w"> </span><span class="n">Claude</span><span class="w"> </span><span class="n">Code</span><span class="o">/</span><span class="n">Hermes</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">分析</span><span class="err">・</span><span class="n">Wiki化</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">[Wiki記事</span><span class="o">]</span><span class="err">]</span><span class="w"> </span>
+<span class="w">          </span><span class="err">└─</span><span class="w"> </span><span class="n">③</span><span class="w"> </span><span class="n">Loopプロンプト</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">[Wiki記事</span><span class="o">]</span><span class="err">]</span><span class="n">の整合性チェック</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">[loop-memory.md</span><span class="o">]</span><span class="err">]</span><span class="w"> </span><span class="n">に記録</span>
+</code></pre></div>
+
+<h3 id="loop-8raw">loop #8の実行パターン（新着raw素材がある場合）<a class="headerlink" href="#loop-8raw" title="Permanent link">&para;</a></h3>
+<ol>
+<li>raw/inbox/の新着ファイルを確認</li>
+<li>ループ#で Wiki化（要約 + カテゴリ分類 + frontmatter）</li>
+<li>article-loop-0NN として wiki/articles に保存</li>
+<li>_loop_memory.md に loop #N の結果を追記 → 残り課題をメモ</li>
+<li>cross-linkを既存Wiki追加</li>
+</ol>
+<hr />
+<h2 id="f-loop-the-meta-layer-loop-revisit">F. Loopプロセスの統合 — The Meta-Layer: LOOPとは何か revisit<a class="headerlink" href="#f-loop-the-meta-layer-loop-revisit" title="Permanent link">&para;</a></h2>
+<h3 id="loop123-loops">LOOPの概念（第1,2,3, loopsで定着）<a class="headerlink" href="#loop123-loops" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>CONTENT</th>
+<th>LOOP #で具体化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Philosophy</strong> (why)</td>
+<td>Prompt Exploring, 遅く考える, AIに問いを与えろ</td>
+<td>loop-04 / loop-6</td>
+</tr>
+<tr>
+<td><strong>Conceptual</strong> (what)</td>
+<td>ループの基本構造・3層記憶スタック</td>
+<td>loop-01 / loop-02</td>
+</tr>
+<tr>
+<td><strong>Tactical</strong> (how)</td>
+<td>NotebookLM + Claude Codeの比較活用パターン</td>
+<td>Loop #5 / #7</td>
+</tr>
+<tr>
+<td><strong>Operational</strong> (where)</td>
+<td>Brain3 Vaultでの自動化・Wiki化フロー</td>
+<td>LOOP#1-7 (実績)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="loop2-loop-7loop-v1">LOOPの進化（第2回） — 最初の LOOP として構築、7回のLOOPを経て「統合設計書 v1」として再構成<a class="headerlink" href="#loop2-loop-7loop-v1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>ループ<span class="w"> </span><span class="sc">#1</span><span class="w"> </span>→<span class="w"> </span>ループの定義<span class="w">       </span>→<span class="w"> </span><span class="k">loop</span><span class="o">-</span><span class="mi">01</span><span class="w"> </span><span class="ss">(</span><span class="nv">Getting</span><span class="w"> </span><span class="nv">started</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">loops</span><span class="ss">)</span>
+<span class="w">    </span>└──→<span class="w"> </span>ループ<span class="w"> </span><span class="sc">#7</span><span class="w"> </span>→<span class="w"> </span><span class="nv">Wiki</span>化パターン<span class="w">     </span>→<span class="w"> </span><span class="k">Loop</span><span class="o">-</span><span class="mi">6</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">loop</span><span class="o">-</span><span class="mi">7</span>
+<span class="w">            </span>↓<span class="w">        </span><span class="k">Loop</span><span class="o">-</span><span class="mi">3</span><span class="w"> </span><span class="ss">(</span><span class="nv">Claude</span><span class="w"> </span><span class="nv">Code</span><span class="w"> </span><span class="mi">45</span>タスク自動化<span class="ss">)</span>
+<span class="w">                </span>→<span class="w"> </span><span class="k">LOOP</span><span class="w"> </span><span class="sc">#8</span><span class="w"> </span><span class="ss">(</span>この記事<span class="ss">)</span><span class="w">      </span>→<span class="w"> </span>統合設計書<span class="w"> </span><span class="nv">v1</span>（全<span class="mi">7</span>記事の概念合成）
+<span class="w">                    </span>→<span class="w"> </span><span class="k">LOOP</span><span class="w"> </span><span class="sc">#9</span><span class="w">          </span>次回：<span class="k">loop</span><span class="w"> </span><span class="sc">#9</span>でさらに洗練→「<span class="nv">Brain3</span><span class="w"> </span><span class="nv">Vault</span>運用マニュアル」へ進化するはず
+</code></pre></div>
+
+<hr />
+<h2 id="g-brain3-vault">G. Brain3 Vaultでの適用可能性（実装例一覧）<a class="headerlink" href="#g-brain3-vault" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>loopで学んだことを</th>
+<th>Brain3 Vaultでの具体例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prompt Exploring (loop-04)</td>
+<td>loopプロンプト集(templates/)で「なぜわからないのか → どうすればわかるか」を自問</td>
+</tr>
+<tr>
+<td>3層記憶スタック（ loop-02）</td>
+<td>Obsidian(Vault×Hermes Agentの記憶→推論エンジン）→ AI操作員→ プロンプト</td>
+</tr>
+<tr>
+<td>NotebookLM vs Claude Code (loop-05)</td>
+<td>NotebookLMは「一次情報保管庫」、Claude Code/Hermesは分析・自動化ツール</td>
+</tr>
+<tr>
+<td>米国株BOTの実装例（ loop-06）</td>
+<td>ルール→AI審査→実行 のパターンをBrain3 Vaultに適用可</td>
+</tr>
+<tr>
+<td>Loopプロンプトテンプレート（templates/）</td>
+<td>ループ運用の「ループ#8→Wiki化 → _loop-memory に追記」フロー</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="h-brain3-vault">H. Brain3 Vaultでの設計原則<a class="headerlink" href="#h-brain3-vault" title="Permanent link">&para;</a></h2>
+<h3 id="ai_1">ルール：「AIが考える部分を人間が残す」という境界設計<a class="headerlink" href="#ai_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>┌─┐ ┌───────────┐  ┌────────────┐  ┌──────────┐
+│人│→│What/Why    │  │ AIに任せる      │ →│結果の確認│→│人間の判断│
+└─┘ └───────────┘  └────────────┘  └──────────┘
+
+| ループの構造 | loop_01（基本定義） → loop-02（3層記憶） → loop-3（自動化パターン） |
+   │
+   ↓「統合設計書 v1として再構成」→ LOOP #8（この記事） 
+</code></pre></div>
+
+<h3 id="brain3-vault-ai-5">Brain3 Vault × AI活用 の5設計原則<a class="headerlink" href="#brain3-vault-ai-5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>原則</th>
+<th>説明</th>
+<th>ループでの根拠</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>① Loopに「問いを出す」</strong></td>
+<td>loopメモのLOOP#には「なぜわからないか」「どれが見えてないか」といった質問をする。答えではない</td>
+<td>loop-04 (又吉式思考術)</td>
+</tr>
+<tr>
+<td><strong>② Wikiを蓄積する</strong></td>
+<td>raw素材 → Wiki化 → cross-link → 知識の地層</td>
+<td>loop-02 (3層記憶スタック) + LOOP #1-#8</td>
+</tr>
+<tr>
+<td><strong>③ ループに「壁打ち」をつける</strong></td>
+<td>「この仮説は正しいか？反対意見は？」をloop-04の「壁打ち5連コンボ」で自問し、LOOPメモに保存</td>
+<td>loop-05 (NotebookLM32活用法)</td>
+</tr>
+<tr>
+<td><strong>④ 設計書はアップデートする</strong></td>
+<td>LOOP #9以降も追加・再構成→「統合設計書 v2, v3…へ進化」</td>
+<td>LOOP #8の試み（記事A-Hに進化する）</td>
+</tr>
+<tr>
+<td><strong>⑤ Brain3 Vaultが「記憶の地層」</strong></td>
+<td>Obsidian Vault → AI操作員 → プロンプト（推論エンジン） — 記憶→処理→出力 のループ構造に適用。この循環が回るほど知識は蓄積していく</td>
+<td>loop-02 (3層記憶スタック)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="brain3-ai-v1-loop8">Brain3 × AI活用統合設計書 v1 LOOP#8<a class="headerlink" href="#brain3-ai-v1-loop8" title="Permanent link">&para;</a></h2>
+<h3 id="loop-9">LOOP #9への引き継ぎ情報<a class="headerlink" href="#loop-9" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>次回やるべきこと</th>
+<th>提案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>raw_folder_watchers_design_v2に常駐設定を追記する</strong></td>
+<td>Cronジョブで「every 6hにraw/inboxを監視し、新着があればloop #NとしてWiki化」を追加設計</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
