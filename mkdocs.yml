@@ -27,13 +27,13 @@ nav:
       - article-02 (Ollama+Open WebUI): blog/article-02-ollama-open-webui.md
       - article-09 (Ubuntu入門ミス): blog/article-09-ubuntu-start-mistakes.md
     - ローカルAI/推論:
-      - article-02 (Ollama最新情報): blog/Ollama最新情報2026 — MLXエンジン更新、GPU互換性Calculator.md
-      - 2026年中のローカルLLMベンチマーク: blog/2026年中のローカルLLMベンチ.md
-      - 推論プラットフォーム比較: blog/2026年中のローカルLLM推論プラットフォーム比較 — Ollama、vLLM、llama.cpp.md
+      - article-17 (Ollama最新2026): blog/article-17-ollama-latest-2026.md
+      - 2026年ローカルLLMベンチマーク: blog/article-18-local-llm-bench-2026.md
+      - 推論プラットフォーム比較: blog/article-19-inference-platform-compare.md
     - Agent/Hermes:
-      - Hermes-Agent記事: blog/Hermes-Agent — Nous Research製自律型AIエージェント.md
-      - article-03 (Hermes Agent OB): blog/article-03-hermes-agent-ob.md
-      - Obsidian連携: blog/ObsidianとローカルLLM連携 — Local-LLM-Helperプラグイン、Llm-hub統合.md
+      - article-16 (Hermes Agent概要): blog/article-20-hermes-agent-overview.md
+      - article-21 (Obsidian+ローカルAI連携): blog/article-21-obsidian-local-ai-integration.md
+      - article-22 (Ollama Open WebUI構築): blog/article-22-hermes-agent-ob.md
     - Loop記事:
       - Loop 01 (ループ入門): blog/article-loop-01-getting-started-with-loops.md
       - Loop 02 (3層メモリスタック): blog/article-loop-02-3layer-memory-stack.md
@@ -59,8 +59,8 @@ nav:
       - article-06 (ChatGPT+Canvaノート): blog/article-06-chatgpt-canva-note.md
       - article-08 (AI書き間違い): blog/article-08-ai-writing-mistakes.md
       - article-04 (GitHub Pages Webサイト): blog/article-04-github-pages-website.md
-      - 自己改善ループ概要: blog/10-self-improvement-loop-overview.md
-      - 30日間ロードマップ概要: blog/thirty-day-roadmap-overview.md
+      - 自己改善ループ概要: blog/article-23-self-improvement-loop.md
+      - 30日間ロードマップ概要: blog/_archive/thirty-day-roadmap-overview.md
       - Ubuntu初期環境設定: blog/ubuntu-env-setup.md
     - お知らせ:
       - article-disclosure-note: blog/article-disclosure-note.md

@@ -21,8 +21,8 @@ status: published
 ブログ運営・広告・公開に関するルール。
 
 - [広告ルール v2](ad-rules-v2.md)
-- [ブログ執筆ルール](blog-writing-rules.md)
-- [Hermes Agentルール](hermes-agent-rules.md) — エージェント設計の指針
+- [ブログ執筆ルール v2](ad-rules-v2.md)
+- [Hermes Agent運用ルール](https://github.com/snoeru373/kirokuwonokosite/blob/main/docs/blog/03-policy-hermes-agent-rules.md) — エージェント設計の指針
 - [公開ルール v2](publishing-rules-v2.md)
 
 ## ツールセットアップ

@@ -5,43 +5,11 @@
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/01-concept-local-ai-stack-overview/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
          <loc>https://snoeru373.github.io/kirokuwonokosite/blog/02-policy-blog-writing-rules/</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://snoeru373.github.io/kirokuwonokosite/blog/03-policy-hermes-agent-rules/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/04-tool-hardcore-local-agent/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/10-self-improvement-loop-overview/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/2026%E5%B9%B4%E4%B8%AD%E3%81%AE%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%ABLLM%E3%83%99%E3%83%B3%E3%83%81/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/2026%E5%B9%B4%E4%B8%AD%E3%81%AE%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%ABLLM%E6%8E%A8%E8%AB%96%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E6%AF%94%E8%BC%83%20%E2%80%94%20Ollama%E3%80%81vLLM%E3%80%81llama.cpp/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/Hermes-Agent%20%E2%80%94%20Nous%20Research%E8%A3%BD%E8%87%AA%E5%BE%8B%E5%9E%8BAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/Obsidian%E3%81%A8%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%ABLLM%E9%80%A3%E6%90%BA%20%E2%80%94%20Local-LLM-Helper%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%81Llm-hub%E7%B5%B1%E5%90%88/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/Ollama%E6%9C%80%E6%96%B0%E6%83%85%E5%A0%B12026%20%E2%80%94%20MLX%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E6%9B%B4%E6%96%B0%E3%80%81GPU%E4%BA%92%E6%8F%9B%E6%80%A7Calculator/</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
@@ -58,10 +26,6 @@
     </url>
     <url>
          <loc>https://snoeru373.github.io/kirokuwonokosite/blog/article-02-ollama-open-webui/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/article-03-hermes-agent-ob/</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
@@ -90,6 +54,34 @@
     </url>
     <url>
          <loc>https://snoeru373.github.io/kirokuwonokosite/blog/article-10-free-aspx-comparison/</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/article-17-ollama-latest-2026/</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/article-18-local-llm-bench-2026/</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/article-19-inference-platform-compare/</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/article-20-hermes-agent-overview/</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/article-21-obsidian-local-ai-integration/</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/article-22-hermes-agent-ob/</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/article-23-self-improvement-loop/</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
@@ -157,15 +149,7 @@
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/blog-writing-rules/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
          <loc>https://snoeru373.github.io/kirokuwonokosite/blog/hardcore-agent-setup/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/hermes-agent-rules/</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
@@ -193,10 +177,6 @@
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/thirty-day-roadmap-overview/</loc>
-         <lastmod>2026-09-08</lastmod>
-    </url>
-    <url>
          <loc>https://snoeru373.github.io/kirokuwonokosite/blog/ubuntu-env-setup/</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
@@ -206,6 +186,10 @@
     </url>
     <url>
          <loc>https://snoeru373.github.io/kirokuwonokosite/blog/writing-prompts-guide/</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/_archive/thirty-day-roadmap-overview/</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
 </urlset>
