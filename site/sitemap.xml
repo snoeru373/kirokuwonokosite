@@ -5,6 +5,22 @@
          <lastmod>2026-09-07</lastmod>
     </url>
     <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/01-concept-local-ai-stack-overview/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/02-policy-blog-writing-rules/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/03-policy-hermes-agent-rules/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/04-tool-hardcore-local-agent/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
          <loc>https://snoeru373.github.io/kirokuwonokosite/blog/10-self-improvement-loop-overview/</loc>
          <lastmod>2026-09-07</lastmod>
     </url>
@@ -26,6 +42,10 @@
     </url>
     <url>
          <loc>https://snoeru373.github.io/kirokuwonokosite/blog/Ollama%E6%9C%80%E6%96%B0%E6%83%85%E5%A0%B12026%20%E2%80%94%20MLX%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E6%9B%B4%E6%96%B0%E3%80%81GPU%E4%BA%92%E6%8F%9B%E6%80%A7Calculator/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/ad-rules-v2/</loc>
          <lastmod>2026-09-07</lastmod>
     </url>
     <url>
@@ -137,7 +157,39 @@
          <lastmod>2026-09-07</lastmod>
     </url>
     <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/blog-writing-rules/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/hardcore-agent-setup/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/hermes-agent-rules/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
          <loc>https://snoeru373.github.io/kirokuwonokosite/blog/initial-articles-overview/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/local-ai-integrations/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/local-ai-stack-overview/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/mkdocs-config-example/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/ollama-operating-guidebook/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/publishing-rules-v2/</loc>
          <lastmod>2026-09-07</lastmod>
     </url>
     <url>
@@ -149,47 +201,11 @@
          <lastmod>2026-09-07</lastmod>
     </url>
     <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/wiki/</loc>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/wiki-index/</loc>
          <lastmod>2026-09-07</lastmod>
     </url>
     <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/wiki/concepts/local-ai-stack-overview/</loc>
-         <lastmod>2026-09-07</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/wiki/concepts/ollama-operating-guidebook/</loc>
-         <lastmod>2026-09-07</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/wiki/policies/advertising-rules-v2/</loc>
-         <lastmod>2026-09-07</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/wiki/policies/blog-writing-rules/</loc>
-         <lastmod>2026-09-07</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/wiki/policies/hermes-agent-rules/</loc>
-         <lastmod>2026-09-07</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/wiki/policies/publishing-rules-v2/</loc>
-         <lastmod>2026-09-07</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/wiki/prompts/golden-hero-section-prompt/</loc>
-         <lastmod>2026-09-07</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/wiki/tools/hardcore-local-agent-setup-guide-v1/</loc>
-         <lastmod>2026-09-07</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/wiki/tools/local-ai-stack-integration/</loc>
-         <lastmod>2026-09-07</lastmod>
-    </url>
-    <url>
-         <loc>https://snoeru373.github.io/kirokuwonokosite/wiki/tools/mkdocs-yml-example/</loc>
+         <loc>https://snoeru373.github.io/kirokuwonokosite/blog/writing-prompts-guide/</loc>
          <lastmod>2026-09-07</lastmod>
     </url>
 </urlset>

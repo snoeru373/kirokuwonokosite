@@ -83,19 +83,18 @@ description: "50代からのローカルAI実践ノート。Ollama、Hermes Agen
 ## Wiki / ナレッジベース
 
 ### コンセプト（概念）
-- [ローカルLLMアーキテクチャ統合](wiki/concepts/local-ai-stack-overview.md)
-- [Ollama運用ガイドブック](wiki/concepts/ollama-operating-guidebook.md)
+- [ローカルLLMアーキテクチャ統合](blog/local-ai-stack-overview.md)
+- [Ollama運用ガイドブック](blog/ollama-operating-guidebook.md)
 
 ### ポリシー
-- [広告ルール v2](wiki/policies/advertising-rules-v2.md)
-- [ブログ執筆ルール](wiki/policies/blog-writing-rules.md)
-- [Hermes Agentルール](wiki/policies/hermes-agent-rules.md)
-- [公開ルール v2](wiki/policies/publishing-rules-v2.md)
+- [広告ルール v2](blog/ad-rules-v2.md)
+- [ブログ執筆ルール](blog/blog-writing-rules.md)
+- [Hermes Agentルール](blog/hermes-agent-rules.md)
+- [公開ルール v2](blog/publishing-rules-v2.md)
 
 ### プロンプト
-- [ゴールデンヒーローセクションプロンプト](wiki/prompts/golden-hero-section-prompt.md)
 
 ### ツール
-- [ハードコアローカルエージェント構築ガイド v1](wiki/tools/hardcore-local-agent-setup-guide-v1.md)
-- [ローカルAI統合](wiki/tools/local-ai-stack-integration.md)
-- [MkDocs YML例](wiki/tools/mkdocs-yml-example.md)
+- [ハードコアローカルエージェント構築ガイド v1](blog/hardcore-agent-setup.md)
+- [ローカルAI統合](blog/local-ai-integrations.md)
+- [MkDocs YML例](blog/mkdocs-config-example.md)

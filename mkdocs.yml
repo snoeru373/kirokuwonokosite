@@ -64,23 +64,6 @@ nav:
       - Ubuntu初期環境設定: blog/ubuntu-env-setup.md
     - お知らせ:
       - article-disclosure-note: blog/article-disclosure-note.md
-  - Wiki:
-    - 記事一覧: wiki/index.md
-    - コンセプト:
-      - ローカルLLMアーキテクチャ統合: wiki/concepts/local-ai-stack-overview.md
-      - Ollama運用ガイドブック: wiki/concepts/ollama-operating-guidebook.md
-    - ポリシー:
-      - 広告ルールv2: wiki/policies/advertising-rules-v2.md
-      - ブログ執筆ルール: wiki/policies/blog-writing-rules.md
-      - Hermes Agentルール: wiki/policies/hermes-agent-rules.md
-      - 公開ルールv2: wiki/policies/publishing-rules-v2.md
-    - プロンプト:
-      - ゴールデンヒーローセクションプロンプト: wiki/prompts/golden-hero-section-prompt.md
-    - ツール:
-      - ハードコアローカルエージェント構築ガイドv1: wiki/tools/hardcore-local-agent-setup-guide-v1.md
-      - ローカルAI統合: wiki/tools/local-ai-stack-integration.md
-      - MkDocs YML例: wiki/tools/mkdocs-yml-example.md
-
 markdown_extensions:
   - toc:
       permalink: true
