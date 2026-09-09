@@ -65,13 +65,13 @@ nav:
     - お知らせ:
       - article-disclosure-note: blog/article-disclosure-note.md
   - Wiki/ポリシー:
-    - 設定ファイル例: blog/mkdocs-yml-example.md
-    - ローカルAI統合ツール: blog/local-ai-stack-integration.md
     - セットアップガイド: blog/hardcore-agent-setup.md
-    - ブログ執筆ルール: blog/blog-writing-rules.md
-    - 広告規約ルール: blog/advertising-rules-v2.md
-    - プロンプト一覧: blog/golden-hero-section-prompt.md
-    - Agent運用ルール: blog/hermes-agent-rules.md
+    - 運用ポリシー v2:
+      - ブログ執筆ルール: blog/02-policy-blog-writing-rules.md
+      - Hermes Agent運用ルール: blog/03-policy-hermes-agent-rules.md
+      - 広告規約ルール: blog/advertising-rules-v2.md
+      - 公開ルール: blog/publishing-rules-v2.md
+    - ライティングガイド: blog/writing-prompts-guide.md
 markdown_extensions:
   - toc:
       permalink: true
