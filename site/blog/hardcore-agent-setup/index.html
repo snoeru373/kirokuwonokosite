@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://snoeru373.github.io/kirokuwonokosite/blog/hardcore-agent-setup/">
       
       
+        <link rel="prev" href="../local-ai-stack-integration/">
+      
+      
+        <link rel="next" href="../blog-writing-rules/">
       
       
         
@@ -1955,18 +1959,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1987,7 +1993,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2072,10 +2078,44 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../hardcore-local-agent-setup-guide-v1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    セットアップガイド
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2092,12 +2132,315 @@
     
   
   
-    <span class="md-status md-status--publish"></span>
+    <span class="md-status md-status--active"></span>
   
 
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概要
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前提条件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-blank-slate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. セキュリティ・Blank Slate (初期化)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 構成ファイル更新
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 構成ファイル更新">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        memory セクション（自動記憶・自己改善ループ①）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curator-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curator セクション（スキル自動整理・自己改善ループ②）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        auxiliary セクション（ローカル判定・コスト最適化③）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sttvoice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stt・voice セクション（音声ローカル処理）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. AI社員プロファイルの構築（複数運用）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. AI社員プロファイルの構築（複数運用）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        スキル保護（ピン留め）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. プロンプト・コマンド集
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. プロンプト・コマンド集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. サブエージェント連携（並列処理・並列推論）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. サブエージェント連携（並列処理・並列推論）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自然言語での依頼例:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. スラッシュコマンド（セッション実行用）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. カンバンによる複雑なタスク管理（複数エージェント連携）:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. ローカル統合サービス群（Docker Compose）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. ローカル統合サービス群（Docker Compose）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        外部公開する場合（注意必須）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-obsidian-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Obsidian Vault連携（ナレッジベース・長期記憶）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. ループエンジニアリング（自己改善ループ）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. チェックリスト（セットアップ完了確認用）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-api-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. コスト最適化まとめ（外部 API 費用を $0 に）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. セキュリティ &amp; リスク管理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 関連リンク
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 

@@ -67,7 +67,7 @@ nav:
   - Wiki/ポリシー:
     - 設定ファイル例: blog/mkdocs-yml-example.md
     - ローカルAI統合ツール: blog/local-ai-stack-integration.md
-    - セットアップガイド: blog/hardcore-local-agent-setup-guide-v1.md
+    - セットアップガイド: blog/hardcore-agent-setup.md
     - ブログ執筆ルール: blog/blog-writing-rules.md
     - 広告規約ルール: blog/advertising-rules-v2.md
     - プロンプト一覧: blog/golden-hero-section-prompt.md
