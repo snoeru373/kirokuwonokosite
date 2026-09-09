@@ -60,10 +60,18 @@ nav:
       - article-08 (AI書き間違い): blog/article-08-ai-writing-mistakes.md
       - article-04 (GitHub Pages Webサイト): blog/article-04-github-pages-website.md
       - 自己改善ループ概要: blog/article-23-self-improvement-loop.md
-      - 30日間ロードマップ概要: blog/_archive/thirty-day-roadmap-overview.md
+      - 30日間ロードマップ概要: blog/thirty-day-roadmap-overview.md
       - Ubuntu初期環境設定: blog/ubuntu-env-setup.md
     - お知らせ:
       - article-disclosure-note: blog/article-disclosure-note.md
+  - Wiki/ポリシー:
+    - 設定ファイル例: blog/mkdocs-yml-example.md
+    - ローカルAI統合ツール: blog/local-ai-stack-integration.md
+    - セットアップガイド: blog/hardcore-local-agent-setup-guide-v1.md
+    - ブログ執筆ルール: blog/blog-writing-rules.md
+    - 広告規約ルール: blog/advertising-rules-v2.md
+    - プロンプト一覧: blog/golden-hero-section-prompt.md
+    - Agent運用ルール: blog/hermes-agent-rules.md
 markdown_extensions:
   - toc:
       permalink: true
