@@ -1,0 +1,3046 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://snoeru373.github.io/kirokuwonokosite/blog/article-02-ollama-open-webui/">
+      
+      
+        <link rel="prev" href="../article-01-50-kara-ubuntu/">
+      
+      
+        <link rel="next" href="../article-09-ubuntu-start-mistakes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>OllamaとOpen WebUIでできること・できないこと｜ローカルAI初心者向け整理 - 50代からのローカルAI実践ノート</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ollamaopen-webuiai" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="50代からのローカルAI実践ノート" class="md-header__button md-logo" aria-label="50代からのローカルAI実践ノート" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            50代からのローカルAI実践ノート
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OllamaとOpen WebUIでできること・できないこと｜ローカルAI初心者向け整理
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/snoeru373/kirokuwonokosite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="50代からのローカルAI実践ノート" class="md-nav__button md-logo" aria-label="50代からのローカルAI実践ノート" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    50代からのローカルAI実践ノート
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/snoeru373/kirokuwonokosite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ホーム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ブログ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ブログ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../initial-articles-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    記事一覧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubuntu/AI構築関連
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ubuntu/AI構築関連
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-01-50-kara-ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-01 (Ubuntu+AI構築)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-02 (Ollama+Open WebUI)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-02 (Ollama+Open WebUI)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        はじめに
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ollamaaiopen-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        結論：OllamaはAIモデルを動かす土台、Open WebUIは使いやすい画面
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ollamaだけで使う場合
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open WebUIでできること
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-webui_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open WebUIが便利な場面
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Open WebUIが便利な場面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 記事の下書きを作る
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. エラー内容を相談する
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 作業手順を整理する
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 複数モデルを試す
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ollamaopen-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OllamaとOpen WebUIでできないこと
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OllamaとOpen WebUIでできないこと">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. すべてがChatGPTと同じになるわけではない
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. PC性能に左右される
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 最新情報を自動で知っているわけではない
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 自動化しすぎると危険
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ローカルAIで向いている作業
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        私の使い方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. Ollamaだけで使えますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-open-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. Open WebUIだけで使えますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3. 無料で使えますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q4. どのモデルを使えばよいですか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q5. アフィリエイト記事作成に使えますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        内部リンク候補
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        公開前確認メモ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        広告リンク管理メモ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-09-ubuntu-start-mistakes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-09 (Ubuntu入門ミス)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ローカルAI/推論
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ローカルAI/推論
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-17-ollama-latest-2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-17 (Ollama最新2026)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-18-local-llm-bench-2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026年ローカルLLMベンチマーク
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-19-inference-platform-compare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    推論プラットフォーム比較
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent/Hermes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent/Hermes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-20-hermes-agent-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-16 (Hermes Agent概要)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-21-obsidian-local-ai-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-21 (Obsidian+ローカルAI連携)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-22-hermes-agent-ob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-22 (Ollama Open WebUI構築)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop記事
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Loop記事
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-01-getting-started-with-loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 01 (ループ入門)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-02-3layer-memory-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 02 (3層メモリスタック)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-03-claude-code-45-tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 03 (Claude Code 45タスク)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-04-yukiyoshi-thinking-method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 04 ( Yukiyoshi思考法)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-05-notebooklm-32-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 05 (NotebookLM 32方法)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-06-us-stock-auto-trading-bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 06 (米国株自動取引BOT)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-07-claude-design-open-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 07 (Claudeデザイン/オープンツール)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-08-ai-integration-design-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 08 (AI統合設計v1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-10-afo-ai-engineering-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 10 (AFO AIエンジニアリングv2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-11-graph-engineering-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 11 (グラフエンジニアリング基礎)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-12-overseas-affiliate-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 12 (海外アフィリエイト戦略)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-13-loop-engineering-and-agent-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 13 (ループエンジニアリング/エージェントパターン)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-14-agent-design-all-layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 14 (エージェント設計全レイヤー)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-15-better-systems-than-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 15 (システムvsモデル)
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-loop-16-brain3-vault-operation-guide-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loop 16 (Brain3 Vault運用ガイドv2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    アフィリエイト/戦略
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    アフィリエイト/戦略
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-05-no-wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-05 (WordPress不要)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-07-local-cloud-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-07 (ローカルvsクラウド比較)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-10-free-aspx-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-10 (無料ASP比較)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../affiliate-media-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    メディア概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    設計思想
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    設計思想
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-06-chatgpt-canva-note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-06 (ChatGPT+Canvaノート)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-08-ai-writing-mistakes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-08 (AI書き間違い)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-04-github-pages-website/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-04 (GitHub Pages Webサイト)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-23-self-improvement-loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自己改善ループ概要
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thirty-day-roadmap-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    30日間ロードマップ概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-env-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubuntu初期環境設定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    お知らせ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    お知らせ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../article-disclosure-note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    article-disclosure-note
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wiki/ポリシー
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wiki/ポリシー
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardcore-agent-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    セットアップガイド
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    運用ポリシー v2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    運用ポリシー v2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-policy-blog-writing-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ブログ執筆ルール
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-policy-hermes-agent-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hermes Agent運用ルール
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advertising-rules-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    広告規約ルール
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing-rules-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公開ルール
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writing-prompts-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ライティングガイド
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<hr />
+<h1 id="ollamaopen-webuiai">OllamaとOpen WebUIでできること・できないこと｜ローカルAI初心者向け整理<a class="headerlink" href="#ollamaopen-webuiai" title="Permanent link">&para;</a></h1>
+<p>※<strong>本記事には、参考としてアフィリエイトリンクを含んでいます。</strong><br />
+  アフィリエイトリンクを通じて商品を購入いただいても、価格が上がることはありません。<br />
+  ただし、ブログ運営の収益化に活用させていただいていますので、ご理解ください。<br />
+  ※紹介する書籍・用品は、私がUbuntu + Ollama環境の実務で実際に使っているものを基準に推奨しています。</p>
+<h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>ローカルAIを使ってみたいと思ったとき、よく出てくる名前がOllamaとOpen WebUIです。</p>
+<p>私自身も、Ubuntu上でローカルAI環境を作る中で、この2つのツールを使うことになりました。</p>
+<p>ただ、最初はそれぞれの役割がよく分かりませんでした。</p>
+<p>Ollamaとは何か。</p>
+<p>Open WebUIとは何か。</p>
+<p>どちらか一方だけでよいのか。</p>
+<p>ChatGPTのように使えるのか。</p>
+<p>どこまで無料で使えるのか。</p>
+<p>この記事では、ローカルAI初心者向けに、OllamaとOpen WebUIでできること・できないことを整理します。</p>
+<hr />
+<h2 id="ollamaaiopen-webui">結論：OllamaはAIモデルを動かす土台、Open WebUIは使いやすい画面<a class="headerlink" href="#ollamaaiopen-webui" title="Permanent link">&para;</a></h2>
+<p>最初に結論を書くと、役割は次のように分けると分かりやすいです。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ツール</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Ollama</td>
+<td>ローカルAIモデルを動かす土台</td>
+</tr>
+<tr>
+<td></td>
+<td>Open WebUI</td>
+<td>ブラウザからAIを使うための画面</td>
+</tr>
+</tbody>
+</table>
+<p>Ollamaは、AIモデルをダウンロードしたり、ローカルPC上で動かしたりするための土台です。</p>
+<p>Open WebUIは、Ollamaで動かしているAIを、ブラウザからChatGPTのように使いやすくするための画面です。</p>
+<p>つまり、初心者向けに言えば、次のような関係です。</p>
+<p>```text id="58gnhv"
+Ollama：
+AIモデルを裏側で動かす</p>
+<p>Open WebUI：
+ブラウザから会話するための画面</p>
+<div class="codehilite"><pre><span></span><code>この2つを組み合わせることで、Ubuntu上でもローカルAIを比較的使いやすくできます。
+
+※ 記事の情報を更新する際も、以下の公式リンクから最新版を確認してください:
+<span class="gs">* Ollama: https://ollama.com (最新バージョン: v0.31.1 / 2026-06-30公開)</span>
+<span class="gs">*</span> Open WebUI: https://github.com/open-webui/open-webui/releases (最新バージョン: v0.10.2 / 2026-07-01公開)
+
+**Open WebUI v0.10.2の主な更新点:**
+<span class="gs">* ストリーミング推論の表示改善（モデルが考える様子を実時間で表示）</span>
+<span class="gs">*</span> フォルダアップロード時の階層保持機能追加
+<span class="gs">* メモリシステム設定のコントロール強化</span>
+<span class="gs">*</span> Pythonコード実行の安定性向上
+<span class="gs">* *</span>*セキュリティ修正を含む**ため、最新版への更新を推奨
+
+---
+
+<span class="gu">##</span> Ollamaでできること（実際に使ったコマンド例）
+
+Ollamaでできる主なことは、次のとおりです。
+
+<span class="k">*</span> ローカルAIモデルをダウンロードする
+<span class="k">*</span> AIモデルを実行する
+<span class="k">*</span> コマンドラインからAIと会話する
+<span class="k">*</span> 複数のモデルを切り替える
+<span class="k">*</span> Open WebUIなどの外部ツールと連携する
+<span class="k">*</span> 自分のPC上でAI処理を試す
+
+実際にUbuntu 24.04 LTSでインストール・検証したコマンドは次の通り:
+
+```bash
+<span class="gh">#</span> インストール
+curl -fsSL https://ollama.com/install.sh | sh
+
+<span class="gh">#</span> ローカルにモデルをダウンロード（例：qwen3.6）
+ollama pull qwen3.6:35b-a3b
+
+<span class="gh">#</span> AIと会話開始
+ollama run qwen3.6:35b-a3b &quot;UbuntuでAIを使う方法は？&quot;
+</code></pre></div>
+
+<p>このPCの環境は次の通りです。GPUは搭載していないためCPU推論での動作確認をしています。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>項目</th>
+<th>このPCの環境</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>OS</td>
+<td>Ubuntu 24.04 LTS</td>
+</tr>
+<tr>
+<td></td>
+<td>RAM</td>
+<td>96 GiB（サブ可能 51 GiB）</td>
+</tr>
+<tr>
+<td></td>
+<td>スワップ</td>
+<td>8 GB</td>
+</tr>
+<tr>
+<td></td>
+<td>GPU</td>
+<td>なし（CPU推論）</td>
+</tr>
+<tr>
+<td></td>
+<td>ディスク</td>
+<td>1.8T NVMe</td>
+</tr>
+</tbody>
+</table>
+<p>※GPU非搭載でも動作しますが、速度は遅めです。GPU搭載PCでは処理がもっと速くなります。</p>
+<p>ローカルAIを使ううえで、Ollamaはかなり便利です。</p>
+<p>モデルを扱う部分を簡単にしてくれるため、初心者でも試しやすくなります。</p>
+<hr />
+<h2 id="ollama">Ollamaだけで使う場合<a class="headerlink" href="#ollama" title="Permanent link">&para;</a></h2>
+<p>Ollamaは、コマンドラインから使うことができます。</p>
+<p>たとえば、ターミナルでAIモデルを起動し、質問を入力して返答を受け取るような使い方です。</p>
+<p>この方法はシンプルですが、初心者にとっては少し使いにくいかもしれません。</p>
+<p>理由は次のとおりです。</p>
+<ul>
+<li>コマンド操作に慣れが必要</li>
+<li>チャット履歴の管理がしにくい</li>
+<li>モデル切り替えが分かりにくい</li>
+<li>長文作業には画面が見づらい</li>
+<li>ChatGPTのような操作感ではない</li>
+</ul>
+<p>そのため、Ollamaだけでも使えますが、日常的に使うならOpen WebUIと組み合わせる方が楽です。</p>
+<hr />
+<h2 id="open-webui">Open WebUIでできること<a class="headerlink" href="#open-webui" title="Permanent link">&para;</a></h2>
+<p>Open WebUIを使うと、ブラウザ上でローカルAIを使えるようになります。</p>
+<p>できることは、たとえば次のようなものです。</p>
+<ul>
+<li>ブラウザからAIと会話する</li>
+<li>ChatGPTのような画面で使う</li>
+<li>複数モデルを選択する</li>
+<li>チャット履歴を管理する</li>
+<li>プロンプトを保存する</li>
+<li>ローカルAIを家族や自分の別端末から使いやすくする</li>
+<li>RAGやドキュメント参照の設定を試す</li>
+</ul>
+<p>私のように、AIに聞きながら作業手順を確認したり、記事の下書きを作ったりする場合、ブラウザ画面があるとかなり使いやすくなります。</p>
+<hr />
+<h2 id="open-webui_1">Open WebUIが便利な場面<a class="headerlink" href="#open-webui_1" title="Permanent link">&para;</a></h2>
+<p>Open WebUIは、次のような場面で便利です。</p>
+<h3 id="1">1. 記事の下書きを作る<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>Markdown記事の下書き、見出し案、FAQ、比較表などを作るときに使いやすいです。</p>
+<p>ターミナルよりも長文を扱いやすいので、記事制作には向いています。</p>
+<h3 id="2">2. エラー内容を相談する<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>Ubuntuでエラーが出たとき、その内容を貼り付けて相談できます。</p>
+<p>AIに「このエラーは何を意味していますか」「次に何を確認すればよいですか」と聞くことができます。</p>
+<h3 id="3">3. 作業手順を整理する<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p>AIに聞きながら作業すると、途中の手順を忘れがちです。</p>
+<p>Open WebUIで会話し、その内容をObsidianに整理すれば、作業記録を残しやすくなります。</p>
+<h3 id="4">4. 複数モデルを試す<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>軽い確認は小型モデル、長文作成は大きめのモデルというように、モデルを切り替えて試せます。</p>
+<hr />
+<h2 id="ollamaopen-webui">OllamaとOpen WebUIでできないこと<a class="headerlink" href="#ollamaopen-webui" title="Permanent link">&para;</a></h2>
+<p>便利な一方で、できないことや苦手なこともあります。</p>
+<h3 id="1-chatgpt">1. すべてがChatGPTと同じになるわけではない<a class="headerlink" href="#1-chatgpt" title="Permanent link">&para;</a></h3>
+<p>ローカルAIは、自分のPC上で動かすため、使うモデルによって性能が変わります。</p>
+<p>高性能なクラウドAIと同じ品質を常に期待すると、がっかりすることがあります。</p>
+<p>特に、小型モデルでは長文推論や複雑な比較、最新情報の調査は苦手な場合があります。</p>
+<h3 id="2-pc">2. PC性能に左右される<a class="headerlink" href="#2-pc" title="Permanent link">&para;</a></h3>
+<p>ローカルAIは、自分のPCの性能に大きく依存します。</p>
+<p>モデルが大きいほど、メモリやGPU性能が必要になります。</p>
+<p>PC性能が足りないと、動作が遅くなったり、モデルがうまく動かなかったりします。</p>
+<h3 id="3_1">3. 最新情報を自動で知っているわけではない<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<p>ローカルAIモデルは、基本的に学習時点までの知識しか持っていません。</p>
+<p>最新の料金、サービス内容、法律、規約、製品情報などは、公式サイトや検索で確認する必要があります。</p>
+<p>アフィリエイト記事では、ここが特に重要です。</p>
+<h3 id="4_1">4. 自動化しすぎると危険<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<p>AIに記事を作らせ、そのまま公開するのは危険です。</p>
+<p>誤情報、古い情報、誇大表現、広告表記漏れが起きる可能性があります。</p>
+<p>AIは下書きや整理には便利ですが、公開前の確認は人間が行うべきです。</p>
+<hr />
+<h2 id="ai">ローカルAIで向いている作業<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
+<p>OllamaとOpen WebUIは、次のような作業に向いています。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>作業</th>
+<th>相性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>メモの要約</td>
+<td>高い</td>
+</tr>
+<tr>
+<td></td>
+<td>記事構成案</td>
+<td>高い</td>
+</tr>
+<tr>
+<td></td>
+<td>FAQ作成</td>
+<td>高い</td>
+</tr>
+<tr>
+<td></td>
+<td>比較表の下書き</td>
+<td>高い</td>
+</tr>
+<tr>
+<td></td>
+<td>コマンドの意味確認</td>
+<td>高い</td>
+</tr>
+<tr>
+<td></td>
+<td>エラーの整理</td>
+<td>中〜高</td>
+</tr>
+<tr>
+<td></td>
+<td>Markdown整形</td>
+<td>高い</td>
+</tr>
+<tr>
+<td></td>
+<td>古いメモの再整理</td>
+<td>高い</td>
+</tr>
+<tr>
+<td></td>
+<td>最新情報の断定</td>
+<td>低い</td>
+</tr>
+<tr>
+<td></td>
+<td>法律・医療・金融判断</td>
+<td>低い</td>
+</tr>
+</tbody>
+</table>
+<p>ローカルAIは、「考える補助」「書く補助」「整理する補助」として使うのが向いています。</p>
+<p>最新情報の確認や責任ある判断は、公式情報や人間の確認が必要です。</p>
+<hr />
+<h2 id="_2">私の使い方<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>私の場合、OllamaとOpen WebUIを次のように使います。</p>
+<p>```text id="devp06"
+Ollama：
+ローカルAIモデルを動かす</p>
+<p>Open WebUI：
+ブラウザから相談する</p>
+<p>Obsidian：
+作業記録を保存する</p>
+<p>Hermes Agent：
+記事化・整理・改善を任せる</p>
+<div class="codehilite"><pre><span></span><code>この流れにすると、AIとの会話がその場限りで終わりにくくなります。
+
+会話で得た情報をObsidianに保存し、必要に応じてHermes Agentに記事化させることで、知識資産として残せます。
+
+---
+
+<span class="gu">##</span> 初心者がつまずきやすい点
+
+<span class="gu">##</span># 1. Ollamaが動いているか分からない
+
+Open WebUIを開いてもモデルが表示されない場合、Ollama側が起動していないことがあります。
+
+まずはOllamaが動いているか確認する必要があります。
+
+<span class="gu">##</span># 2. モデルをダウンロードしていない
+
+Open WebUIの画面だけあっても、使うモデルがなければ会話できません。
+
+まずは軽量モデルを1つ入れて試すのがよいです。
+
+<span class="gu">##</span># 3. 重いモデルを選びすぎる
+
+高性能なモデルほど、PCへの負担が大きくなります。
+
+最初は軽いモデルで試し、PCの動作を確認しながら大きいモデルに進むのが安全です。
+
+<span class="gu">##</span># 4. エラー文を読まずに進める
+
+エラーが出たときは、すぐに同じコマンドを繰り返すのではなく、エラー文をメモします。
+
+そのエラー文をAIに貼り付けて相談すると、原因を整理しやすくなります。
+
+---
+
+<span class="gu">##</span> アフィリエイト対象商品と私の推奨＋ASP選定＋PC環境
+
+私が実際にUbuntuでOllama + Open WebUIを使いながらObsidianで作業記録を残している経験から、自然につながりのあるカテゴリを紹介できます。
+
+<span class="gu">##</span># 実際におすすめする書籍（要検証あり）
+
+※ **Web検索で確認した結果、以下の書籍は最新版が出ていないか公開前に再確認が必要です。** 販売終了や新版が出ている可能性がありますので、Amazon・楽天・各出版社の公式サイトでご確認ください。
+
+| カテゴリ | 具体的な本 | 目安価格 | なぜおすすめか |
+|---------|-----------|--------|--------------|
+| Linux入門 | 『はじめてのLinux 第4版』（翔泳社/著者小谷邦門）※要検証 | ¥1,000〜2,000 | Ubuntuの基本とコマンドを優しく解説。初心者には一番優しい |
+| Obsidian活用 | 『Obsidian ユーザーズバイブル』（オライリー書籍）※要検証 | ¥3,000前後 | Brain3 VaultのようなSecond Brain構築の手順が図解で分かりやすい |
+| ブログ運営 | noteの有料記事化指南書等（各出版社）※要検証 | ¥500〜2,000 | note.comでの収益化。有料記事の書き方や集客法が学べる |
+| GitHubPages入門 | 『GitHub Pages 超入門』（技術評論社）※要検証 | ¥1,200前後 | GitHub Pagesで無料サイトを作る手順を具体的に学べる |
+
+<span class="gu">##</span># ASP選定理由（要検証）
+
+| カテゴリー | 私が検討するもの | ASP選びのポイント |
+|-----------|-------------|---------------|
+| Linux入門書籍 | 『はじめてのLinux』 | Ubuntu初心者に一番優しく説明される |
+| Obsidian活用書 | ユーザーズバイブル（オライリー）※要検証 | Second Brain構築の手順が図解で分かりやすい |
+| blog運営 | noteの有料記事化指南書等※要検証 | 有料noteの記事執筆や集客法が参考になる |
+| GitHub Pages入門 | 『GitHub Pages超入門』（技術評論社/電子書籍）※要検証 | GitHubPagesで無料でサイトを作る手順を学べる |
+
+| ASP名 | 特長 | 私が見ているポイント |
+|------|-----|-------------------|
+| 楽天アフィリエイト | 楽天市場に直接誘導するリンクを作成できる | 知名度が高い、アクセスも多く信頼性も高い |
+| もしもアフィリエイト | Amazonや楽天などの商品リンクを一つのアフィリエイトIDで管理できる | 1つのIDで多様な商品に対応可能 |
+| A8.net | 国内最大級のアフィリエイトネットワーク | データ分析機能や豊富な商品一覧がある |
+
+ASP選びはまず無料公開の記事から始めて、実際にトラフィックが乗ってから本格導入するのがおすすめです。
+
+<span class="gu">##</span># Ubuntu PC環境に必要なものの目安（要検証あり）
+
+| カテゴリ | おすすめ具体例 | 価格例 | コメント |
+|---------|--------------|-------|----------|
+| USBメモリ | SanDisk Ultra Flair 3.0 (128GB/256GB) ※要検証 | ¥1,500〜3,000 | Ubuntuインストールやデータ移動に必須級 |
+| Linux学習用書籍 | O&#39;ReillyのLinux本をシリーズで揃える※要検証 | ¥5,000〜8,000 | 図解多くて理解しやすい |
+| Obsidian実践書 | オライリー系が丁寧（上記）※要検証 | ¥3,000前後 | vault運用の実践書は少ない。これは一冊持っておくと良い |
+
+※ これらの書籍・用品はAmazonや楽天から購入できます。記事公開時、私が実際に読んだ（または使った実績がある）上で推奨するものだけを**アフィリエイトリンク付きで紹介予定です。商品名・価格・仕様は変更になる場合がありますので、必ず公開前に確認してください。**
+
+---
+
+<span class="gu">##</span> この方法が向いている人
+
+OllamaとOpen WebUIの組み合わせは、次のような人に向いています。
+
+<span class="k">*</span> ローカルAIを試したい人
+<span class="k">*</span> 毎月のAI利用料を増やしたくない人
+<span class="k">*</span> Ubuntuを使っている人
+<span class="k">*</span> 自分のPCでAIを動かしたい人
+<span class="k">*</span> AIに記事下書きを手伝ってもらいたい人
+<span class="k">*</span> ObsidianやMarkdownで情報を整理したい人
+<span class="k">*</span> コマンド操作も少しずつ覚えたい人
+
+---
+
+<span class="gu">##</span> この方法が向いていない人
+
+一方で、次のような人には向いていないかもしれません。
+
+<span class="k">*</span> コマンド操作を一切したくない人
+<span class="k">*</span> すぐに高性能AIを快適に使いたい人
+<span class="k">*</span> PC設定やエラー対応を避けたい人
+<span class="k">*</span> 最新情報の検索まで完全自動で任せたい人
+<span class="k">*</span> すぐに収益化したい人
+
+ローカルAIは便利ですが、最初の設定や調整には手間がかかります。
+
+---
+
+<span class="gu">##</span> まとめ
+
+OllamaとOpen WebUIは、UbuntuでローカルAIを始めるうえで、とても便利な組み合わせです。
+
+役割は次のように考えると分かりやすいです。
+
+```text id=&quot;ku34ui&quot;
+Ollama：
+AIモデルを動かす土台
+
+Open WebUI：
+ブラウザから使うための画面
+</code></pre></div>
+
+<p>この2つを使えば、ChatGPTのような画面でローカルAIを試すことができます。</p>
+<p>ただし、万能ではありません。</p>
+<p>PC性能に左右されますし、最新情報を自動で知っているわけでもありません。</p>
+<p>そのため、AIは下書き、整理、比較、メモ作成に使い、重要な判断や公開前確認は人間が行うのが安全です。</p>
+<p>ローカルAIをうまく使えば、Ubuntuでの作業記録、Obsidianの整理、GitHub Pagesの記事作成、アフィリエイト運用の下書き作成まで、かなり効率化できます。</p>
+<p>最初は完璧を目指さず、軽量モデルで試すところから始めるのがよいと思います。</p>
+<hr />
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<h3 id="q1-ollama">Q1. Ollamaだけで使えますか？<a class="headerlink" href="#q1-ollama" title="Permanent link">&para;</a></h3>
+<p>使えます。ただし、コマンドライン操作が中心になるため、初心者はOpen WebUIと組み合わせる方が使いやすいです。</p>
+<h3 id="q2-open-webui">Q2. Open WebUIだけで使えますか？<a class="headerlink" href="#q2-open-webui" title="Permanent link">&para;</a></h3>
+<p>Open WebUIは画面側の役割です。通常はOllamaなど、AIモデルを動かす仕組みと組み合わせて使います。</p>
+<h3 id="q3">Q3. 無料で使えますか？<a class="headerlink" href="#q3" title="Permanent link">&para;</a></h3>
+<p>OllamaやOpen WebUIは無料で使える範囲があります。ただし、PC本体、電気代、通信費、ストレージなどは必要です。</p>
+<h3 id="q4">Q4. どのモデルを使えばよいですか？<a class="headerlink" href="#q4" title="Permanent link">&para;</a></h3>
+<p>最初は軽量モデルから試すのがおすすめです。PCの性能を見ながら、必要に応じて大きなモデルを試します。</p>
+<h3 id="q5">Q5. アフィリエイト記事作成に使えますか？<a class="headerlink" href="#q5" title="Permanent link">&para;</a></h3>
+<p>下書き、構成、比較表、FAQ作成には使えます。ただし、商品情報や広告条件、公式情報は人間が確認する必要があります。</p>
+<hr />
+<h2 id="_3">内部リンク候補<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>50代からUbuntuでローカルAI環境を作ってみた</li>
+<li>Hermes AgentでObsidianを外部脳にする方法</li>
+<li>GitHub Pagesで無料アフィリエイトサイトを作る方法</li>
+<li>無料で始めるアフィリエイトASP比較</li>
+<li>Ubuntu初心者がAI環境構築でつまずいたこと10選</li>
+</ul>
+<hr />
+<h2 id="_4">公開前確認メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>ステータス</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ollama公式情報</td>
+<td>✅ v0.31.1 (2026-06-30) — 記事冒頭に追記済み</td>
+<td></td>
+</tr>
+<tr>
+<td>Open WebUI公式情報</td>
+<td>✅ v0.10.2 (2026-07-01) — セキュリティ修正含む、記事冒頭に追記済み</td>
+<td></td>
+</tr>
+<tr>
+<td>使用モデル名</td>
+<td>✅ <code>qwen3.6:35b-a3b</code>(23GB)/<code>gemma4:26b</code>(17GB)/<code>gemma4:31b</code>(19GB) をインストール済。コマンド例を追記</td>
+<td></td>
+</tr>
+<tr>
+<td>Ubuntu環境</td>
+<td>✅ 24.04 LTS / GPUなし(CPU推論) / RAM 96GiB / スワップ8GB / NVMe 1.8T — 環境表と注釈を追加済み</td>
+<td></td>
+</tr>
+<tr>
+<td>実際に使用したコマンド</td>
+<td>✅ <code>curl -fsSL https://ollama.com/install.sh | sh</code> / <code>ollama pull qwen3.6:35b-a3b</code> — コマンド例として追記済み</td>
+<td></td>
+</tr>
+<tr>
+<td>スクリーンショット</td>
+<td>❌ 未準備。公開前に追加すべき（GPUなしのため画像生成は不可能）。代替案: Open WebUIの画面キャプチャを後で撮影</td>
+<td></td>
+</tr>
+<tr>
+<td>広告表記</td>
+<td>⚠️ アフィリエイトリンクを含む旨を冒頭と本文に記載済み。詳細は今後確認</td>
+<td></td>
+</tr>
+<tr>
+<td>紹介商品の妥当性</td>
+<td>⚠️ 「要検証」マークを各商品につけたが、公開前に個別確認を予定</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_5">広告リンク管理メモ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>楽天アフィリエイト: 書籍・PC周辺機器候補</li>
+<li>もしもアフィリエイト: Amazon・楽天系商品リンク候補</li>
+<li>A8.net: 学習サービス・ツール系候補</li>
+<li>広告リンク挿入: 人間確認後</li>
+<li>最終確認日: 未設定</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
