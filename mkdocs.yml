@@ -27,6 +27,8 @@ nav:
       - article-02 (Ollama+Open WebUI): blog/article-02-ollama-open-webui.md
       - article-09 (Ubuntu入門ミス): blog/article-09-ubuntu-start-mistakes.md
     - ローカルAI/推論:
+      - ローマルAIスタックの全体像: blog/local-ai-stack-overview.md
+      - Ollama運用ガイドブック: blog/ollama-operating-guidebook.md  
       - article-17 (Ollama最新2026): blog/article-17-ollama-latest-2026.md
       - 2026年ローカルLLMベンチマーク: blog/article-18-local-llm-bench-2026.md
       - 推論プラットフォーム比較: blog/article-19-inference-platform-compare.md
@@ -34,7 +36,7 @@ nav:
       - article-16 (Hermes Agent概要): blog/article-20-hermes-agent-overview.md
       - article-21 (Obsidian+ローカルAI連携): blog/article-21-obsidian-local-ai-integration.md
       - article-22 (Ollama Open WebUI構築): blog/article-22-hermes-agent-ob.md
-    - Loop記事:
+    - ループ記事:
       - Loop 01 (ループ入門): blog/article-loop-01-getting-started-with-loops.md
       - Loop 02 (3層メモリスタック): blog/article-loop-02-3layer-memory-stack.md
       - Loop 03 (Claude Code 45タスク): blog/article-loop-03-claude-code-45-tasks.md
@@ -66,12 +68,14 @@ nav:
       - article-disclosure-note: blog/article-disclosure-note.md
   - Wiki/ポリシー:
     - セットアップガイド: blog/hardcore-agent-setup.md
+    - Wiki記事一覧: blog/wiki-index.md
     - 運用ポリシー v2:
       - ブログ執筆ルール: blog/02-policy-blog-writing-rules.md
       - Hermes Agent運用ルール: blog/03-policy-hermes-agent-rules.md
       - 広告規約ルール: blog/advertising-rules-v2.md
       - 公開ルール: blog/publishing-rules-v2.md
     - ライティングガイド: blog/writing-prompts-guide.md
+
 markdown_extensions:
   - toc:
       permalink: true
