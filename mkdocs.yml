@@ -32,6 +32,8 @@ nav:
       - article-17 (Ollama最新2026): blog/article-17-ollama-latest-2026.md
       - 2026年ローカルLLMベンチマーク: blog/article-18-local-llm-bench-2026.md
       - 推論プラットフォーム比較: blog/article-19-inference-platform-compare.md
+      - ローカルAI統合: blog/local-ai-integrations.md
+      - MkDocs YML設定例: blog/mkdocs-config-example.md
     - Agent/Hermes:
       - article-16 (Hermes Agent概要): blog/article-20-hermes-agent-overview.md
       - article-21 (Obsidian+ローカルAI連携): blog/article-21-obsidian-local-ai-integration.md
