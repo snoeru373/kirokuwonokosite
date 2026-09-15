@@ -3,10 +3,10 @@ title: "決定版セットアップガイド — Hermes Agent構築"
 date: "2026-07-25T06:00:00+09:00"
 status: active
 tags:
-  - " hermes-agent"
-  - " local-ai"
-  - " tools"
-  - " ubuntu"
+  - "hermes-agent"
+  - "local-ai"
+  - "tools"
+  - "ubuntu"
   - "setup"
 ---
 
@@ -224,8 +224,8 @@ Hermes Agent を外からの接続や操作に対して安全に運用するた�
 
 - [Brain3 Vault — ツールインテグレーション](local-ai-integrations.md)
 - ~~#セットアップログLOOP-~~ (旧： ../raw/ は削除済み → Wiki統合済み)
-- [Loop Engineering (概念)](@session:main/)
-- [AI 社員プロファイル管理](@hermes CLI → `hermes profile --help`)
+~~Loop Engineering（外部リソース）~~ — MkDocs外にアーカイブ済み
+~~AI 社員プロファイル管理~~ — 過去記事（→ Loop #06, #14 参照）
 
 ---
 
