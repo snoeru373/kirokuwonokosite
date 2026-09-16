@@ -12,9 +12,6 @@ theme:
 
 nav:
   - ホーム: index.md
-  - ローカルAI:
-      - OllamaとOpen WebUI: local-ai/ollama-openwebui.md
-      - ローカルAI vs クラウドAI比較: blog/article-07-local-cloud-comparison.md
   - ブログ:
       - 記事一覧: blog/index.md
       - UbuntuでローカルAI環境を作ってみた: blog/article-01-50-kara-ubuntu.md
