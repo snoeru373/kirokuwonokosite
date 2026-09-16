@@ -1,7 +1,7 @@
 ---
 title: note記事の書き方：具体的な構成と事例
-tags: [note-例, コンテンツ作成, AFO]
-date: 2026-08-02
+tags: [note, article-structure, content-creation, afo, japanese-platforms]
+publishedAt: 2026-08-02
 status: published
 description: noteでアフィリエイト記事を執筆する際の手順、ChatGPT活用法、公開までのワークフローを解説します。
 ---
@@ -18,7 +18,7 @@ description: noteでアフィリエイト記事を執筆する際の手順、Cha
 - タイトル案を3つ出す
 - h2見出しを含む構成を考える
 
-これで完成品ではなく「骨格」を作ってもらいます。ここが失敗しないコツです。詳しくは[**(公開済み)**](../free-affiliate/a8_guide.md)の記事でも解説しています！
+これで完成品ではなく「骨格」を作ってもらいます。ここが失敗しないコツです。詳しくは[**(公開済み)**](../blog/article-asp-comparison.md)の記事でも解説しています！
 
 ## noteに貼り付けて公開する
 作成した文章をnoteの投稿画面にコピー＆ペーストします。その後、Canvaで作ったアイコン画像（サムネイル）を添付し、「公開」ボタンを押すだけで完了です。

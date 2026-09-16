@@ -47,7 +47,7 @@ UbuntuやローカルAIを使い始めたときの体験、つまずき、確認
 
 ### Obsidian・Hermes Agent活用
 
-* [Hermes AgentでObsidian外部脳化](./drafts/hermes-agent-obsidian-gaibusnou.md)
+
 * [ローカルAI vs クラウドAI比較](./blog/article-07-local-cloud-comparison.md)
 
 AIに聞きっぱなしで終わらせず、作業記録を知識として残すための運用を总结一下です。
