@@ -38,7 +38,7 @@ AIに聞きながら作業を進めると、その場では前に進めます。
 ### AI環境構築の体験記事
 
 * [UbuntuでローカルAI環境を作ってみた](./blog/article-01-50-kara-ubuntu.md)
-* [OllamaとOpen WebUIでできること・できないこと](./local-ai/ollama-openwebui.md)
+* [OllamaとOpen WebUIでできること・できないこと](./blog/article-02-ollama-open-webui.md)
 * [ローカルAI vs クラウドAI比較](./blog/article-07-local-cloud-comparison.md)
 
 UbuntuやローカルAIを使い始めたときの体験、つまずき、確認ポイントをまとめています。
@@ -129,4 +129,4 @@ AIは便利ですが、最終的に確認し、判断し、公開する責任は
 
 ## 広告・アフィリエイト表記について
 
-このサイトでは、記事内に広告・アフィリエイトリンクを含む場合があります。詳しくは[掲載基準](./disclosure.md)をご確認ください。
+このサイトでは、記事内に広告・アフィリエイトリンクを含む場合があります。必要に応じて各記事を確認してください。
