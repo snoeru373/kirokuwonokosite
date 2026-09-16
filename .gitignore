@@ -5,7 +5,8 @@ __pycache__/
 *.pyo
 
 # MkDocsビルド出力
-03_Site/site/
+site/
+**/site/
 
 # OS
 .DS_Store
