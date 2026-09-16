@@ -19,7 +19,7 @@ Hermes AgentはこのObsidian Vault（Brain3）と連携し、以下のような
 ## 2. Brain3 Vaultの構造
 以下の4層で構成しています：
 - **_agent/**：エージェントのスキル・ルール・ルーン管理ファイル
-- **wiki/**：学習済み知識（AI活用、ツール比較）
+- **wiki/**：学習済み知識 → 現在docs/blog/articles/に統合
 - **_agent/tasks**：進行中のタスク管理
 - **daily-notes/**：日記・思考ログ
 
