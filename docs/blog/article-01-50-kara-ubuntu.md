@@ -1,13 +1,12 @@
 ---
-
-作成日時: 2026-06-27（Asia/Tokyo）
-タグ: #ubuntu #local-ai #affiliate
+title: "50代からUbuntuでローカルAI環境を作ってみた｜無料で始めるAI活用の第一歩"
+description: "Ubuntu上でOllama、Open WebUI、Obsidian、Hermes Agentを使ったローカルAI構築の実践記録。50代が実際に触ってわかった手順と注意点を解説します。"
+publishedAt: "2026-06-27T14:30:00+09:00"
+tags: [ローカルAI, Ubuntu, Ollama, OpenWebUI, AI活用]
 status: published
 affiliate: true
 review_required: false
-title: 50代からUbuntuでローカルAI環境を作ってみた｜無料で始めるAI活用の第一歩
-description: 50代からUbuntuでローカルAI環境を構築した実体験をもとに、Ollama、Open WebUI、Obsidian、Hermes Agentを使った無料AI活用の始め方をまとめます。
-----------------------------------------------------------------------------------------------------------
+---
 
 # 50代からUbuntuでローカルAI環境を作ってみた｜無料で始めるAI活用の第一歩
 

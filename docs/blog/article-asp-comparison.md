@@ -1,9 +1,9 @@
 ---
-title: 無料アフィリエイトASP比較：A8.NET・Getahone・Bbitで月数万円作る方法
-tags: [ASP-comparison, A8-net, Bbit, アフィリエイト]
-date: 2026-08-02
+title: "無料アフィリエイトASP比較：A8.NET・Getahone・Bbitで月数万円作る方法"
+description: "主要なASP（A8.net、Getahone、Bbit）を比較し、それぞれの仕組み・手数料・登録方法を解説。無料メディアとの組み合わせで高収益化！"
+publishedAt: "2026-08-02T14:30:00+09:00"
+tags: [ASP比較, A8-net, Bbit, アフィリエイト, 無料メディア]
 status: published
-description: 主要なASP (A8.net, Getahone, Bbit) を比較し、それぞれの仕組み・手数料・登録方法を解説。無料メディアとの組み合わせで高収益化！
 ---
 
 # 無料アフィリエイトASP比較：月数千円 → 数万円の導線 {{< internal-link article-10-free-aspx-comparison >}}

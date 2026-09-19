@@ -1,9 +1,9 @@
 ---
-tags: [note, アフィリエイト, 無料メディア, 信頼形成]
-date: 2026-08-02
+title: "noteでアフィリエイト：仕組みと記事作成の極意"
+description: "noteを活用した収益化の方法や、AI記事の書き方、読者を惹きつける構成のコツを解説します。"
+publishedAt: "2026-08-02T14:30:00+09:00"
+tags: [note, アフィリエイト, 無料メディア, 信頼形成, 収益化]
 status: published
-title: noteでアフィリエイト：仕組みと記事作成の極意
-description: noteを活用した収益化の方法や、AI記事の書き方、読者を惹きつける構成のコツを解説します。
 ---
 
 # noteでアフィリエイト：仕組みと記事作成の極意 {{< internal-link article-06-chatgpt-canva-note >}}
