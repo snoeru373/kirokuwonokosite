@@ -5,8 +5,7 @@ __pycache__/
 *.pyo
 
 # MkDocsビルド出力
-site/
-**/site/
+03_Site/site/
 
 # OS
 .DS_Store
@@ -15,3 +14,5 @@ Thumbs.db
 # Temporary
 *.tmp
 *.bak
+# MkDocs build output
+site/

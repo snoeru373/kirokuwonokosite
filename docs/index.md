@@ -1,132 +1,99 @@
 # 50代からのローカルAI実践ノート
 
-Ubuntu、ローカルAI、Obsidian、Hermes Agent、GitHub Pagesを使いながら、50代からAI活と副業サイト運営に挑戦する実践記録です。
+---
+created: 2026-09-06
+title: ホーム — ローカルAI実践ノート
+type: home
+status: active
+tags:
+  - ホーム
+  - ローカルLLM
+  - Ollama
+  - AI活用
+  - MkDocs
+description: "50代からのローカルAI実践ノート。Ollama、Hermes Agent、Obsidianを使用したAI活用方法、記事、ポリシーを公開。"
+---
 
-このサイトでは、AIに詳しい専門家としてではなく、実際に手を動かしながら学び直している立場から、つまずいたこと、調べたこと、試したことを記録しています。
+# 50代からのローカルAI実践ノート
 
-AIに聞きながら作業を進めると、その場では前に進めます。
+このサイトでは、**Ollama**（ローカルLLMエンジン）、**Hermes Agent**（自律型AIエージェント）、**Obsidian Vault**（知識管理）を統合した活用法や記事・ポリシーを公開しています。
 
-しかし、あとから振り返ると「何をしたのか覚えていない」「どのコマンドを使ったのか分からない」「なぜその設定にしたのか説明できない」ということがあります。
+## ブログ記事一覧
 
-そこで、作業記録をObsidianに残し、ローカルAIやHermes Agentで整理し、GitHub Pagesやnoteの記事として公開する流れを作ることにしました。
+### Ubuntu/AI構築関連
+{{>blog-category:Ubuntu/AI構築}}
 
-このサイトは、その実験記録です。
+- [article-01 Ubuntu+AI構築](blog/article-01-50-kara-ubuntu.md)
+- [article-02 Ollama+Open WebUI](blog/article-02-ollama-open-webui.md)
+- [article-09 Ubuntu入門ミス](blog/article-09-ubuntu-start-mistakes.md)
+
+### ローカルAI/推論プラットフォーム
+{{>blog-category:ローカルAI/推論}}
+
+- [Ollama最新情報2026 (article-17)](blog/article-17-ollama-latest-2026.md)
+- [2026年中のローカルLLMベンチマーク (article-18)](blog/article-18-local-llm-bench-2026.md)
+- [推論プラットフォーム比較 (Ollama/vLLM/llama.cpp) (article-19)](blog/article-19-inference-platform-compare.md)
+
+### Agent/Hermes/AI統合
+{{>blog-category:Agent/Hermes}}
+
+- [Hermes-Agent記事 (article-20)](blog/article-20-hermes-agent-overview.md)
+- [Hermes Agent OB (article-22)](blog/article-22-hermes-agent-ob.md)
+- [ObsidianとローカルLLM連携 (article-21)](blog/article-21-obsidian-local-ai-integration.md)
+
+### Loopエンジニアリング記事（16本）
+{{>blog-category:Loopエンジニアリング}}
+
+- [Loop 01 - ループ入門](blog/article-loop-01-getting-started-with-loops.md)
+- [Loop 02 - 3層メモリスタック](blog/article-loop-02-3layer-memory-stack.md)
+- [Loop 03 - Claude Code 45タスク](blog/article-loop-03-claude-code-45-tasks.md)
+- [Loop 04 - Yukiyoshi思考法](blog/article-loop-04-yukiyoshi-thinking-method.md)
+- [Loop 05 - NotebookLM 32方法](blog/article-loop-05-notebooklm-32-methods.md)
+- [Loop 06 - 米国株自動取引BOT](blog/article-loop-06-us-stock-auto-trading-bot.md)
+- [Loop 07 - Claudeデザイン/オープンツール](blog/article-loop-07-claude-design-open-tools.md)
+- [Loop 08 - AI統合設計v1](blog/article-loop-08-ai-integration-design-v1.md)
+- [Loop 10 - AFO AIエンジニアリングv2](blog/article-loop-10-afo-ai-engineering-v2.md)
+- [Loop 11 - グラフエンジニアリング基礎](blog/article-loop-11-graph-engineering-fundamentals.md)
+- [Loop 12 - 海外アフィリエイト戦略](blog/article-loop-12-overseas-affiliate-strategy.md)
+- [Loop 13 - ループエンジニアリング/エージェントパターン](blog/article-loop-13-loop-engineering-and-agent-patterns.md)
+- [Loop 14 - エージェント設計全レイヤー](blog/article-loop-14-agent-design-all-layers.md)
+- [Loop 15 - システムvsモデル](blog/article-loop-15-better-systems-than-models.md)
+- [Loop 16 - Brain3 Vault運用ガイドv2](blog/article-loop-16-brain3-vault-operation-guide-v2.md)
+
+### アフィリエイト/戦略記事
+{{>blog-category:アフィリエイト/戦略}}
+
+- [article-05 WordPress不要](blog/article-05-no-wordpress.md)
+- [article-07 ローカルvsクラウド比較](blog/article-07-local-cloud-comparison.md)
+- [article-10 無料ASP比較](blog/article-10-free-aspx-comparison.md)
+- [メディア概要](blog/affiliate-media-overview.md)
+
+### 設計思想
+{{>blog-category:設計思想}}
+
+- [article-06 ChatGPT+Canvaノート](blog/article-06-chatgpt-canva-note.md)
+- [article-08 AI書き間違い](blog/article-08-ai-writing-mistakes.md)
+- [article-04 GitHub Pages Webサイト](blog/article-04-github-pages-website.md)
+- [Ubuntu初期環境設定](blog/ubuntu-env-setup.md)
 
 ---
 
-## このサイトで扱うテーマ
+## Wiki / ナレッジベース
 
-主に、次のテーマを扱います。
+### コンセプト（概念）
+- [ローカルLLMアーキテクチャ統合](blog/local-ai-stack-overview.md)
+- [Ollama運用ガイドブック](blog/ollama-operating-guidebook.md)
 
-* UbuntuでAI環境を作る方法
-* OllamaとOpen WebUIによるローカルAI運用
-* Obsidianを外部脳として使う方法
-* Hermes Agentで作業や記事作成を補助する方法
-* GitHub Pagesで無料アフィリエイトサイトを作る方法
-* noteとCanvaを使った記事作成
-* ローカルAIとクラウドAIの使い分け
-* AI記事作成で注意すること
-* アフィリエイトASPの登録準備と使い分け
-* 50代からのAI学び直しと副業実験
+### ポリシー
+- [広告ルール v2](blog/advertising-rules-v2.md)
+- [ブログ執筆ルール (policy-02)](blog/02-policy-blog-writing-rules.md)
+- [Hermes Agentルール (policy-03)](blog/03-policy-hermes-agent-rules.md)
+- [公開ルール v2](blog/publishing-rules-v2.md)
 
-最初から完璧なノウハウをまとめるのではなく、実際に試した内容をもとに、初心者にも分かりやすく整理していきます。
+### プロンプト
+{{>blog-category:プロンプト}}
 
----
-
-## まず読んでほしい記事
-
-### AI環境構築の体験記事
-
-* [UbuntuでローカルAI環境を作ってみた](./blog/article-01-50-kara-ubuntu.md)
-* [OllamaとOpen WebUIでできること・できないこと](./blog/article-02-ollama-open-webui.md)
-* [ローカルAI vs クラウドAI比較](./blog/article-07-local-cloud-comparison.md)
-
-UbuntuやローカルAIを使い始めたときの体験、つまずき、確認ポイントをまとめています。
-
----
-
-### Obsidian・Hermes Agent活用
-
-
-* [ローカルAI vs クラウドAI比較](./blog/article-07-local-cloud-comparison.md)
-
-AIに聞きっぱなしで終わらせず、作業記録を知識として残すための運用を总结一下です。
-
----
-
-### 無料サイト運営・アフィリエイト
-
-* [GitHub Pagesで無料サイトをを作る方法](./blog/article-04-github-pages-website.md)
-* [WordPressを使わず無料で副業サイトを作る方法](./blog/article-05-no-wordpress.md)
-* [無料で始めるアフィリエイトASP比較](./blog/article-10-free-aspx-comparison.md)
-
-有料サーバーやドメインをまず小さく無料副業サイトを作る方法を整理しています。
-
----
-
-### note・記事作成
-
-* [ChatGPTとCanva無料版でnote記事を作る方法](./blog/article-06-chatgpt-canva-note.md)
-* [AI徹底解説: AIを「右腕」から「従業員」へ](./blog/article-47-ai-saikou-yakata.md)
-
-AIを使って記事を書くときの流れ、見出し画像の作り方、広告表記や褒大表現への注意点をまとめています。
-
----
-
-## このサイトの基本方針
-
-このサイトでは、次の方針を大切にします。
-
-```text
-1. 実際に試したことを中心に書く
-2. AIの回答をそのまま公開しない
-3. 分からなかったことや失敗も記録する
-4. 広告・アフィリエイトリンクを含む場合は明記する
-5. 褒大表現や収益保証をしない
-6. 最新情報は公式情報で確認する
-7. 個人情報やログイン情報を公開しない
-8. 削除や公開など重要操作は人間が確認する
-```
-
-AIは便利ですが、最終的に確認し、判断し、公開する責任は人間にあります。
-
-そのため、このサイトでは「完全自動で稼ぐ」ことではなく、AIを補助役として使いながら、学び直し、記録し、発信し、少しずつ改善することを重視します。
-
----
-
-## 無料で始める理由
-
-副業サイトを作るとき、最初から有料サーバー、独自ドメイン、有料テーマ、有料AIツールをそろえる方法もあります。
-
-しかし、最初から固定費をかけると、始める前に負担が大きくなります。
-
-このサイトでは、まず次のような無料または無料で始めやすい道具を中心に使います。
-
-* Ubuntu
-* Ollama
-* Open WebUI
-* Obsidian
-* Hermes Agent
-* GitHub Pages
-* note
-* Canva無料版
-* Search Console
-* 楽天アフィリエイト
-* もしもアフィリエイト
-* A8.net
-
-まずは無料で小さく始め、記事を書き、反応を見て、必要になった段階で有料サービスやWordPress移行を検討する方針です。
-
----
-
-## 最後に
-
-このサイトは、完成されたノウハウ集ではなく、AIを使いながら学び直し、試行錯誤し、少しずつ改善していくための実践記録です。
-
-同じように、50代からAIを学び直したい人、UbuntuやローカルAIに挑戦したい人、noteや無料副業サイトを始めたい人の参考になればうれしいです。
-
----
-
-## 広告・アフィリエイト表記について
-
-このサイトでは、記事内に広告・アフィリエイトリンクを含む場合があります。必要に応じて各記事を確認してください。
+### ツール
+- [ハードコアローカルエージェント構築ガイド v1](blog/hardcore-agent-setup.md)
+- [ローカルAI統合](blog/local-ai-integrations.md)
+- [MkDocs YML例](blog/mkdocs-config-example.md)
