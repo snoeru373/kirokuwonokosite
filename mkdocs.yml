@@ -35,6 +35,7 @@ nav:
       - ローカルAI統合: blog/local-ai-integrations.md
       - MkDocs YML設定例: blog/mkdocs-config-example.md
     - Agent/Hermes:
+      - 外部脳化手順 (Hermes+Obsidian): blog/article-03-hermes-agent-ob.md
       - article-16 (Hermes Agent概要): blog/article-20-hermes-agent-overview.md
       - article-21 (Obsidian+ローカルAI連携): blog/article-21-obsidian-local-ai-integration.md
       - article-22 (Ollama Open WebUI構築): blog/article-22-hermes-agent-ob.md
@@ -55,6 +56,7 @@ nav:
       - Loop 15 (システムvsモデル): blog/article-loop-15-better-systems-than-models.md
       - Loop 16 (Brain3 Vault運用ガイドv2): blog/article-loop-16-brain3-vault-operation-guide-v2.md
     - アフィリエイト/戦略:
+      - AI最適設計の最上位構造: blog/article-47-ai-saikou-yakata.md
       - article-05 (WordPress不要): blog/article-05-no-wordpress.md
       - article-07 (ローカルvsクラウド比較): blog/article-07-local-cloud-comparison.md
       - article-10 (無料ASP比較): blog/article-10-free-aspx-comparison.md
