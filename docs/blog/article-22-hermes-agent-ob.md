@@ -3,8 +3,8 @@ title: ""Hermes AgentでObsidianを外部脳にする方法 — 手順と注意�
 date: "2026-06-27T06:00:00+09:00"
 status: draft
 tags:
-  - " Obsidian"
-  - " 外部脳"
+  - "Obsidian"
+  - "外部脳"
   - "AI活用"
   - "Hermes Agent"
   - "ローカルAI"

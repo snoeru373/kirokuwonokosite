@@ -3,8 +3,8 @@ title: ""GitHub Pagesで無料アフィリエイトサイトをつくる手順�
 date: "2026-06-27T06:00:00+09:00"
 status: draft
 tags:
-  - " MkDocs"
-  - " 無料ブログ"
+  - "MkDocs"
+  - "無料ブログ"
   - "AI活用"
   - "GitHub Pages"
   - "ローカルAI"

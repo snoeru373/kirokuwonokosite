@@ -3,9 +3,9 @@ title: "MkDocs.yml設定ファイル例"
 date: "2026-06-28T06:00:00+09:00"
 status: active
 tags:
-  - " MkDocs"
-  - " mkdocs-yml"
-  - " 設定ファイル"
+  - "MkDocs"
+  - "mkdocs-yml"
+  - "設定ファイル"
   - "AI活用"
   - "affiliate-free"
 ---

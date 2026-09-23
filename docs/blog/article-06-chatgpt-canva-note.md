@@ -3,8 +3,8 @@ title: ""ChatGPTとCanva無料版でnote記事が作れるか — 50代が実際
 date: "2026-06-27T06:00:00+09:00"
 status: draft
 tags:
-  - " AI活用"
-  - " Canva無料版"
+  - "AI活用"
+  - "Canva無料版"
   - "AI活用"
   - "note"
   - "ローカルAI"

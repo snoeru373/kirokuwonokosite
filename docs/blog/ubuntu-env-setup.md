@@ -3,10 +3,10 @@ title: ""Ubuntu環境構築セットアップ手順""
 date: "2026-06-28T06:00:00+09:00"
 status: archived_by_aging
 tags:
-  - " MkDocs導入"
-  - " git"
-  - " ubuntu"
-  - " 初期設定"
+  - "MkDocs導入"
+  - "git"
+  - "ubuntu"
+  - "初期設定"
   - "affiliate-free"
 ---
 

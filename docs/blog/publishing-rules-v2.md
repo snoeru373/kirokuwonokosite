@@ -3,10 +3,10 @@ title: "公開ルール v2"
 date: "2026-06-25T06:00:00+09:00"
 status: active
 tags:
-  - " automation"
-  - " rules"
-  - " wiki"
-  - " workflow"
+  - "automation"
+  - "rules"
+  - "wiki"
+  - "workflow"
   - "publishing"
 ---
 
