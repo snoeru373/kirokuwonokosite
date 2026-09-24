@@ -10,7 +10,7 @@ tags:
   - "wiki"
 ---
 
-このサイトの技術ドキュメント・運用ルールをカテゴリ別に整理しています。2026年9月時点で47件の記事があります。
+このサイトの技術ドキュメント・運用ルールをカテゴリ別に整理しています。2026年9月時点で49件の記事があります。
 
 == ローカルAI / コンセプト ==
 
@@ -29,7 +29,15 @@ Ubuntu環境でのAIツールのセットアップ手順。
 - [Ubuntu入門で失敗しない方法](article-09-ubuntu-start-mistakes.md) — 初心者が避けるべき罠
 - [Ubuntu初期環境設定](ubuntu-env-setup.md) — 推奨パッケージ・設定一覧
 
-== GitHub Pages / Webサイト構築 ==
+== ローカルLLMベンチマーク ==
+
+各モデルのパフォーマンス比較と推論プラットフォーム。
+
+- [Ollama最新情報2026](article-17-ollama-latest-2026.md) — Ollamaの最新アップデートと互換性
+- [2026年ローカルLLMベンチマーク](article-18-local-llm-bench-2026.md) — 主要モデルのパフォーマンス比較
+- [推論プラットフォーム比較](article-19-inference-platform-compare.md) — GPU推論の選択肢
+
+== Webサイト構築 ==
 
 無料でのウェブサイト公開手法。
 
@@ -45,6 +53,7 @@ Ubuntu環境でのAIツールのセットアップ手順。
 
 AIエージェントの設計・運用ガイド。
 
+- [外部脳化手順 (Hermes+Obsidian)](article-03-hermes-agent-ob.md) — Obsidian連携による外部脳構築
 - [Hermes Agent 概要](article-20-hermes-agent-overview.md)
 - [Obsidian + ローカルAI連携](article-21-obsidian-local-ai-integration.md)
 - [Ollama Open WebUI構築（詳細）](article-22-hermes-agent-ob.md)
@@ -52,7 +61,7 @@ AIエージェントの設計・運用ガイド。
 
 == ループ記事 ==
 
-AFOプロジェクトのプロダクトループ全16件。
+AFOプロジェクトのプロダクトループ全15件。
 
 - [Loop 01: ループ入門](article-loop-01-getting-started-with-loops.md)
 - [Loop 02: 3層メモリスタック](article-loop-02-3layer-memory-stack.md)
@@ -74,7 +83,8 @@ AFOプロジェクトのプロダクトループ全16件。
 
 アフィリエイトメディアの運営戦略。
 
-- [メディア概要](affiliate-media-overview.md)
+- [AI最適設計の最上位構造](article-47-ai-saikou-yakata.md) — 戦略設計の基本フレーム
+- [メディア概要](affiliate-media-overview.md) — メディアの全体像と目的
 
 == MkDocs 設定例 ==
 
@@ -82,7 +92,7 @@ AFOプロジェクトのプロダクトループ全16件。
 
 == 自己改善 / メタ ==
 
-- [自己改善ループ概要](article-23-self-improvement-loop.md)
+- [自己改善ループ概要](article-23-self-improvement-loop.md) — 継続的な改善サイクルの仕組み
 
 == お知らせ ==
 
@@ -93,6 +103,7 @@ AFOプロジェクトのプロダクトループ全16件。
 運用ルールとガイドライン。
 
 - [ブログ執筆ルール v2](02-policy-blog-writing-rules.md)
+- [Hermes Agent運用ルール](03-policy-hermes-agent-rules.md)
 - [広告規約ルール v2](advertising-rules-v2.md)
 - [公開ルール v2](publishing-rules-v2.md)
 - [ライティングガイド](writing-prompts-guide.md)
