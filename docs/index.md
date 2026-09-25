@@ -86,8 +86,6 @@ description: "50代からのローカルAI実践ノート。Ollama、Hermes Agen
 
 ### ポリシー
 - [広告ルール v2](blog/advertising-rules-v2.md)
-- [ブログ執筆ルール (policy-02)](blog/02-policy-blog-writing-rules.md)
-- [Hermes Agentルール (policy-03)](blog/03-policy-hermes-agent-rules.md)
 - [公開ルール v2](blog/publishing-rules-v2.md)
 
 ### プロンプト
