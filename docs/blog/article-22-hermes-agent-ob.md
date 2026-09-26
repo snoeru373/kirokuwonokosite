@@ -1,7 +1,8 @@
 ---
-title: ""Hermes AgentでObsidianを外部脳にする方法 — 手順と注意点""
+title: "Hermes AgentでObsidianを外部脳にする方法 — 手順と注意点"
 date: "2026-06-27T06:00:00+09:00"
-status: draft
+publishedAt: 2026-09-27T06:00:00+09:00
+status: published
 tags:
   - "Obsidian"
   - "外部脳"
