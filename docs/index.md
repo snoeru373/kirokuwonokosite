@@ -38,7 +38,6 @@ description: "50代からのローカルAI実践ノート。Ollama、Hermes Agen
 {{>blog-category:Agent/Hermes}}
 
 - [Hermes-Agent記事 (article-20)](blog/article-20-hermes-agent-overview.md)
-- [Hermes Agent OB (article-22)](blog/article-22-hermes-agent-ob.md)
 - [ObsidianとローカルLLM連携 (article-21)](blog/article-21-obsidian-local-ai-integration.md)
 
 ### Loopエンジニアリング記事（16本）

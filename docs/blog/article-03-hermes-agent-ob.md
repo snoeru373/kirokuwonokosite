@@ -2,7 +2,8 @@
 title: "Hermes AgentでObsidianを外部脳化する手順｜Ubuntu上のAI自動化活用"
 description: "Ubuntu上でのObsidian活用を、Hermes Agentの自動化と組み合わせる手順を解説します。外部脳化でAIとの会話を記録し、記事や知識資産に変える方法。"
 publishedAt: 2026-07-18T15:00:00+09:00
-status: draft
+date: "2026-07-18T06:00:00+09:00"
+status: published
 tags: [Hermes Agent, Obsidian, ローカルAI, Ubuntu, 自動化]
 affiliate: true
 review_required: true
@@ -136,7 +137,8 @@ Obsidianに保存する際、このフォーマットに従うと後でHermes Ag
 title: "[タイトル]"
 date: "2026-07-18T15:00:00+09:00"
 tags: [タグ, タグ]
-status: draft
+date: "2026-07-18T06:00:00+09:00"
+status: published
 type: memo
 source: hermes-agent
 ---

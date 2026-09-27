@@ -10,7 +10,7 @@ tags:
   - "wiki"
 ---
 
-このサイトの技術ドキュメント・運用ルールをカテゴリ別に整理しています。2026年9月時点で49件の記事があります。
+このサイトの技術ドキュメント・運用ルールをカテゴリ別に整理しています。2026年9月時点で48件の記事があります。
 
 == ローカルAI / コンセプト ==
 
@@ -56,7 +56,6 @@ AIエージェントの設計・運用ガイド。
 - [外部脳化手順 (Hermes+Obsidian)](article-03-hermes-agent-ob.md) — Obsidian連携による外部脳構築
 - [Hermes Agent 概要](article-20-hermes-agent-overview.md)
 - [Obsidian + ローカルAI連携](article-21-obsidian-local-ai-integration.md)
-- [Ollama Open WebUI構築（詳細）](article-22-hermes-agent-ob.md)
 - [ハードコアローカルエージェント構築ガイド v1](hardcore-agent-setup.md)
 
 == ループ記事 ==
