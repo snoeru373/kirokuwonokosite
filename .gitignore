@@ -16,3 +16,5 @@ Thumbs.db
 *.bak
 # MkDocs build output
 site/
+blog/
+search/
