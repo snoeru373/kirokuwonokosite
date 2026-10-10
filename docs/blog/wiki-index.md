@@ -93,6 +93,6 @@ AFOプロジェクトのプロダクトループ全16件。
 運用ルールとガイドライン。
 
 - [ブログ執筆ルール v2](02-policy-blog-writing-rules.md)
-- [広告規約ルール v2](advertising-rules-v2.md)
+
 - [公開ルール v2](publishing-rules-v2.md)
 - [ライティングガイド](writing-prompts-guide.md)
